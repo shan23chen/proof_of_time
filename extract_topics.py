@@ -2,6 +2,7 @@
 # Run: python emnlp_topics_benchmarks_litellm.py
 
 import os, re, json, asyncio
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Dict, Any, Tuple, List
 from datasets import load_dataset, DatasetDict
 from tqdm import tqdm
@@ -15,6 +16,7 @@ MODEL = os.getenv("LITELLM_MODEL", "openai/gpt-4o-mini")  # any LiteLLM-supporte
 TEMPERATURE = 0
 TIMEOUT = 120
 MAX_CONCURRENCY = int(os.getenv("MAX_CONCURRENCY", "8"))
+SPLIT_WORKERS = max(1, int(os.getenv("SPLIT_WORKERS", "1")))
 MAX_TOKENS = 400  # plenty for our JSON
 ENABLE_REPAIR_PASS = True
 
@@ -26,8 +28,8 @@ Return STRICT JSON matching the provided schema.
 
 Tagging rules:
 - topics (coarse): 1–5 concise themes (e.g., "evaluation/benchmarks", "machine translation", "retrieval augmentation").
-- primary_topic: exactly one fine-grained label from FINE_TOPICS (below) that best characterizes the paper.
-- fine_topics: up to 8 labels from FINE_TOPICS; if nothing fits, use "other:<short label>".
+- primary_topic: exactly one fine-grained label from FINE_TOPICS (below) that best characterizes the paper. If none fits, craft a new concise label prefixed with "other:" and also include it in fine_topics.
+- fine_topics: up to 8 labels from FINE_TOPICS; if nothing fits, use "other:<short label>" entries that you invent to best describe the work.
 - domain_tags: optional domains (e.g., "biomedical", "legal", "finance", "multilingual", "low-resource", "social media").
 - Benchmark detection:
   * is_benchmark = true iff the paper RELEASES a new dataset/benchmark/leaderboard or a major standardized evaluation suite.
@@ -247,12 +249,30 @@ async def process_split(ds, concurrency: int = MAX_CONCURRENCY):
     ds = ds.add_column("benchmark_tasks", bench_tasks_col)
     return ds
 
-async def main():
+def process_split_blocking(split: str, ds, concurrency: int) -> Tuple[str, Any]:
+    print(f"Processing split: {split} | rows={len(ds)}")
+    processed = asyncio.run(process_split(ds, concurrency=concurrency))
+    return split, processed
+
+def main():
     dsdict: DatasetDict = load_dataset("AIM-Harvard/EMNLP-Accepted-Papers")  # loads all splits
     out = {}
-    for split, ds in dsdict.items():
-        print(f"Processing split: {split} | rows={len(ds)}")
-        out[split] = await process_split(ds)
+    items = list(dsdict.items())
+
+    if SPLIT_WORKERS > 1 and len(items) > 1:
+        with ThreadPoolExecutor(max_workers=SPLIT_WORKERS) as pool:
+            futures = [
+                pool.submit(process_split_blocking, split, ds, MAX_CONCURRENCY)
+                for split, ds in items
+            ]
+            for fut in tqdm(as_completed(futures), total=len(futures), desc="Split workers"):
+                split, processed = fut.result()
+                out[split] = processed
+    else:
+        for split, ds in items:
+            split_name, processed = process_split_blocking(split, ds, MAX_CONCURRENCY)
+            out[split_name] = processed
+
     out = DatasetDict(out)
 
     out_dir = "emnlp_with_topics_benchmarks"
@@ -265,4 +285,4 @@ async def main():
     print(f"Total rows: {total} | Detected benchmark papers: {benchmarks}")
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
