@@ -30,10 +30,10 @@ Tagging rules:
 - topics (coarse): 1–5 concise themes (e.g., "evaluation/benchmarks", "machine translation", "retrieval augmentation").
 - primary_topic: exactly one fine-grained label from FINE_TOPICS (below) that best characterizes the paper. If none fits, craft a new concise label prefixed with "other:" and also include it in fine_topics.
 - fine_topics: up to 8 labels from FINE_TOPICS; if nothing fits, use "other:<short label>" entries that you invent to best describe the work.
-- domain_tags: optional domains (e.g., "biomedical", "legal", "finance", "multilingual", "low-resource", "social media").
+- domain_tags: optional domains (e.g., "biomedical", "legal", "finance", "multilingual", "low-resource", "social media"). Return an empty list if none apply.
 - Benchmark detection:
   * is_benchmark = true iff the paper RELEASES a new dataset/benchmark/leaderboard or a major standardized evaluation suite.
-  * If true, fill benchmark_name (short) and up to 5 benchmark_tasks (e.g., "NER", "VQA", "MMLU-style multitask").
+  * If true, fill benchmark_name (short) and up to 5 benchmark_tasks (e.g., "NER", "VQA", "MMLU-style multitask"). If false, return benchmark_name as an empty string and benchmark_tasks as an empty list.
 - Be conservative; do not infer beyond evidence.
 
 FINE_TOPICS (controlled vocabulary):
@@ -95,7 +95,15 @@ JSON_SCHEMA = {
       "benchmark_name": { "type": "string" },
       "benchmark_tasks": { "type": "array", "items": {"type": "string"}, "maxItems": 5 }
     },
-    "required": ["topics", "primary_topic", "fine_topics", "is_benchmark"],
+    "required": [
+      "topics",
+      "primary_topic",
+      "fine_topics",
+      "domain_tags",
+      "is_benchmark",
+      "benchmark_name",
+      "benchmark_tasks"
+    ],
     "additionalProperties": False
   },
   "strict": True
