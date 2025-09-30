@@ -2,7 +2,7 @@
 # Run: python emnlp_topics_benchmarks_litellm.py
 
 import os, re, json, asyncio
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from threading import Thread
 from typing import Dict, Any, Tuple, List
 from datasets import load_dataset, DatasetDict
 from tqdm import tqdm
@@ -30,10 +30,10 @@ Tagging rules:
 - topics (coarse): 1–5 concise themes (e.g., "evaluation/benchmarks", "machine translation", "retrieval augmentation").
 - primary_topic: exactly one fine-grained label from FINE_TOPICS (below) that best characterizes the paper. If none fits, craft a new concise label prefixed with "other:" and also include it in fine_topics.
 - fine_topics: up to 8 labels from FINE_TOPICS; if nothing fits, use "other:<short label>" entries that you invent to best describe the work.
-- domain_tags: optional domains (e.g., "biomedical", "legal", "finance", "multilingual", "low-resource", "social media").
+- domain_tags: optional domains (e.g., "biomedical", "legal", "finance", "multilingual", "low-resource", "social media"). Return an empty list if none apply.
 - Benchmark detection:
   * is_benchmark = true iff the paper RELEASES a new dataset/benchmark/leaderboard or a major standardized evaluation suite.
-  * If true, fill benchmark_name (short) and up to 5 benchmark_tasks (e.g., "NER", "VQA", "MMLU-style multitask").
+  * If true, fill benchmark_name (short) and up to 5 benchmark_tasks (e.g., "NER", "VQA", "MMLU-style multitask"). If false, return benchmark_name as an empty string and benchmark_tasks as an empty list.
 - Be conservative; do not infer beyond evidence.
 
 FINE_TOPICS (controlled vocabulary):
@@ -95,7 +95,15 @@ JSON_SCHEMA = {
       "benchmark_name": { "type": "string" },
       "benchmark_tasks": { "type": "array", "items": {"type": "string"}, "maxItems": 5 }
     },
-    "required": ["topics", "primary_topic", "fine_topics", "is_benchmark"],
+    "required": [
+      "topics",
+      "primary_topic",
+      "fine_topics",
+      "domain_tags",
+      "is_benchmark",
+      "benchmark_name",
+      "benchmark_tasks"
+    ],
     "additionalProperties": False
   },
   "strict": True
@@ -174,8 +182,7 @@ async def llm_once(title: str, abstract: str, repair_note: str = "") -> Dict[str
         max_tokens=MAX_TOKENS,
         response_format={
             "type": "json_schema",
-            "json_schema": JSON_SCHEMA,
-            "strict": True
+            "json_schema": JSON_SCHEMA
         },
         extra_body={
             # Some providers honour 'seed' for extra determinism; safe to include if ignored.
@@ -249,31 +256,38 @@ async def process_split(ds, concurrency: int = MAX_CONCURRENCY):
     ds = ds.add_column("benchmark_tasks", bench_tasks_col)
     return ds
 
-def process_split_blocking(split: str, ds, concurrency: int) -> Tuple[str, Any]:
-    print(f"Processing split: {split} | rows={len(ds)}")
-    processed = asyncio.run(process_split(ds, concurrency=concurrency))
-    return split, processed
-
-def main():
-    dsdict: DatasetDict = load_dataset("AIM-Harvard/EMNLP-Accepted-Papers")  # loads all splits
-    out = {}
+async def process_all_splits(dsdict: DatasetDict) -> DatasetDict:
+    out: Dict[str, Any] = {}
     items = list(dsdict.items())
 
+    async def run_single(split: str, ds) -> Tuple[str, Any]:
+        print(f"Processing split: {split} | rows={len(ds)}")
+        processed = await process_split(ds, concurrency=MAX_CONCURRENCY)
+        return split, processed
+
     if SPLIT_WORKERS > 1 and len(items) > 1:
-        with ThreadPoolExecutor(max_workers=SPLIT_WORKERS) as pool:
-            futures = [
-                pool.submit(process_split_blocking, split, ds, MAX_CONCURRENCY)
-                for split, ds in items
-            ]
-            for fut in tqdm(as_completed(futures), total=len(futures), desc="Split workers"):
-                split, processed = fut.result()
-                out[split] = processed
+        sem = asyncio.Semaphore(SPLIT_WORKERS)
+
+        async def run_with_limit(split: str, ds):
+            async with sem:
+                return await run_single(split, ds)
+
+        tasks = [asyncio.create_task(run_with_limit(split, ds)) for split, ds in items]
+        for fut in tqdm(asyncio.as_completed(tasks), total=len(tasks), desc="Split workers"):
+            split, processed = await fut
+            out[split] = processed
     else:
         for split, ds in items:
-            split_name, processed = process_split_blocking(split, ds, MAX_CONCURRENCY)
+            split_name, processed = await run_single(split, ds)
             out[split_name] = processed
 
-    out = DatasetDict(out)
+    return DatasetDict(out)
+
+
+async def amain() -> DatasetDict:
+    """Asynchronous entry point so notebooks can simply `await amain()`."""
+    dsdict: DatasetDict = load_dataset("AIM-Harvard/EMNLP-Accepted-Papers")
+    out = await process_all_splits(dsdict)
 
     out_dir = "emnlp_with_topics_benchmarks"
     out.save_to_disk(out_dir)
@@ -283,6 +297,38 @@ def main():
     total = sum(len(ds) for ds in out.values())
     benchmarks = sum(int(x) for ds in out.values() for x in ds["is_benchmark"])
     print(f"Total rows: {total} | Detected benchmark papers: {benchmarks}")
+    return out
+
+
+def main() -> DatasetDict:
+    """Synchronous wrapper that works in both scripts and notebooks."""
+    try:
+        asyncio.get_running_loop()
+    except RuntimeError:
+        return asyncio.run(amain())
+
+    # If we reach here we are already inside an event loop (e.g. Jupyter).
+    result_box: Dict[str, Any] = {}
+    error_box: Dict[str, BaseException] = {}
+
+    def runner():
+        new_loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(new_loop)
+        try:
+            result_box["value"] = new_loop.run_until_complete(amain())
+        except BaseException as exc:  # propagate KeyboardInterrupt too
+            error_box["error"] = exc
+        finally:
+            new_loop.close()
+
+    thread = Thread(target=runner, daemon=True)
+    thread.start()
+    thread.join()
+
+    if error_box:
+        raise error_box["error"]
+    return result_box["value"]
+
 
 if __name__ == "__main__":
     main()
