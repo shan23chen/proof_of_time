@@ -174,8 +174,7 @@ async def llm_once(title: str, abstract: str, repair_note: str = "") -> Dict[str
         max_tokens=MAX_TOKENS,
         response_format={
             "type": "json_schema",
-            "json_schema": JSON_SCHEMA,
-            "strict": True
+            "json_schema": JSON_SCHEMA
         },
         extra_body={
             # Some providers honour 'seed' for extra determinism; safe to include if ignored.
