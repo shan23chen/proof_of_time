@@ -1,0 +1,4993 @@
+fine_topics,year,paper_count
+3D hand normalization,2023,1
+3D point cloud classification,2024,1
+AI safety,2024,1
+AI-generated text detection,2023,1
+AMR parsing,2021,1
+AMR parsing,2023,1
+API schema usage,2024,1
+ASR,2023,1
+ASR adaptation,2021,1
+ASR adaptation,2023,1
+ASR domain adaptation,2024,1
+ASR error correction,2021,1
+ASR error correction,2023,1
+ASR error detection,2022,1
+ASR integration,2022,1
+ASR test-time adaptation,2024,1
+ASR training with pseudo-labels,2024,1
+ASR/multidialectal speech recognition,2024,1
+ASR/self-supervised speech representation,2024,1
+ASR/speaker adaptation,2021,1
+ASR/speech recognition,2021,8
+ASR/speech recognition,2022,12
+ASR/speech recognition,2023,24
+ASR/speech recognition,2024,26
+AST-based learning,2023,1
+Arabic NLP,2021,1
+Arabic NLP,2023,1
+Arabic NLP,2024,1
+BERT,2021,2
+BERT,2023,1
+BERT integration,2021,1
+BIO tagging,2023,1
+Bayesian inference,2023,1
+Bayesian methods,2023,1
+Bayesian methods,2024,1
+Bayesian modeling,2022,2
+Bayesian modeling,2023,1
+Bayesian neural networks,2023,1
+Bayesian optimization,2021,1
+Bayesian optimization,2024,1
+Beta distribution,2021,1
+BiLSTM,2021,1
+CNN architectures,2021,1
+Chinese NLP,2022,1
+Chinese NLP,2023,2
+Chinese NLP,2024,1
+EEG analysis,2023,1
+EHR processing,2023,1
+GANs,2021,1
+GNN integration,2024,1
+HTR/handwritten text recognition,2023,1
+Huffman tree,2023,1
+KV-cache/attention optimizations,2024,4
+LLM alignment,2024,2
+LLM applications,2024,1
+LLM compression,2024,1
+LLM conditioning,2024,1
+LLM distillation,2024,1
+LLM evaluation,2023,1
+LLM evaluation,2024,1
+LLM hidden states,2024,1
+LLM methods,2024,1
+LLM prompting,2024,1
+LLM quantization,2024,1
+LLMs,2024,5
+LLMs & Methods,2023,4
+LLMs & Methods,2024,3
+LLMs and methods,2024,1
+LLMs assessment,2023,1
+LLMs evaluation,2023,1
+LLMs evaluation,2024,1
+LLMs for annotation,2024,1
+LLMs for information extraction,2024,1
+LoRA,2024,1
+MCQ reasoning,2021,7
+MCQ reasoning,2022,5
+MCQ reasoning,2023,54
+MCQ reasoning,2024,78
+MLP modules,2023,1
+MLP-based prediction,2023,1
+Monte-Carlo Dropout,2022,1
+Multi-Scale Attention,2024,1
+NER,2021,67
+NER,2022,59
+NER,2023,95
+NER,2024,42
+NLG evaluation,2022,1
+NLG evaluation,2023,1
+NLG metrics,2024,1
+NLI,2021,1
+NLI,2022,1
+NLI,2023,1
+NLI,2024,1
+NLIDB security,2024,1
+NLP,2021,1
+NLP applications,2024,1
+NLU,2021,2
+NLU tasks,2023,1
+OCR,2023,1
+OCR,2024,1
+OOD detection,2023,1
+POMDP,2022,1
+POS,2021,1
+POS tagging,2022,1
+POS tagging,2023,1
+Pareto efficiency,2024,1
+Q-learning,2022,1
+QA/MCQ reasoning,2022,2
+QA/MCQ reasoning,2024,2
+QA/abstractive,2021,29
+QA/abstractive,2022,36
+QA/abstractive,2023,64
+QA/abstractive,2024,99
+QA/extractive,2021,145
+QA/extractive,2022,158
+QA/extractive,2023,268
+QA/extractive,2024,290
+QA/open-domain QA,2024,1
+RE/relation extraction,2021,40
+RE/relation extraction,2022,59
+RE/relation extraction,2023,59
+RE/relation extraction,2024,28
+RL for text generation,2022,1
+RLHF/GRPO/PPO,2021,11
+RLHF/GRPO/PPO,2022,7
+RLHF/GRPO/PPO,2023,42
+RLHF/GRPO/PPO,2024,102
+RLHF/optimization,2024,1
+SLU,2023,1
+STS,2022,1
+SVM,2024,1
+Shapley value,2024,1
+TTS/speech synthesis,2022,1
+TTS/speech synthesis,2023,4
+TTS/speech synthesis,2024,8
+Transformer models,2023,1
+VAE/variational autoencoders,2024,1
+VLM/vision-language,2021,42
+VLM/vision-language,2022,70
+VLM/vision-language,2023,118
+VLM/vision-language,2024,183
+VQA,2023,1
+VQA/extractive,2021,1
+WSD/lexical semantics,2021,26
+WSD/lexical semantics,2022,16
+WSD/lexical semantics,2023,26
+WSD/lexical semantics,2024,20
+abductive reasoning,2022,1
+abstract syntax trees,2023,1
+abstractive summarization,2023,1
+accent adaptation,2023,1
+accent transfer,2023,1
+acoustic classification,2024,1
+acoustic landmarks,2024,1
+acoustic language identification,2024,1
+acoustic modeling,2023,1
+action recognition,2024,2
+activation clustering,2024,1
+activation editing,2024,1
+activation quantization,2023,2
+activation quantization,2024,2
+activation scaling,2024,1
+active learning,2021,4
+active learning,2022,6
+active learning,2023,15
+active learning,2024,9
+active learning/task selection,2023,1
+actor-critic methods,2021,1
+adaptation,2023,1
+adaptation layers,2024,1
+adapter ensembles,2024,1
+adapter learning,2023,1
+adapter methods,2022,1
+adapter methods,2023,1
+adapter methods,2024,1
+adapter modules,2022,1
+adapter tuning,2022,1
+adapter tuning,2023,2
+adapter-based finetuning,2022,1
+adapter-tuning,2022,1
+adapters,2021,1
+adaptive algorithms,2023,1
+adaptive dialogue systems,2023,1
+adaptive optimization,2023,1
+adaptive sensing,2022,1
+adversarial attack detection,2021,1
+adversarial attacks,2023,2
+adversarial attacks,2024,4
+adversarial detection,2022,1
+adversarial detection,2024,1
+adversarial domain adaptation,2024,1
+adversarial evaluation,2023,1
+adversarial examples,2021,1
+adversarial examples,2022,1
+adversarial learning,2021,10
+adversarial learning,2022,3
+adversarial learning,2024,3
+adversarial methods,2021,1
+adversarial methods,2023,1
+adversarial methods,2024,1
+adversarial perturbations,2024,1
+adversarial robustness,2024,1
+adversarial training,2021,3
+adversarial training,2022,6
+adversarial training,2023,2
+adversarial training,2024,1
+affective computing,2022,1
+agent learning,2024,1
+agent modeling,2023,1
+agents/planning,2021,4
+agents/planning,2022,6
+agents/planning,2023,20
+agents/planning,2024,89
+agreement loss,2021,1
+alignment,2023,5
+alignment,2024,2
+alignment algorithms,2021,1
+alignment techniques,2024,1
+alignment/forgetting trade-off,2024,1
+ambiguity resolution,2023,1
+amortized variational inference,2021,1
+analogical learning,2021,1
+analogical reasoning,2022,1
+analogy methods,2023,1
+analysis,2021,3
+analysis,2023,2
+analysis methods,2022,1
+analysis methods,2023,1
+analysis/self-consistency,2021,1
+analysis/semantics,2024,1
+anaphora/cataphora,2021,3
+anaphora/cataphora,2022,1
+anaphora/cataphora,2023,3
+anaphora/cataphora,2024,1
+ancient languages,2021,1
+angular loss,2024,1
+annotation,2021,2
+annotation,2023,2
+annotation,2024,4
+annotation consistency,2021,1
+annotation corpus,2022,1
+annotation cost,2022,1
+annotation disagreement,2023,2
+annotation efficiency,2023,1
+annotation efficiency,2024,1
+annotation methodology,2024,1
+annotation methods,2023,1
+annotation methods,2024,2
+annotation modeling,2024,1
+annotation practices,2023,1
+annotation projection,2023,1
+annotation quality,2021,2
+annotation quality,2022,2
+annotation quality,2023,1
+annotation quality,2024,1
+annotation scheme,2024,1
+annotation schemes,2023,1
+annotation strategies,2024,1
+annotation studies,2023,1
+annotation studies,2024,1
+annotation/corpus creation,2023,1
+annotation/data collection,2023,1
+annotation/dataset creation,2024,1
+annotation/datasets,2022,1
+annotation/labeling,2023,2
+annotation/multi-annotation,2023,1
+annotation/subjectivity,2023,1
+answer consolidation,2022,1
+anti-social language detection,2023,1
+approximate nearest neighbor search,2023,1
+approximation algorithms,2023,1
+argument mining,2022,3
+argument mining,2023,6
+argument mining,2024,3
+argumentation,2021,1
+argumentation,2022,1
+argumentation,2024,1
+argumentation frameworks,2023,1
+argumentation mining,2021,1
+arithmetic reasoning,2023,1
+article generation,2023,1
+artifact detection,2021,1
+aspect category detection,2022,1
+aspect category detection,2023,1
+aspect category sentiment analysis,2021,1
+aspect detection,2021,1
+aspect extraction,2021,1
+aspect sentiment triplet extraction,2023,2
+aspect sentiment triplet extraction,2024,1
+aspect term extraction,2021,1
+aspect term extraction,2023,1
+aspect term polarity,2023,1
+aspect-based sentiment analysis,2021,8
+aspect-based sentiment analysis,2022,7
+aspect-based sentiment analysis,2023,5
+aspect-based sentiment analysis,2024,6
+aspect-based sentiment classification,2021,1
+aspect-based sentiment classification,2022,1
+aspect-level sentiment analysis,2022,1
+aspect-level sentiment classification,2021,1
+atomic inference,2024,1
+attack chaining,2024,1
+attention analysis,2023,1
+attention augmentation,2021,1
+attention mechanism,2023,1
+attention mechanisms,2021,19
+attention mechanisms,2022,14
+attention mechanisms,2023,14
+attention mechanisms,2024,8
+attention optimizations,2021,1
+attention-based methods,2021,1
+attribute binding,2023,1
+attribute classifiers,2022,1
+attribute distribution reconstruction,2023,1
+attribute extraction,2022,1
+attribute inference attack,2022,1
+attribute prediction,2023,1
+attribute refinement,2022,1
+attribution,2024,1
+audio LMs,2022,1
+audio LMs,2023,4
+audio LMs,2024,3
+audio-language models,2024,1
+audit/measurement,2021,2
+audit/measurement,2022,8
+audit/measurement,2023,24
+audit/measurement,2024,33
+augmentation,2021,2
+augmentation learning,2023,1
+augmentation techniques,2021,1
+author verification,2023,1
+authorship attribution,2021,1
+authorship attribution,2022,1
+authorship attribution,2023,2
+authorship obfuscation,2022,1
+authorship verification,2023,1
+authorship verification,2024,1
+autocomplete,2023,1
+autoencoder,2022,1
+autoencoders,2024,1
+automated essay scoring,2023,1
+automated essay scoring,2024,1
+automatic evaluation metrics,2023,1
+automatic labeling,2023,1
+automatic post-editing,2023,1
+automatic prompt design,2023,1
+automatic prompt generation,2023,1
+autonomous driving,2024,1
+autoregressive generation,2021,1
+backdoor attacks,2022,1
+backdoor attacks,2023,1
+batch processing,2024,1
+beam search,2022,1
+behavior analysis,2024,1
+behavior cloning,2021,1
+behavioral studies,2024,1
+behavioral testing,2024,1
+benchmark analysis,2023,1
+benchmark construction,2024,1
+benchmark contamination detection,2024,1
+benchmark creation,2024,2
+benchmark dataset,2022,1
+benchmark evaluation,2024,1
+benchmark generation,2021,1
+benchmark release,2022,1
+benchmark release,2023,2
+benchmark release,2024,2
+benchmark subset selection,2023,1
+benchmark/dataset,2022,2
+benchmark/dataset,2023,1
+benchmark/dataset creation,2024,1
+benchmark/dataset release,2021,1
+benchmarking,2022,7
+benchmarking,2023,17
+benchmarking,2024,20
+benchmarking LLMs,2024,1
+benchmarking multimodal code generation,2024,1
+benchmarking with missing data,2024,1
+benchmarking/dataset release,2023,1
+bi-directional voting,2023,1
+bi-objective optimization,2024,1
+bias mitigation,2024,1
+bias/fairness,2021,38
+bias/fairness,2022,42
+bias/fairness,2023,82
+bias/fairness,2024,102
+bidirectional information propagation,2024,1
+bilinear tensor models,2023,1
+binary classification,2022,1
+binary classification,2023,1
+binary classification,2024,2
+binary code analysis,2023,1
+binary representation,2024,1
+biomedical,2021,7
+biomedical,2022,2
+biomedical,2023,5
+biomedical,2024,8
+biomedical NLI,2023,1
+biomedical NLP,2021,3
+biomedical NLP,2022,2
+biomedical NLP,2023,2
+biomedical adaptation,2024,1
+biomedical concept normalization,2021,1
+biomedical entity linking,2023,1
+biomedical semantic textual similarity,2023,1
+bipartite matching loss,2021,1
+black-box attack,2021,1
+black-box attack,2022,1
+blockchain-inspired methods,2024,1
+boosting methods,2023,1
+bootstrapping,2021,1
+bot detection,2024,1
+boundary detection,2021,1
+brain imaging,2022,1
+budget allocation,2024,1
+budget-guided optimization,2024,1
+bug detection,2022,1
+bug localization,2022,1
+calibration,2024,1
+calibration data,2024,1
+candidate ranking,2023,1
+cardinality modeling,2022,1
+case outcome classification,2024,1
+catastrophic forgetting,2021,1
+catastrophic forgetting,2023,3
+catastrophic forgetting,2024,2
+catastrophic forgetting prevention,2023,1
+causal analysis,2021,1
+causal analysis,2022,1
+causal analysis,2024,1
+causal attention,2022,1
+causal discovery,2024,1
+causal inference,2021,3
+causal inference,2022,4
+causal inference,2023,7
+causal inference,2024,8
+causal inference in dialogue,2023,1
+causal intervention,2023,2
+causal mediation analysis,2023,1
+causal mediation analysis,2024,3
+causal modeling,2024,1
+causal reasoning,2021,1
+causal reasoning,2023,4
+causal reasoning,2024,3
+causal relation extraction,2023,1
+causal relation extraction,2024,1
+causality,2022,1
+causality analysis,2024,1
+causality reasoning,2022,1
+cause extraction,2023,1
+centrality detection,2023,1
+certainty estimation,2024,1
+certified robustness,2024,1
+chain-of-thought,2023,7
+chain-of-thought,2024,3
+chain-of-thought prompting,2023,7
+chain-of-thought reasoning,2023,2
+chain-of-thought reasoning,2024,1
+channel-wise scaling,2023,1
+channel-wise shifting,2023,1
+character description generation,2021,1
+character embeddings,2024,1
+character identification,2021,1
+character modeling,2022,1
+character-centric narrative understanding,2021,1
+chemical language representation,2024,1
+chronological consistency,2022,1
+chunk-wise decoding,2024,1
+circle loss,2022,1
+circular cosine similarity,2023,1
+claim detection,2022,1
+claim span identification,2023,1
+claim-evidence extraction,2023,1
+class imbalance,2021,4
+class imbalance,2022,1
+class imbalance,2023,1
+classical Chinese NLP,2024,1
+classification,2021,27
+classification,2022,17
+classification,2023,40
+classification,2024,30
+classification methods,2021,1
+classification modeling,2022,1
+classification/emotion recognition,2024,1
+classification/fine-grained,2021,1
+classification/multi-label,2021,1
+classification/text classification,2023,1
+classifier guidance,2024,1
+clinical NLP,2021,1
+clinical NLP,2022,2
+clinical NLP,2023,2
+clinical NLP,2024,3
+clinical document classification,2021,1
+clinical domain,2022,1
+clinical notes processing,2021,1
+clinical text processing,2024,1
+clustering,2021,8
+clustering,2022,11
+clustering,2023,10
+clustering,2024,9
+clustering metrics,2023,1
+co-evolution methods,2024,1
+co-regularization,2021,1
+co-training,2024,1
+code LMs/generation,2021,13
+code LMs/generation,2022,17
+code LMs/generation,2023,38
+code LMs/generation,2024,50
+code generation,2023,1
+code perturbation,2023,1
+code search,2022,1
+code structure analysis,2023,1
+code understanding,2023,1
+code-mixed language processing,2023,1
+code-mixing,2022,1
+code-mixing,2023,1
+code-switching,2021,1
+code-switching,2022,2
+code-switching,2023,1
+code-switching,2024,3
+cognitive modeling,2021,1
+cognitive modeling,2022,1
+cognitive modeling,2023,3
+cognitive modeling,2024,3
+cognitive neuroscience,2022,1
+coherence evaluation,2022,1
+coherence evaluation,2023,1
+coherence modeling,2021,1
+coherence modeling,2022,2
+coherence modeling,2024,1
+collaborative filtering,2024,1
+collaborative games,2024,1
+collaborative learning,2023,2
+combination models,2023,1
+common ground modeling,2023,1
+common ground modeling,2024,1
+common sense reasoning,2022,1
+commonsense inference,2021,1
+commonsense knowledge integration,2021,1
+commonsense knowledge integration,2022,1
+commonsense reasoning,2021,10
+commonsense reasoning,2022,8
+commonsense reasoning,2023,9
+commonsense reasoning,2024,2
+communication,2024,1
+communication mechanism,2022,1
+communication optimization,2024,1
+community detection,2024,1
+community engagement,2023,1
+community question answering,2022,1
+community-specific modeling,2023,1
+complaint identification,2023,1
+complex audio reasoning,2024,1
+complex instruction following,2024,1
+complex question answering,2021,1
+complex reasoning,2024,2
+complexity measures,2023,1
+compositional generalization,2021,3
+compositional generalization,2022,2
+compositional generalization,2023,3
+compositional learning,2022,1
+compositional learning,2023,1
+compositional models,2022,1
+compositional reasoning,2023,1
+compositionality,2021,3
+compositionality,2022,1
+compositionality,2023,1
+compositionality,2024,2
+compression,2023,1
+computation optimization,2024,1
+computational journalism,2023,1
+computational social science,2022,1
+concept classification,2023,1
+concept embeddings,2023,1
+concept planning,2021,1
+concept relationship recognition,2023,1
+concept-to-text generation,2021,1
+conceptualization augmentation,2023,1
+conclusion deduction,2024,1
+conditional generation,2021,1
+conditional generation,2022,2
+conditional graph generation,2022,1
+conditional random fields,2023,1
+conditional sentence generation,2024,1
+conditional set generation,2022,1
+conditional similarity,2024,1
+confidence calibration,2023,3
+confidence embeddings,2022,1
+confidence estimation,2024,3
+confidence modeling,2023,1
+confidence scoring,2023,1
+confidence weighting,2024,1
+conformal prediction,2022,1
+consistency,2021,1
+consistency in generation,2024,1
+consistency learning,2024,1
+consistency regularization,2023,1
+consistency regularization,2024,1
+consistency training,2022,1
+consistency-guided learning,2024,1
+constrained decoding,2022,1
+constrained decoding,2023,1
+constraint decoding,2022,1
+constraint learning,2021,1
+content planning,2022,2
+content planning,2023,1
+content preservation,2022,1
+content selection,2021,1
+content similarity,2024,1
+context extraction,2022,1
+context generation,2022,1
+context modeling,2022,1
+context-aware modeling,2021,1
+context-aware models,2023,1
+context-aware translation,2024,1
+context-dependent paraphrase,2024,1
+contextual ambiguity,2023,1
+contextual biasing,2024,1
+contextual embeddings,2021,1
+contextual embeddings,2023,1
+contextual modeling,2021,2
+contextual modeling,2023,3
+contextual modeling,2024,1
+contextual prompts,2022,1
+contextual reasoning,2021,1
+contextual representation,2021,2
+contextual representation,2023,1
+contextualization,2021,1
+contextualized embeddings,2024,1
+continual learning,2021,1
+continual learning,2022,4
+continual learning,2023,8
+continual learning,2024,6
+continued pretraining/domain-adapt,2021,91
+continued pretraining/domain-adapt,2022,95
+continued pretraining/domain-adapt,2023,146
+continued pretraining/domain-adapt,2024,169
+continuous learning,2021,1
+continuous representations,2023,1
+contract clause extraction,2022,1
+contract clause retrieval,2022,1
+contrastive decoding,2024,1
+contrastive explanations,2022,2
+contrastive instruction,2023,1
+contrastive learning,2021,19
+contrastive learning,2022,53
+contrastive learning,2023,56
+contrastive learning,2024,28
+contrastive learning/dense,2023,1
+controllable generation,2022,2
+controllable generation,2023,2
+controllable text generation,2021,1
+controlled decoding,2024,1
+controlled generation,2021,2
+conversational QA,2022,1
+conversational engagement,2024,1
+conversational recommender systems,2023,1
+conversational search,2022,1
+conversational semantic role labeling,2021,1
+conversational/task-oriented dialogue,2024,1
+convolutional networks,2021,1
+cooperative interactions,2022,1
+coordination structure,2021,1
+copy mechanism,2021,2
+copyright protection,2024,1
+core NLP Tasks,2021,1
+core NLP Tasks,2022,1
+core NLP Tasks: text classification,2022,1
+core NLP tasks,2023,1
+coreference,2021,33
+coreference,2022,32
+coreference,2023,40
+coreference,2024,25
+corpus construction,2021,1
+corpus creation,2023,3
+corpus creation,2024,1
+corpus-based study,2021,1
+correlation with human judgement,2021,1
+cost optimization,2024,1
+cost reduction,2023,1
+cost-aware learning,2022,1
+cost-efficient IE,2024,1
+counterfactual augmentation,2023,1
+counterfactual data augmentation,2023,1
+counterfactual evaluation,2022,1
+counterfactual explanation,2024,1
+counterfactual fairness,2023,1
+counterfactual learning,2022,1
+counterfactual reasoning,2021,1
+counterfactual reasoning,2022,1
+counterfactual reasoning,2023,1
+counterfactual reasoning,2024,2
+crisis informatics,2021,1
+cross-architecture distillation,2021,1
+cross-attention,2021,2
+cross-attention,2022,1
+cross-attention,2023,2
+cross-attention optimization,2023,1
+cross-benchmark transfer,2022,1
+cross-cultural NLP,2023,1
+cross-cultural NLP,2024,1
+cross-cultural analysis,2023,1
+cross-document analysis,2023,1
+cross-document reasoning,2021,1
+cross-domain adaptation,2021,1
+cross-domain adaptation,2023,2
+cross-domain evaluation,2022,1
+cross-domain evaluation,2023,1
+cross-domain learning,2022,2
+cross-domain learning,2023,1
+cross-domain learning,2024,1
+cross-domain transfer,2021,2
+cross-encoder architecture,2022,1
+cross-encoding,2024,1
+cross-entity comparison,2023,1
+cross-lingual NLP,2022,2
+cross-lingual NLP,2023,1
+cross-lingual NLU,2023,1
+cross-lingual adaptation,2021,2
+cross-lingual alignment,2021,3
+cross-lingual alignment,2022,1
+cross-lingual alignment,2023,4
+cross-lingual alignment,2024,1
+cross-lingual classification,2021,1
+cross-lingual classification,2023,1
+cross-lingual fine-tuning,2022,1
+cross-lingual learning,2021,1
+cross-lingual learning,2022,2
+cross-lingual models,2021,1
+cross-lingual parsing,2024,1
+cross-lingual retrieval,2022,1
+cross-lingual similarity estimation,2021,1
+cross-lingual summarization,2022,1
+cross-lingual transfer,2021,11
+cross-lingual transfer,2022,10
+cross-lingual transfer,2023,8
+cross-lingual transfer,2024,12
+cross-modal alignment,2022,1
+cross-modal alignment,2023,1
+cross-modal alignment,2024,1
+cross-modal fusion,2023,1
+cross-modal learning,2022,1
+cross-modal learning,2023,2
+cross-modal learning,2024,1
+cross-modal modeling,2022,1
+cross-modal retrieval,2024,1
+cross-model generalization,2024,1
+cross-platform analysis,2024,1
+cross-policy generalization,2021,1
+cross-sentence interaction,2021,1
+cross-task generalization,2021,1
+cross-task generalization,2024,1
+cross-task learning,2023,1
+crosslingual alignment,2021,1
+crossmodal learning,2024,1
+crowd annotation,2024,1
+crowdsourcing,2021,1
+crowdsourcing,2024,1
+cultural features,2023,1
+curriculum analysis,2022,1
+curriculum learning,2021,8
+curriculum learning,2022,11
+curriculum learning,2023,9
+curriculum learning,2024,7
+data annotation,2024,2
+data augmentation,2021,11
+data augmentation,2022,16
+data augmentation,2023,9
+data augmentation,2024,11
+data balancing,2024,1
+data collection,2021,1
+data efficiency,2023,2
+data efficiency,2024,1
+data filtering/deduplication,2021,26
+data filtering/deduplication,2022,26
+data filtering/deduplication,2023,46
+data filtering/deduplication,2024,29
+data leakage,2021,1
+data poisoning,2023,1
+data poisoning,2024,1
+data privacy,2024,1
+data quality,2022,1
+data quality,2023,1
+data replay,2023,1
+data replay,2024,1
+data selection,2021,1
+data selection strategies,2023,1
+data transformation,2024,1
+data triage,2024,1
+data-based cross-lingual transfer,2022,1
+data-centric analysis,2022,1
+data-efficient learning,2021,1
+data-to-text generation,2021,2
+data-to-text generation,2022,4
+data-to-text generation,2023,1
+data-to-text generation,2024,1
+database querying,2021,1
+dataset analysis,2022,1
+dataset analysis,2023,1
+dataset analysis,2024,1
+dataset balancing,2022,1
+dataset characterization,2024,1
+dataset cleansing,2024,1
+dataset composition,2024,1
+dataset construction,2023,3
+dataset creation,2021,7
+dataset creation,2022,5
+dataset creation,2023,8
+dataset creation,2024,7
+dataset creation/annotation,2022,1
+dataset creation/annotation,2023,1
+dataset curation,2023,1
+dataset curation,2024,2
+dataset documentation,2021,1
+dataset inference,2022,1
+dataset release,2022,2
+dataset release,2023,1
+dataset release,2024,1
+dataset synthesis/augmentation,2021,108
+dataset synthesis/augmentation,2022,121
+dataset synthesis/augmentation,2023,198
+dataset synthesis/augmentation,2024,203
+datasets,2021,1
+datasets,2024,2
+datasets/benchmarks,2024,1
+debiasing,2022,1
+debiasing,2023,1
+debiasing,2024,1
+decoding algorithms,2023,2
+decoding control,2023,1
+decoding methods,2021,1
+decoding methods,2023,1
+decoding/ sampling control,2023,1
+decoding/decoding algorithms,2022,1
+decomposition,2021,1
+deductive methods,2023,1
+deductive reasoning,2022,2
+deduplication,2024,1
+deep learning,2021,6
+deep learning,2022,2
+deep learning,2023,1
+deep learning,2024,3
+deep learning methods,2021,1
+deep metric learning,2022,1
+defense mechanisms,2022,1
+defense methods,2023,1
+defense methods,2024,1
+defense strategies,2023,1
+definition bias,2024,1
+definition generation,2021,1
+definition generation,2024,1
+definition modeling,2023,1
+demographic analysis,2022,1
+demographic bias mitigation,2022,1
+demographic feature use,2024,1
+demonstration selection,2024,2
+demonstration-based learning,2022,1
+denoising,2023,1
+denoising methods,2024,1
+denoising rationalization,2024,1
+denoising training,2024,1
+dense retrieval,2023,1
+dependency length,2022,1
+dependency modeling,2024,1
+dependency parsing,2021,2
+dependency parsing,2023,2
+depression detection,2023,1
+depression detection,2024,1
+depression diagnosis,2022,1
+detect-correct framework,2021,1
+deterministic methods,2021,1
+diagnosis bias metric,2024,1
+diagnostic dataset,2021,1
+dialect identification,2023,1
+dialect identification,2024,1
+dialect transfer,2023,1
+dialog act prediction,2021,1
+dialog state tracking,2021,1
+dialog summary,2022,1
+dialog/open-domain,2023,1
+dialog/task-oriented,2021,4
+dialog/task-oriented,2022,1
+dialog/task-oriented,2023,1
+dialogue analysis,2023,1
+dialogue evaluation,2022,1
+dialogue segmentation,2023,1
+dialogue/open-domain,2021,41
+dialogue/open-domain,2022,27
+dialogue/open-domain,2023,77
+dialogue/open-domain,2024,59
+dialogue/policy learning,2022,1
+dialogue/response generation,2022,1
+dialogue/state tracking,2022,1
+dialogue/task-oriented,2021,102
+dialogue/task-oriented,2022,102
+dialogue/task-oriented,2023,147
+dialogue/task-oriented,2024,99
+dictionary learning,2024,1
+dictionary-based methods,2023,2
+differentiable relaxation,2021,1
+differential privacy,2022,1
+diffusion models,2023,2
+dimension reduction,2022,1
+dimensionality reduction,2022,1
+dimensionality reduction,2024,1
+direct speech translation,2024,1
+disambiguation,2023,1
+discourse,2022,1
+discourse,2023,1
+discourse analysis,2021,6
+discourse analysis,2022,2
+discourse analysis,2023,3
+discourse analysis,2024,1
+discourse coherence,2021,1
+discourse comprehension,2022,1
+discourse marker detection,2024,1
+discourse modeling,2021,1
+discourse parsing,2023,2
+discourse parsing,2024,1
+discourse representation,2021,1
+discourse segmentation,2021,1
+discourse structure,2023,2
+discrete representations,2022,1
+discrete representations,2023,1
+discrimination/filtering,2022,1
+discriminative methods,2021,1
+discriminative training,2022,1
+discriminator,2021,1
+discriminator guidance,2022,1
+disease progression prediction,2024,1
+disfluency correction,2023,1
+disfluency detection,2023,1
+disinformation detection,2022,1
+disinformation detection,2024,1
+distance-based methods,2023,1
+distant supervision,2021,7
+distant supervision,2022,1
+distant supervision,2023,5
+distillation,2021,22
+distillation,2022,19
+distillation,2023,34
+distillation,2024,26
+distillation/knowledge transfer,2022,1
+distress detection,2023,1
+distributed learning,2024,1
+distributed training,2023,1
+distributed training,2024,1
+distribution alignment,2022,1
+distribution balancing,2021,1
+distribution bias,2023,1
+distribution shift,2023,1
+distributional inference,2023,1
+diversity sampling,2021,1
+diversity sampling,2023,1
+document classification,2021,1
+document classification,2023,2
+document clustering,2024,1
+document encoding,2021,1
+document intelligence,2023,1
+document layout analysis,2023,1
+document processing,2024,1
+document representation,2023,1
+document structure,2022,1
+document understanding,2023,1
+document understanding,2024,1
+document-level IE,2023,1
+document-level NER,2023,1
+document-level NLI,2021,1
+document-level NLP,2022,2
+document-level NLP,2023,1
+document-level context modeling,2021,2
+document-level extraction,2021,1
+document-level modeling,2022,1
+document-level modeling,2023,1
+document-level modeling,2024,1
+document-level relation extraction,2021,1
+document-level relation extraction,2024,1
+document-level translation,2023,2
+documentation generation,2021,1
+domain adaptation,2021,9
+domain adaptation,2022,10
+domain adaptation,2023,13
+domain adaptation,2024,3
+domain adaptation/financial reports,2023,1
+domain generalization in QA,2022,1
+domain knowledge integration,2021,1
+domain transfer,2021,1
+domain-adversarial learning,2022,1
+domain-adversarial training,2021,1
+domain-specific NER,2021,1
+domain-specific dataset,2024,1
+domain-specific pretraining,2024,1
+downstream tasks,2024,1
+drug-drug interaction prediction,2023,1
+dual decoders,2022,1
+dual-encoder architecture,2022,1
+dual-encoder architectures,2023,1
+dynamic architectures,2023,1
+dynamic data selection,2022,1
+dynamic epistemic logic,2023,1
+dynamic graph neural networks,2023,1
+dynamic inference,2024,1
+dynamic module composition,2024,1
+dynamic routing,2024,1
+dynamic token pruning,2023,1
+dynamic topic modeling,2022,1
+e-commerce dialogue,2023,1
+early exit,2022,1
+early exit,2024,1
+early exit strategies,2024,1
+early stopping,2023,1
+early stopping,2024,1
+early-exit techniques,2024,1
+economic modeling,2024,1
+edge computing,2024,1
+edge label encoding,2021,1
+edit distance robustness,2024,1
+edit-distance-based labeling,2021,1
+editing-based MT,2022,1
+education,2021,1
+education,2023,4
+education,2024,4
+education/student simulation,2024,1
+efficiency,2021,4
+efficiency,2022,6
+efficiency,2023,3
+efficiency,2024,8
+efficiency & systems,2021,16
+efficiency & systems,2022,24
+efficiency & systems,2023,38
+efficiency & systems,2024,23
+efficiency & systems/dataset synthesis/augmentation,2022,1
+efficiency & systems/throughput/latency/inference serving,2021,1
+efficiency & systems/throughput/latency/inference serving,2024,1
+efficiency & systems: dataset synthesis/augmentation,2023,1
+efficiency algorithm,2024,1
+efficiency improvement,2023,1
+efficiency in communication,2021,1
+efficiency optimization,2021,3
+efficiency optimization,2022,1
+efficiency optimization,2023,2
+efficiency optimization,2024,1
+efficiency/encoding,2024,1
+efficiency/graph methods,2023,1
+efficiency/latency,2023,1
+efficiency/latency/inference serving,2021,1
+efficiency/latency/inference serving,2022,1
+efficiency/optimization,2021,1
+efficiency/scalability,2024,1
+efficiency/speed,2021,1
+efficiency/speed,2022,1
+efficiency/speed,2023,1
+efficiency/speed,2024,1
+efficiency/speedup,2024,1
+efficiency/systems,2021,1
+efficiency/systems,2022,1
+efficiency/systems,2023,2
+efficiency/systems,2024,6
+efficiency/throughput/inference serving,2023,1
+efficiency/throughput/latency/inference serving,2023,3
+efficiency/throughput/latency/inference serving,2024,2
+efficient fine-tuning,2023,1
+efficient inference,2024,1
+efficient training,2023,1
+egocentric video understanding,2024,1
+embedding,2024,1
+embedding adaptation,2021,1
+embedding alignment,2021,1
+embedding alignment,2022,1
+embedding analysis,2022,2
+embedding analysis,2023,2
+embedding analysis,2024,1
+embedding compression,2022,1
+embedding constraints,2023,1
+embedding geometry analysis,2021,1
+embedding initialization,2023,1
+embedding inversion,2022,1
+embedding learning,2021,3
+embedding learning,2022,4
+embedding learning,2024,1
+embedding manipulation,2021,1
+embedding manipulation,2022,1
+embedding mapping,2024,1
+embedding methods,2021,7
+embedding methods,2022,4
+embedding methods,2023,6
+embedding methods,2024,5
+embedding models,2021,1
+embedding models,2023,2
+embedding models,2024,1
+embedding privacy,2022,1
+embedding probing,2023,1
+embedding quality,2023,1
+embedding selection,2023,1
+embedding space,2023,1
+embedding space analysis,2021,1
+embedding space analysis,2023,1
+embedding strategies,2022,1
+embedding synthesis,2024,1
+embedding-based architectures,2024,1
+embodied AI,2023,1
+embodied AI,2024,1
+embodied agents,2024,1
+emergent behavior,2021,1
+emotion analysis,2021,2
+emotion analysis,2022,1
+emotion analysis,2023,6
+emotion analysis,2024,3
+emotion cause detection,2021,1
+emotion cause extraction,2021,1
+emotion cause extraction,2022,1
+emotion cause extraction,2023,1
+emotion cause extraction,2024,1
+emotion classification,2021,1
+emotion classification,2022,1
+emotion classification,2024,1
+emotion control,2024,1
+emotion correlation,2023,1
+emotion detection,2022,2
+emotion detection/categorical,2021,1
+emotion detection/dimensional,2021,1
+emotion dynamics,2023,1
+emotion flow modeling,2022,1
+emotion inference,2021,1
+emotion modeling,2023,1
+emotion recognition,2021,9
+emotion recognition,2022,5
+emotion recognition,2023,11
+emotion recognition,2024,8
+emotion recognition in conversation,2023,1
+emotion/sentiment analysis,2023,1
+emotional support,2022,1
+empathetic feedback,2024,1
+empathetic response generation,2022,1
+empathetic response generation,2023,1
+empathy detection,2022,1
+empathy detection,2024,1
+encoder-decoder ASR,2023,1
+encoder-decoder architectures,2022,1
+encoder-decoder models,2021,2
+encoder-decoder models,2022,1
+encoder-decoder models,2023,1
+encoder-decoder models,2024,1
+encoding methods,2023,1
+encryption,2023,1
+end-to-end QA,2024,1
+end-to-end learning,2023,1
+end-to-end modeling,2021,4
+end-to-end models,2022,2
+end-to-end models,2023,1
+end-to-end training,2022,1
+endpointing,2024,1
+energy efficiency,2023,1
+energy-based learning,2022,1
+energy-based modeling,2023,1
+energy-based models,2023,2
+engagement analysis,2023,1
+ensemble learning,2022,1
+ensemble methods,2021,4
+ensemble methods,2022,2
+ensemble methods,2023,6
+ensemble methods,2024,6
+ensembling,2024,1
+entailment trees,2022,1
+entities,2024,1
+entity alignment,2021,1
+entity alignment,2022,1
+entity alignment,2023,1
+entity canonicalization,2021,1
+entity correlation modeling,2024,1
+entity disambiguation,2024,1
+entity extraction,2023,1
+entity extraction,2024,1
+entity linking,2021,5
+entity linking,2022,3
+entity linking,2023,5
+entity linking,2024,3
+entity matching,2022,1
+entity matching,2024,1
+entity profiling,2023,1
+entity representation,2021,1
+entity resolution,2021,1
+entity retrieval,2021,1
+entity retrieval,2022,1
+entity set expansion,2021,1
+entity state tracking,2022,1
+entity typing,2021,2
+entity typing,2023,1
+entity typing,2024,1
+entity-agnostic representation,2021,1
+entity-based evaluation,2021,1
+entity-centric NLP,2023,1
+entity-centric analysis,2021,1
+entity-centric code-switching,2022,1
+entity-centric question generation,2024,1
+entity-guided generation,2021,1
+entity-level modeling,2022,1
+entity-level sentiment classification,2023,1
+entity-number relationship,2021,1
+entropy constraints,2024,1
+environment alignment,2024,1
+error analysis,2022,2
+error analysis,2023,3
+error correction,2021,1
+error correction,2022,1
+error correction,2023,1
+error correction,2024,2
+error detection,2022,2
+error detection,2023,1
+error extrapolation,2023,1
+error mitigation,2022,1
+error propagation,2022,1
+error type annotation,2024,1
+error-guided instruction,2023,1
+ethical NLP,2022,1
+ethics,2022,1
+ethics in AI,2024,1
+ethics sheet,2023,1
+ethics/societal impact,2024,1
+evaluation methodology,2021,262
+evaluation methodology,2022,308
+evaluation methodology,2023,623
+evaluation methodology,2024,792
+evaluation metrics,2023,1
+evaluation/benchmarking,2024,1
+evaluation/benchmarks,2021,5
+evaluation/benchmarks,2022,7
+evaluation/benchmarks,2023,13
+evaluation/benchmarks,2024,23
+event detection,2021,1
+event extraction,2021,33
+event extraction,2022,25
+event extraction,2023,36
+event extraction,2024,30
+event modeling,2022,1
+event representation,2021,1
+evidence identification,2021,1
+evidence selection,2022,2
+execution feedback,2023,1
+execution-based filtering,2023,1
+expectation-maximization,2022,1
+expectation-maximization,2023,1
+expectation-maximization,2024,1
+experience replay,2021,1
+expert finding,2022,1
+explainability,2021,2
+explainability,2022,4
+explainability,2023,7
+explainability,2024,7
+explainability/SAE/features,2022,1
+explainability/faithfulness,2024,1
+explainability/interpretability,2021,1
+explainability/self-consistency,2023,2
+explainability/self-consistency,2024,2
+explainable recommendation,2023,1
+explanation,2024,1
+explanation faithfulness,2024,1
+explanation generation,2023,2
+explanation generation/self-explanations,2022,1
+explanation learning,2024,1
+explanations/self-consistency,2021,13
+explanations/self-consistency,2022,17
+explanations/self-consistency,2023,35
+explanations/self-consistency,2024,33
+exploration strategies,2024,1
+exploratory search,2024,1
+exposure bias,2021,1
+exposure bias,2023,1
+expression representation,2023,1
+external knowledge integration,2024,1
+extraction,2022,1
+extractive methods,2024,1
+extractive summarization,2023,1
+facial expression analysis,2024,1
+fact decomposition,2024,1
+fact linking,2023,1
+fact verification,2021,19
+fact verification,2022,36
+fact verification,2023,40
+fact verification,2024,40
+factuality/knowledge editing,2021,21
+factuality/knowledge editing,2022,36
+factuality/knowledge editing,2023,77
+factuality/knowledge editing,2024,105
+fairness,2023,1
+fairness,2024,2
+fairness/bias mitigation,2024,1
+faithfulness,2021,1
+faithfulness evaluation,2023,1
+faithfulness/consistency,2023,1
+faithfulness/grounding,2024,1
+faithfulness/knowledge,2023,1
+fake news detection,2023,1
+fallacy detection,2023,1
+false negatives,2021,1
+feature aggregation,2023,1
+feature alignment,2023,1
+feature distribution estimation,2024,1
+feature encoding,2023,1
+feature engineering,2021,3
+feature engineering,2022,2
+feature extraction,2021,1
+feature extraction,2022,1
+feature extraction,2023,1
+feature fusion,2022,1
+feature interaction modeling,2021,1
+feature interaction modeling,2024,1
+feature representation,2023,2
+feature selection,2024,1
+feature-based models,2023,1
+federated learning,2021,4
+federated learning,2022,5
+federated learning,2023,3
+federated learning,2024,5
+feed-forward network optimization,2021,1
+few-shot classification,2023,1
+few-shot learning,2021,31
+few-shot learning,2022,52
+few-shot learning,2023,56
+few-shot learning,2024,24
+few-shot prompting,2024,1
+figurative language understanding,2023,1
+filtering methods,2024,1
+finance,2021,1
+finance,2022,4
+finance,2023,3
+finance,2024,4
+finance forecasting,2024,1
+financial NLP,2024,1
+financial prediction,2022,1
+financial risk prediction,2022,1
+financial sentiment analysis,2023,1
+fine-grained classification,2023,1
+fine-grained classification,2024,1
+fine-grained entity recognition,2024,1
+fine-grained recognition,2023,1
+fine-grained recognition,2024,1
+fine-tuning,2021,3
+fine-tuning,2022,7
+fine-tuning,2023,5
+fine-tuning,2024,6
+fine-tuning effects,2022,1
+fine-tuning memory optimization,2024,1
+fine-tuning methods,2021,1
+fine-tuning methods,2022,1
+fine-tuning methods,2023,1
+fine-tuning methods,2024,2
+fine-tuning/SFT,2022,1
+finetuning/domain-adapt,2023,1
+floating-point quantization,2023,1
+fluency assessment,2021,1
+fluency assessment,2024,1
+fluency constraints,2023,1
+fluency evaluation,2023,1
+forecasting,2023,1
+foreground-background classification,2021,1
+formality in language,2023,1
+foundation models,2024,1
+frame semantic parsing,2021,1
+functional specialization,2023,1
+fusion methods,2021,1
+future prediction,2022,1
+game theory,2024,1
+gender bias,2023,1
+gender representation,2023,1
+generalization,2021,5
+generalization,2022,3
+generalization,2023,2
+generalization,2024,2
+generalization to long tail concepts,2022,1
+generalization trade-off,2024,1
+generation,2021,8
+generation,2022,10
+generation,2023,6
+generation,2024,1
+generation control,2021,1
+generation diversity,2024,1
+generation methods,2022,1
+generation methods,2023,2
+generation methods,2024,1
+generation quality evaluation,2023,1
+generation/creativity,2024,1
+generation/editing pipeline,2022,1
+generative adversarial networks,2021,1
+generative adversarial networks,2022,1
+generative adversarial networks,2023,1
+generative commonsense reasoning,2022,1
+generative commonsense reasoning,2023,1
+generative commonsense reasoning,2024,1
+generative data augmentation,2022,2
+generative error correction,2023,1
+generative language models,2022,1
+generative models,2021,2
+generative models,2022,4
+generative models,2023,6
+generative models,2024,1
+generative replay,2022,1
+genetic programming,2024,1
+genre classification,2023,1
+geometric methods,2022,1
+gesture analysis,2023,1
+global feature fusion,2023,1
+global feature modeling,2021,1
+global interpretability,2021,1
+global-level aggregating,2024,1
+gloss alignment,2021,1
+goal shaping,2024,1
+goal-conditioned RL,2021,1
+gradient approximation,2024,1
+gradient attacks,2021,1
+gradient ensembling,2022,1
+gradient regularization,2023,1
+gradient scaling,2023,1
+gradient-based optimization,2024,1
+grammar correction,2021,1
+grammar correction,2022,1
+grammar correction,2024,2
+grammar correction/unsupervised,2021,1
+grammar error correction,2022,1
+grammar error correction,2023,2
+grammar induction,2023,1
+grammar induction,2024,1
+grammar rules,2021,1
+grammar-based augmentation,2023,1
+grammatical error correction,2021,3
+grammatical error correction,2022,2
+grammatical error correction,2023,4
+grammatical error correction,2024,4
+grammatical error detection,2021,1
+grammatical error detection,2023,1
+grammatical error detection,2024,1
+graph algorithms,2021,2
+graph algorithms,2023,1
+graph attention,2021,1
+graph attention networks,2021,1
+graph construction,2021,1
+graph contrastive learning,2023,1
+graph convolution network,2022,1
+graph convolutional networks,2021,2
+graph embeddings,2021,1
+graph embeddings,2022,1
+graph generation,2024,1
+graph linearization,2023,1
+graph matching optimization,2021,1
+graph neural networks,2021,31
+graph neural networks,2022,27
+graph neural networks,2023,29
+graph neural networks,2024,11
+graph pooling,2022,1
+graph prompting,2024,1
+graph reasoning,2023,1
+graph refinement,2021,1
+graph representation,2021,1
+graph representation,2023,1
+graph representation,2024,1
+graph representations,2023,1
+graph representations,2024,1
+graph unpooling,2022,1
+graph-based embeddings,2023,1
+graph-based learning,2022,1
+graph-based learning,2023,2
+graph-based methods,2021,2
+graph-based methods,2023,2
+graph-based modeling,2022,1
+graph-based models,2023,1
+graph-based representation,2023,1
+graph-to-text generation,2022,1
+graph-to-text generation,2023,1
+grounded language learning,2024,1
+grounded language understanding,2021,1
+guideline learning,2023,1
+hallucination,2023,2
+hallucination detection,2024,3
+hallucination mitigation,2023,1
+hallucination mitigation,2024,1
+hallucination reduction,2022,1
+hallucination reduction,2024,2
+handoff prediction,2021,1
+hard sample detection,2024,1
+hardness metric,2023,1
+hardware efficiency,2023,1
+hardware-aware optimization,2023,1
+hate/abuse detection,2021,6
+hate/abuse detection,2022,12
+hate/abuse detection,2023,19
+hate/abuse detection,2024,13
+health misinformation,2023,1
+healthcare NLP,2023,1
+healthcare NLP,2024,1
+healthcare applications,2023,1
+healthcare applications,2024,2
+healthcare prediction,2024,1
+help-seeking detection,2024,1
+heterogeneous graphs,2022,1
+heuristic negative mining,2022,1
+heuristic pruning,2022,1
+hierarchical RNN,2021,1
+hierarchical attention,2021,1
+hierarchical attention networks,2021,1
+hierarchical attribution,2024,1
+hierarchical classification,2021,1
+hierarchical classification,2022,2
+hierarchical classification,2023,2
+hierarchical encoding,2021,1
+hierarchical encoding,2022,1
+hierarchical generalization,2024,1
+hierarchical generation,2023,1
+hierarchical generative models,2022,1
+hierarchical learning,2021,1
+hierarchical learning,2023,1
+hierarchical learning,2024,1
+hierarchical modeling,2021,3
+hierarchical modeling,2022,2
+hierarchical modeling,2023,6
+hierarchical modeling,2024,2
+hierarchical models,2021,2
+hierarchical models,2023,1
+hierarchical multi-label classification,2023,1
+hierarchical ontology utilization,2022,1
+hierarchical reasoning,2021,1
+hierarchical reasoning,2023,1
+hierarchical representation,2021,1
+hierarchical representation,2024,1
+hierarchical structure modeling,2023,1
+hierarchical text representation,2021,1
+higher-order inference,2021,1
+higher-order modeling,2023,1
+historical linguistics,2022,2
+historical text analysis,2024,1
+homophone disambiguation,2023,1
+human annotation,2023,1
+human demonstration,2021,1
+human evaluation,2021,2
+human evaluation,2022,5
+human evaluation,2023,6
+human evaluation,2024,2
+human feedback alignment,2024,1
+human feedback integration,2024,1
+human label variation,2022,1
+human preference alignment,2024,1
+human rationales,2021,1
+human-AI alignment,2024,1
+human-AI collaboration,2022,1
+human-AI collaboration,2024,2
+human-AI comparison,2023,1
+human-AI decision making,2024,1
+human-AI interaction,2022,1
+human-AI interaction,2023,1
+human-AI interaction,2024,2
+human-agent collaboration,2024,1
+human-agent interaction,2023,1
+human-centered evaluation,2024,1
+human-computer interaction,2021,1
+human-computer interaction,2024,2
+human-in-the-loop,2021,1
+human-in-the-loop,2022,1
+human-in-the-loop,2023,2
+human-in-the-loop,2024,2
+human-in-the-loop methods,2022,1
+human-machine collaboration,2023,1
+human-robot interaction,2024,1
+human-value alignment,2023,1
+humor classification,2022,1
+humor detection,2024,1
+humor recognition,2022,1
+humour generation,2023,1
+hybrid compositional learning,2022,1
+hybrid quantum-classical computation,2024,1
+hyperbolic embeddings,2024,1
+hypergraph neural networks,2023,1
+hypernetworks,2022,1
+hypernetworks,2023,2
+hyperparameter tuning,2023,1
+ideology detection,2023,1
+ideology modeling,2022,1
+image captioning,2021,8
+image captioning,2022,9
+image captioning,2023,10
+image captioning,2024,10
+image classification,2021,1
+image classification,2022,1
+image classification,2024,2
+image generation,2022,1
+image manipulation,2023,1
+image retrieval,2024,1
+image segmentation,2023,1
+image-text relation classification,2022,1
+image-text retrieval,2022,2
+imbalance handling,2023,2
+imbalance learning,2023,1
+imbalanced classification,2022,1
+imbalanced learning,2023,1
+imitation learning,2021,1
+imitation learning,2022,2
+imitation learning,2023,1
+implicit opinion extraction,2024,1
+implicit reasoning,2024,1
+implicit sentiment analysis,2021,1
+importance sampling,2023,1
+in-context learning,2022,4
+in-context learning,2023,24
+in-context learning,2024,18
+incremental learning,2022,1
+incremental learning,2023,1
+incremental parsing,2022,1
+incremental parsing,2024,1
+incremental processing,2022,1
+indexing,2022,1
+indicator tasks,2023,1
+indirect supervision,2022,1
+inductive inference,2021,1
+inductive learning,2022,2
+inductive reasoning,2023,1
+inference,2023,1
+inference optimization,2024,1
+inference serving,2022,1
+inference speed optimization,2023,1
+inference with contrastive learning,2023,1
+influence functions,2024,1
+information extraction,2021,4
+information extraction,2022,2
+information extraction,2023,5
+information extraction,2024,2
+information retrieval,2021,1
+information retrieval,2022,1
+information retrieval,2023,2
+information retrieval,2024,2
+information selection,2023,1
+information status,2022,1
+information theory,2021,2
+information theory,2022,1
+information theory,2023,2
+information theory,2024,1
+information-seeking dialogue,2022,1
+information-theoretic measure,2021,1
+ingredient substitution,2022,1
+initialization methods,2024,1
+input representation,2021,1
+insertion transformer,2021,1
+instance re-weighting,2023,1
+instance weighting,2023,1
+instance-guided learning,2022,1
+instance-specific adaptation,2022,1
+instruction following,2023,1
+instruction following,2024,1
+instruction tuning/SFT,2021,13
+instruction tuning/SFT,2022,38
+instruction tuning/SFT,2023,165
+instruction tuning/SFT,2024,302
+integer-only quantization,2024,1
+intent classification,2021,2
+intent detection,2022,1
+intent detection,2023,2
+intent discovery,2024,1
+intent recognition,2022,1
+intent recognition,2023,1
+interaction modeling,2022,1
+interactive NLP,2023,1
+interactive evaluation,2022,1
+interactive learning,2021,1
+interactive learning,2022,4
+interactive learning,2023,2
+interactive methods,2023,1
+interactive prompting,2023,1
+interactive training,2024,1
+interactive transcription,2021,1
+interestingness evaluation,2023,1
+interference effects,2023,1
+intermediate representations,2021,1
+intermediate-task transfer,2022,1
+internal states analysis,2024,1
+interpretability,2022,1
+interpretability/SAE/features,2021,73
+interpretability/SAE/features,2022,111
+interpretability/SAE/features,2023,132
+interpretability/SAE/features,2024,194
+interpretability/explanations/self-consistency,2024,1
+interpretation,2024,1
+invariance learning,2023,1
+inverse reinforcement learning,2021,1
+iterative alignment,2021,1
+iterative decoding,2021,1
+iterative decoding,2024,1
+iterative hierarchical inference,2022,1
+iterative inference,2022,1
+iterative refinement,2021,1
+iterative training,2023,1
+joint encoding,2022,1
+joint entity and relation extraction,2021,1
+joint entity-relation extraction,2023,1
+joint extraction,2021,1
+joint extraction,2022,1
+joint information extraction,2022,1
+joint modeling,2021,6
+joint modeling,2022,1
+joint modeling,2023,2
+joint training,2023,1
+joint training/objectives,2022,1
+kernel regression,2024,1
+key-utterance prediction,2021,1
+keyphrase extraction,2021,1
+keyphrase extraction,2023,2
+keyphrase generation,2021,2
+keyphrase generation,2022,1
+keyphrase generation,2023,1
+keyword extraction,2021,1
+keyword-based methods,2021,1
+keyword-conditioned generation,2022,1
+knowledge acquisition,2021,1
+knowledge aggregation,2024,1
+knowledge augmentation,2023,1
+knowledge base,2024,1
+knowledge base population,2021,1
+knowledge base question answering,2021,2
+knowledge base question generation,2023,1
+knowledge clarity,2024,1
+knowledge construction,2024,1
+knowledge distillation,2021,11
+knowledge distillation,2022,15
+knowledge distillation,2023,15
+knowledge distillation,2024,14
+knowledge editing,2023,1
+knowledge editing,2024,4
+knowledge editing/factuality,2024,1
+knowledge extraction,2024,1
+knowledge graphs,2021,1
+knowledge graphs/ontologies,2021,145
+knowledge graphs/ontologies,2022,143
+knowledge graphs/ontologies,2023,162
+knowledge graphs/ontologies,2024,156
+knowledge grounding,2021,1
+knowledge grounding,2023,1
+knowledge infusion,2022,1
+knowledge injection,2024,1
+knowledge integration,2021,2
+knowledge integration,2022,1
+knowledge preservation,2021,1
+knowledge retention,2024,1
+knowledge selection/pre-generation,2023,1
+knowledge tracing,2022,1
+knowledge transfer,2021,4
+knowledge transfer,2022,3
+knowledge transfer,2023,4
+knowledge transfer,2024,3
+knowledge transfer/dense,2023,1
+knowledge-enhanced dialog,2021,1
+knowledge-grounded generation,2021,1
+knowledge-grounded generation,2023,1
+knowledge/factuality,2023,1
+knowledge/factuality,2024,1
+knowledge/factuality/knowledge editing,2024,1
+label aggregation,2023,1
+label dependency modeling,2021,1
+label diffusion,2023,1
+label embeddings,2021,1
+label smoothing,2023,1
+language acquisition,2022,1
+language acquisition,2024,1
+language documentation,2024,1
+language evolution,2021,1
+language evolution,2023,1
+language evolution,2024,1
+language generation,2021,1
+language generation,2023,3
+language generation,2024,3
+language grounding,2023,1
+language identification,2023,1
+language learning,2021,1
+language learning,2024,2
+language learning inductive biases,2023,1
+language model evaluation,2024,1
+language model guidance,2023,1
+language model post-training,2022,1
+language model regularization,2022,1
+language modeling,2021,8
+language modeling,2022,10
+language modeling,2023,12
+language modeling,2024,7
+language models,2022,5
+language models,2023,7
+language models,2024,5
+language proficiency assessment,2023,1
+language representation,2023,1
+language representation,2024,1
+language typology,2024,1
+language understanding,2023,1
+language understanding,2024,1
+language use,2024,1
+language variation,2021,1
+language variation,2022,1
+language variation,2024,1
+language-agnostic methods,2023,1
+language-guided learning,2021,1
+language-image understanding,2023,1
+language-specific NLP,2023,1
+large label space learning,2023,1
+large language models,2022,1
+large language models,2023,12
+large language models,2024,13
+latency optimization,2021,1
+latency optimization,2023,1
+latency reduction,2024,1
+latency-quality tradeoff,2023,1
+latent representation learning,2023,1
+latent space analysis,2022,1
+latent space modeling,2021,1
+latent space modeling,2024,1
+latent variable modeling,2021,1
+latent variable modeling,2022,1
+latent variable modeling,2023,1
+latent variable modeling,2024,1
+latent variable models,2021,3
+latent variable models,2022,4
+latent variable models,2023,5
+latent-space modeling,2024,1
+layer-wise analysis,2024,1
+layer-wise compression,2024,1
+layer-wise importance,2024,1
+layout analysis,2024,1
+leaderboard generation,2024,1
+learning dynamics,2022,1
+learning dynamics,2023,1
+learning from errors,2024,1
+learning from mistakes,2021,1
+learning methods,2022,1
+learning objectives,2024,1
+learning through communication,2022,1
+learning to rank,2023,1
+learning to rank,2024,1
+learning-to-rank,2024,2
+learning-to-retrieve,2024,1
+legal,2021,1
+legal,2022,1
+legal,2023,2
+legal,2024,3
+legal NLP,2021,1
+legal NLP,2022,7
+legal NLP,2023,3
+legal NLP,2024,3
+legal document similarity classification,2021,1
+legal domain adaptation,2024,1
+legal judgment analysis,2023,1
+legal judgment prediction,2022,1
+legal judgment prediction,2023,3
+length extrapolation,2023,1
+length prediction,2021,1
+lexical disambiguation,2024,1
+lexical diversity,2021,1
+lexical overlap,2021,1
+lexical semantics,2022,1
+lexical semantics,2023,3
+lexical semantics,2024,1
+lexicon building,2021,1
+lexicon-based methods,2023,1
+lifelong learning,2021,2
+lifelong learning,2022,1
+lightweight models,2023,1
+likelihood ratio hypothesis testing,2022,1
+linear RNN,2024,1
+linear attention,2024,1
+linear complexity models,2024,1
+linear models,2023,1
+linear transformation mapping,2021,1
+linguistic acceptability,2022,1
+linguistic analysis,2021,2
+linguistic analysis,2023,5
+linguistic analysis,2024,3
+linguistic biomarkers,2023,1
+linguistic feature analysis,2024,1
+linguistic theory,2021,1
+linguistic theory,2023,2
+linguistic typology,2021,2
+linguistic typology,2023,1
+link prediction,2021,2
+link prediction,2023,1
+literary text processing,2023,1
+local attention,2023,1
+local explanations,2022,1
+local interpretability,2021,1
+local model training,2023,1
+local-level encoding,2024,1
+locality sensitive hashing,2021,1
+location-aware generation,2023,1
+logic reasoning,2024,1
+logic rules,2021,1
+logic-based models,2022,1
+logical consistency,2023,1
+logical inference,2022,1
+logical reasoning,2022,4
+long dependency modeling,2023,1
+long document classification,2022,1
+long document classification,2024,1
+long document processing,2021,1
+long-context/memory,2021,27
+long-context/memory,2022,25
+long-context/memory,2023,56
+long-context/memory,2024,86
+long-form generation,2024,1
+long-form text generation,2024,1
+long-range context modeling,2022,1
+long-range context understanding,2023,1
+long-tail distribution,2023,1
+long-tail learning,2022,1
+long-tail learning,2023,1
+long-tail learning,2024,1
+long-tailed classification,2022,1
+long-tailed distribution handling,2021,1
+long-term interaction,2024,1
+longitudinal language change,2021,1
+loss functions,2021,4
+loss functions,2022,1
+loss functions,2023,4
+loss functions,2024,1
+loss landscape analysis,2023,1
+lottery tickets hypothesis,2022,1
+low rank adaptation,2024,1
+low rank correction,2023,1
+low-bit quantization,2024,1
+low-latency inference,2024,1
+low-rank compression,2024,1
+low-rank decomposition,2024,1
+low-resource,2021,13
+low-resource,2022,16
+low-resource,2023,23
+low-resource,2024,30
+low-resource NLP,2022,1
+low-resource NLP,2023,3
+low-resource NLP,2024,2
+low-resource language processing,2021,1
+low-resource languages,2021,1
+low-resource languages,2022,1
+low-resource languages,2023,3
+low-resource learning,2021,6
+low-resource learning,2022,3
+low-resource learning,2023,3
+low-resource learning,2024,1
+machine learning,2021,2
+machine learning,2022,2
+machine learning,2024,2
+machine learning algorithms,2021,1
+machine learning datasets,2023,1
+machine learning for chemistry,2023,1
+machine learning for chemistry,2024,1
+machine learning for code,2021,1
+machine learning methods,2021,2
+machine learning methods,2022,4
+machine reading,2023,1
+machine reading comprehension,2021,4
+machine reading comprehension,2022,2
+machine translation,2021,111
+machine translation,2022,107
+machine translation,2023,132
+machine translation,2024,86
+machine-human collaboration,2021,1
+machine-paraphrase plagiarism,2022,1
+majority voting,2024,1
+mask proposal networks,2023,1
+masked embedding,2023,1
+masked language modeling,2021,1
+masked language modeling,2022,3
+masked language models,2021,1
+masked language models,2022,2
+masked language models,2023,1
+masked word prediction,2021,1
+masking and infilling,2024,1
+masking policies,2021,1
+math word problem solving,2021,1
+matrix factorization,2022,1
+matrix factorization,2023,1
+matrix multiplication optimization,2024,1
+matrix optimization,2023,1
+meaning interpretation,2023,1
+mechanistic interpretability,2021,2
+mechanistic interpretability,2023,5
+mechanistic interpretability,2024,11
+media bias,2023,1
+media profiling,2022,1
+medical NLP,2023,3
+medical NLP,2024,7
+medical NLP dataset,2024,1
+medical QA,2024,1
+medical coding,2024,2
+medical data representation,2024,1
+medical dialogue,2023,1
+medical entity disambiguation,2024,1
+medical image analysis,2022,1
+medical image diagnosis,2024,1
+medical information extraction,2024,1
+medical literature retrieval,2021,1
+medical multimodal alignment,2024,1
+medical prediction,2021,1
+medical report generation,2021,2
+medical report generation,2022,1
+medical report generation,2023,2
+medical report generation,2024,1
+medical vision-language models,2024,2
+medical vision-language representation learning,2023,1
+membership inference attacks,2022,1
+memorisation,2023,1
+memorization,2024,1
+memory,2023,1
+memory augmentation,2022,1
+memory augmentation,2023,1
+memory augmentation/dense,2022,1
+memory augmentations,2023,1
+memory efficiency,2024,2
+memory enhancement,2023,1
+memory in NLP,2023,1
+memory management,2022,1
+memory management,2024,1
+memory mechanisms,2021,1
+memory mechanisms,2024,2
+memory networks,2022,1
+memory networks,2023,1
+memory optimization,2024,3
+memory-augmented inference,2023,1
+memory-augmented learning,2021,1
+memory-augmented models,2021,1
+mental disorder prediction,2024,1
+mental health NLP,2021,1
+mental health NLP,2023,1
+mental health analysis,2022,1
+mental health analysis,2023,1
+mental health analysis,2024,1
+mental health detection,2022,1
+mental health diagnosis,2023,1
+mental health diagnosis,2024,1
+mention-entity matching,2023,1
+meta learning,2021,2
+meta learning,2022,1
+meta-learning,2021,9
+meta-learning,2022,8
+meta-learning,2023,8
+meta-learning,2024,3
+metaphor detection,2022,1
+metric design,2022,1
+metric learning,2022,1
+metric learning,2023,3
+metric learning,2024,2
+minimal interventions,2024,1
+minimal perturbation,2022,1
+minimum spanning tree,2024,1
+misattribution harm,2022,1
+misinformation detection,2023,2
+misinformation detection,2024,1
+missing modality handling,2022,1
+mixed information extraction,2024,1
+mixture of experts,2022,1
+mixture-of-experts,2021,1
+mixture-of-experts,2024,3
+modality fusion,2021,1
+model adaptation,2021,1
+model adaptation,2022,1
+model adaptation,2023,2
+model adaptation,2024,2
+model analysis,2021,4
+model analysis,2022,3
+model analysis,2023,2
+model analysis,2024,2
+model architecture,2022,1
+model architecture,2023,3
+model architectures,2023,3
+model architectures,2024,1
+model averaging,2023,1
+model averaging,2024,1
+model behavior analysis,2024,1
+model calibration,2022,2
+model calibration,2023,1
+model collaboration,2023,1
+model combination,2023,1
+model comparison,2024,1
+model compression,2021,4
+model compression,2022,2
+model compression,2023,3
+model compression,2024,4
+model confidence,2022,1
+model convergence,2024,1
+model criticism,2022,1
+model decomposition,2022,1
+model design,2023,1
+model distillation,2024,1
+model editing,2024,1
+model efficiency,2021,3
+model efficiency,2024,2
+model evaluation,2022,2
+model evaluation,2024,2
+model explanation,2021,2
+model extraction,2022,1
+model fine-tuning,2024,2
+model fusion,2022,1
+model fusion,2024,2
+model generalization,2023,3
+model generalization,2024,2
+model generation,2022,1
+model improvement,2021,1
+model improvement,2024,1
+model interpolation,2024,1
+model interpretability,2022,1
+model interpretability,2024,2
+model learning,2022,1
+model optimization,2021,1
+model optimization,2022,1
+model optimization,2023,1
+model performance analysis,2023,1
+model performance prediction,2022,1
+model poisoning,2022,1
+model privacy,2024,1
+model pruning,2024,1
+model risk analysis,2024,1
+model stability,2024,1
+model steering,2024,2
+model training,2021,2
+model training,2022,1
+model training,2024,1
+model training effects,2023,1
+model training strategies,2022,1
+model training techniques,2021,1
+model transfer,2021,1
+model uncertainty,2022,1
+model updating,2024,1
+model watermarking,2024,1
+model-agnostic explanation,2022,1
+model-agnostic methods,2022,1
+model-agnostic methods,2024,1
+model-based cross-lingual transfer,2022,1
+model-based reinforcement learning,2023,1
+modeling,2022,1
+modeling,2023,1
+modeling,2024,1
+modeling challenges,2021,1
+modeling challenges,2022,1
+modeling emotional propagation,2021,1
+modeling methods,2023,1
+modeling techniques,2021,1
+modeling techniques,2022,2
+modeling techniques: dialogue state smoothing,2021,1
+modular architectures,2024,1
+modular networks,2023,1
+modular parsing,2023,1
+modular systems,2022,1
+module composition,2024,1
+molecular property prediction,2024,2
+morality detection,2023,1
+morphological fusion,2021,1
+morphology,2021,1
+morphology/POS,2021,27
+morphology/POS,2022,16
+morphology/POS,2023,27
+morphology/POS,2024,18
+multi-agent collaboration,2023,1
+multi-agent communication,2024,1
+multi-agent systems,2023,2
+multi-agent systems,2024,2
+multi-attribute modeling,2024,1
+multi-class classification,2023,1
+multi-class classification,2024,1
+multi-dataset learning,2021,1
+multi-document summarization,2021,1
+multi-document summarization,2023,1
+multi-document understanding,2021,1
+multi-head attention,2023,1
+multi-head models,2023,1
+multi-hop reasoning,2021,1
+multi-hop reasoning,2022,3
+multi-hop reasoning,2023,10
+multi-hop reasoning,2024,1
+multi-hop relation detection,2021,1
+multi-input models,2023,1
+multi-instance learning,2021,1
+multi-instance learning,2023,1
+multi-intent detection,2022,1
+multi-intent detection,2023,1
+multi-label classification,2021,2
+multi-label classification,2022,4
+multi-label classification,2023,4
+multi-label classification,2024,4
+multi-label learning,2021,1
+multi-label learning,2022,1
+multi-modal RAG,2021,1
+multi-modal RAG,2023,1
+multi-objective optimization,2024,2
+multi-overlap triplet extraction,2022,1
+multi-party conversation,2023,1
+multi-party dialogue,2024,1
+multi-party meeting analysis,2022,1
+multi-pass decoding,2022,1
+multi-pass generation,2023,1
+multi-skill learning,2022,1
+multi-source attention,2022,1
+multi-source fusion,2021,1
+multi-source learning,2023,1
+multi-stage LM pipelines,2024,1
+multi-step reasoning,2023,3
+multi-subgoal dialog,2021,1
+multi-task learning,2021,18
+multi-task learning,2022,12
+multi-task learning,2023,21
+multi-task learning,2024,11
+multi-task training,2024,1
+multi-turn dialogue,2023,1
+multi-vector embeddings,2024,1
+multi-view learning,2022,1
+multiclass classification,2023,1
+multidocument processing,2021,1
+multilabel classification,2021,1
+multilabel classification,2024,1
+multilingual,2021,9
+multilingual,2022,11
+multilingual,2023,23
+multilingual,2024,17
+multilingual alignment,2021,87
+multilingual alignment,2022,85
+multilingual alignment,2023,135
+multilingual alignment,2024,120
+multilingual models,2021,1
+multilingual models,2022,1
+multimodal RAG,2021,34
+multimodal RAG,2022,52
+multimodal RAG,2023,85
+multimodal RAG,2024,137
+multimodal alignment,2022,1
+multimodal classification,2023,1
+multimodal fusion,2021,1
+multimodal fusion,2022,2
+multimodal fusion,2023,1
+multimodal integration,2023,1
+multimodal interaction,2022,1
+multimodal learning,2022,1
+multimodal learning,2023,2
+multimodal learning,2024,1
+multimodal models,2024,1
+multimodal reasoning,2023,1
+multimodality,2021,2
+multimodality,2022,4
+multimodality,2023,8
+multimodality,2024,3
+multimodality & speech,2023,2
+multimodality RAG,2021,3
+multimodality RAG,2022,1
+multimodality RAG,2023,2
+multimodality RAG,2024,1
+multiple instance learning,2021,1
+multiple instance learning,2022,1
+multiple intent detection,2023,1
+multiple-choice,2022,1
+multiple-choice QA,2022,1
+multiple-choice QA,2024,1
+multitask learning,2021,12
+multitask learning,2022,8
+multitask learning,2023,10
+multitask learning,2024,6
+multiword expression identification,2023,1
+mutual guidance,2021,1
+mutual guidance,2022,1
+mutual information,2021,3
+mutual information learning,2023,1
+mutual information maximization,2023,1
+mutual-attention,2022,1
+named entity preservation,2021,1
+named entity recognition,2021,2
+named entity recognition,2023,2
+narrative roles induction,2021,1
+narrative style detection,2023,1
+narrative understanding,2023,1
+natural language explanations,2022,1
+natural language generation,2022,5
+natural language generation,2023,2
+natural language generation,2024,1
+natural language inference,2021,5
+natural language inference,2022,6
+natural language inference,2023,3
+natural language inference,2024,1
+natural language interfaces,2023,1
+natural language understanding,2021,2
+natural language understanding,2022,4
+natural language understanding,2023,1
+natural language understanding,2024,2
+navigation,2022,1
+nearest neighbor methods,2022,1
+nearest-neighbor matching,2023,1
+negation handling,2022,1
+negative sampling,2021,1
+negative sampling,2022,1
+negotiation dialogue,2024,1
+network analysis,2023,1
+neural architecture search,2024,1
+neural architectures,2022,1
+neural coherence models,2023,1
+neural collaborative filtering,2024,1
+neural generation,2021,1
+neural methods,2021,1
+neural methods,2022,1
+neural models,2022,2
+neural module networks,2021,1
+neural network analysis,2023,1
+neural network simulations,2021,1
+neural networks,2022,1
+neural networks,2023,2
+neural ranking,2022,1
+neural text classification,2024,1
+neural-symbolic,2021,16
+neural-symbolic,2022,16
+neural-symbolic,2023,11
+neural-symbolic,2024,6
+neuro-symbolic,2023,2
+neuro-symbolic,2024,1
+neurosymbolic semantic parsing,2024,1
+news discourse profiling,2021,1
+news media profiling,2024,1
+node representation learning,2023,1
+noise detection,2023,1
+noise filtering,2021,1
+noise handling,2022,2
+noise injection,2023,1
+noise learning,2023,1
+noise reduction,2021,3
+noise reduction,2022,1
+noise reduction,2023,2
+noise regularization,2024,1
+noise robustness,2023,2
+noise-robust learning,2021,1
+noise-robust training,2023,1
+noisy channel model,2024,1
+noisy training,2022,1
+non-IID data handling,2023,1
+non-autoregressive decoding,2021,1
+non-autoregressive decoding,2023,2
+non-autoregressive decoding,2024,1
+non-autoregressive generation,2021,2
+non-autoregressive generation,2022,1
+non-autoregressive generation,2023,1
+non-autoregressive modeling,2021,1
+non-autoregressive modeling,2023,1
+non-autoregressive models,2021,2
+non-autoregressive models,2022,1
+non-autoregressive parsing,2023,1
+non-autoregressive translation,2023,1
+non-collaborative dialogue,2024,1
+non-generative methods,2022,1
+non-parametric learning,2024,1
+non-parametric methods,2022,1
+normalization,2023,1
+normalization techniques,2022,1
+novel relation detection,2023,1
+numeracy,2021,1
+numerical calculation,2023,1
+numerical reasoning,2021,5
+numerical reasoning,2022,3
+numerical reasoning,2023,3
+numerical reasoning,2024,1
+numerical reasoning over measurements,2022,1
+numerical stability,2023,1
+numerical time series,2024,1
+object detection,2024,1
+object localization,2023,2
+object-centric image editing,2023,1
+off-policy evaluation,2021,1
+offensive language detection,2023,1
+offline RL,2023,2
+offline RLHF,2024,1
+offline reinforcement learning,2024,1
+one-shot learning,2022,1
+online learning,2023,1
+ontology integration,2021,1
+ontology usage,2023,1
+ontology-based methods,2023,1
+ontology-guided NER,2021,1
+open information extraction,2021,1
+open information extraction,2023,2
+open information extraction,2024,1
+open-domain QA,2021,9
+open-domain QA,2022,8
+open-domain QA,2023,10
+open-domain QA,2024,8
+open-ended commonsense reasoning,2023,1
+open-ended generation,2023,1
+open-source datasets,2024,1
+open-vocabulary modeling,2022,1
+open-world IE/entity profiling,2023,1
+open-world learning,2023,2
+opinion mining,2024,1
+opinion modeling,2024,1
+opinion term extraction,2021,1
+optical flow features,2023,1
+optimal transport,2022,1
+optimal transport,2023,1
+optimal transport,2024,1
+optimization,2022,3
+optimization,2023,3
+optimization,2024,1
+optimization algorithms,2022,1
+optimization algorithms,2023,1
+optimization algorithms,2024,1
+optimization methods,2023,2
+optimization stability,2024,1
+optimization subspace,2022,1
+optimization techniques,2023,1
+optimization techniques,2024,1
+optimization/combinatorial,2023,1
+order bias mitigation,2024,1
+order-invariance,2022,1
+other:3D human generation,2023,1
+other:3D motion generation,2024,1
+other:3D pose normalization for sign language,2023,1
+other:3D referring expression comprehension,2023,1
+other:3D shape editing,2022,1
+other:AI prototyping interface,2021,1
+other:AI-generated text detection,2023,1
+other:AMR applications survey,2024,1
+other:API orchestration,2024,1
+other:API recommendation,2021,1
+other:API-assisted code generation,2023,1
+other:African languages sentiment,2023,1
+other:Arabic NLG benchmark,2023,1
+other:Arabic NLP,2022,1
+other:Arabic NLP evaluation,2023,1
+other:Bayesian transfer regularizers,2023,1
+other:Boolean logic in retrieval,2024,1
+other:CFG-based evaluation,2024,1
+other:ChatGPT-assisted networks,2023,1
+other:Chinese phonetic and glyph features fusion,2022,1
+other:Chinese spelling check,2024,1
+other:Chinese spelling check detection and reasoning,2023,1
+other:Chinese text error correction,2021,1
+other:DRT parsing,2024,1
+other:Fermi problems reasoning challenge,2021,1
+other:GANs for sequence labeling,2024,1
+other:HTML understanding,2023,1
+other:ICL accuracy estimation,2023,1
+other:IGT generation,2024,1
+other:LLM agent experiential reasoning,2024,1
+other:LLM collaboration consistency,2023,1
+other:LLM communication networks,2024,1
+other:LLM decoding for recommendation,2024,1
+other:LLM evaluation analysis,2023,1
+other:LLM evaluator assessment,2024,1
+other:LLM fine-tuning for reasoning,2024,1
+other:LLM simulation of debates,2024,1
+other:LLM source identification,2023,1
+other:LLM unlearning optimization,2024,1
+other:LLM-based annotation generation,2024,1
+other:LLM-enhanced data generation,2023,1
+other:LLM-generated annotation assessment,2024,1
+other:LLM-generated annotation utilization,2024,1
+other:LLMs as reviewers,2024,1
+other:Learn-Babble-Prune,2023,1
+other:M-tree coding,2022,1
+other:Monte Carlo Tree Search,2023,1
+other:NEFTune method,2024,1
+other:NL-FOL translation,2024,1
+other:NLG evaluation metrics,2022,1
+other:NLG metric evaluation,2021,1
+other:NLP4SG paper identification,2023,1
+other:Norwegian language modeling,2024,1
+other:OCR error correction,2023,1
+other:OCR error correction and deduplication,2021,1
+other:OCR-free text recognition,2023,1
+other:QA with source citation in ambiguous settings,2024,1
+other:QA-based semantic parsing,2022,1
+other:Romanian LLMs,2024,1
+other:SQL-to-question generation,2021,1
+other:Shapley value guided search,2021,1
+other:UI entity recognition,2022,1
+other:UI representation,2022,1
+other:UN SDG mapping,2023,1
+other:Wasserstein distance approximation,2023,1
+other:Wasserstein distance optimization,2021,1
+other:abbreviation expansion,2021,1
+other:absent keyphrase generation,2022,1
+other:abstract segmentation,2023,1
+other:acceptability judgment,2021,1
+other:active learning,2022,1
+other:active learning evaluation,2024,1
+other:active learning for NLG,2023,1
+other:active learning with training dynamics,2021,1
+other:adapter differentiation for task correlation,2022,1
+other:adversarial injection,2024,1
+other:adversarial text generation,2023,1
+other:adversarial training,2021,1
+other:affective response generation,2021,1
+other:affective responses to music,2022,1
+other:affective state identification,2024,1
+other:agent modeling in LMs,2022,1
+other:algorithmic reasoning,2024,1
+other:alignment dynamics,2022,1
+other:alignment for information extraction,2024,1
+other:ambiguity handling in LLMs,2024,1
+other:ambiguity recognition,2023,1
+other:ambiguity resolution,2024,1
+other:analogical reasoning,2024,1
+other:analogy mapping,2023,1
+other:analogy reasoning,2022,1
+other:ancient script analysis,2022,1
+other:angle-based similarity for contrastive learning,2024,1
+other:animal communication,2024,1
+other:annotator personalization,2022,1
+other:annotator perspective modeling,2023,1
+other:annotator representation modeling,2023,1
+other:anomaly detection,2023,1
+other:answer equivalence evaluation,2022,1
+other:argument generation,2022,1
+other:argument mining framework,2023,1
+other:argument mining generative modeling,2022,1
+other:argument quality assessment,2024,1
+other:argumentative essay generation,2024,1
+other:artificial language learning,2023,1
+other:aspect sentiment classification continual learning,2021,1
+other:aspect-based sentiment analysis,2021,1
+other:aspect-level sentiment analysis,2021,1
+other:attention mechanism optimization,2024,1
+other:attention-MLP interaction,2024,1
+other:attitude-guided rebuttal generation,2023,1
+other:attitudes opinions values evaluation,2024,1
+other:audio watermarking,2024,1
+other:author de-anonymization defense,2023,1
+other:author diarization,2024,1
+other:authorship attribution,2023,1
+other:authorship attribution with Bayesian LLMs,2024,1
+other:authorship representation learning,2022,1
+other:authorship verification,2021,1
+other:authorship verification,2022,1
+other:authorship verification,2024,1
+other:autoformalization,2024,1
+other:automated essay scoring,2024,2
+other:automated peer review,2024,1
+other:automated story generation with commonsense,2022,1
+other:automated weakness detection,2024,1
+other:automatic evaluation models,2024,1
+other:automatic prompt augmentation,2023,1
+other:automatic readability assessment,2023,1
+other:autoregressive score generation,2024,1
+other:autoregressive structured prediction,2022,1
+other:auxiliary task selection,2021,1
+other:bachelor recognition,2021,1
+other:back-training method,2021,1
+other:backtranslation for error detection,2023,1
+other:behavioral coding in psychotherapy,2022,1
+other:belief alignment in LLM agents,2024,1
+other:belief alignment modeling,2022,1
+other:belief revision,2024,1
+other:belief tracking,2022,1
+other:benchmark release,2023,1
+other:bi-directional detector-corrector framework,2024,1
+other:bias mitigation in CRS,2023,1
+other:bidding graph modeling,2021,1
+other:bidirectional language modeling,2024,1
+other:bilingual lexicon induction,2021,1
+other:bilingual lexicon induction,2022,2
+other:bilingual lexicon induction with LLMs,2023,1
+other:bilingual synchronization,2022,1
+other:biography generation,2022,1
+other:boolean logic reasoning,2023,1
+other:brain alignment mechanisms,2024,1
+other:cascaded vision-language models,2024,1
+other:case outcome classification,2023,1
+other:case-based reasoning,2021,1
+other:causal analysis,2024,1
+other:causal direction in NLP,2021,1
+other:causal discovery in research trends,2023,1
+other:causal effect estimation in NLP,2023,1
+other:causal inference,2022,1
+other:causal inference for LLM adaptation,2024,1
+other:causal inference from text,2023,1
+other:causal inference in LLMs,2024,1
+other:causal inference with text and numerical data,2021,1
+other:causal intervention,2023,1
+other:causal modeling,2024,1
+other:causal rationale detection,2023,1
+other:causal reasoning datasets,2023,1
+other:causal relation extraction,2022,1
+other:causality explanation generation,2023,1
+other:causality graph modeling,2024,1
+other:chain-of-thought prompting,2023,1
+other:chapter ordering,2022,1
+other:character representation,2024,1
+other:character similarity metric learning,2023,1
+other:character understanding,2023,1
+other:chart generation,2024,1
+other:citation graph analysis,2024,1
+other:citation prediction methods,2024,1
+other:classical Chinese poetry generation,2022,1
+other:classification post-processing,2021,1
+other:clause recommendation,2021,1
+other:clean-label backdoor attacks,2024,1
+other:clinical data generation,2023,1
+other:clinical reasoning enhancement,2024,1
+other:clinical triage,2024,1
+other:clinical trial report NLI,2023,1
+other:cloze distractor generation,2022,1
+other:cloze explanation generation,2023,1
+other:co-teaching ensemble learning,2021,1
+other:code generation for VQA,2023,1
+other:code membership inference,2024,1
+other:code prompting for reasoning,2024,1
+other:code representation for parsing,2024,1
+other:code vulnerability detection,2022,1
+other:code-switching data representativeness,2023,1
+other:code-switching error correction,2023,1
+other:code-switching evaluation,2023,1
+other:code-switching metrics with intonation units,2023,1
+other:cognitive appraisal modeling,2023,1
+other:cognitive bias mitigation,2024,1
+other:cognitive development alignment,2024,1
+other:cognitive distortion detection,2023,2
+other:cognitive dynamics in LLMs,2024,1
+other:cognitive modeling with LMs,2022,1
+other:cognitive tree reasoning,2023,1
+other:coherence assessment,2023,1
+other:coherence detection and rewriting,2024,1
+other:collaborative IE framework,2024,1
+other:color term usage in color-blindness,2022,1
+other:column name expansion,2023,1
+other:commentary generation,2024,1
+other:commonsense causality,2024,1
+other:commonsense evaluation,2023,1
+other:commonsense inference,2021,1
+other:commonsense knowledge,2022,1
+other:commonsense reasoning with discourse connectives,2022,1
+other:comparative reasoning,2023,1
+other:complex instruction evaluation,2024,1
+other:complex span annotation,2024,1
+other:complex word identification,2024,1
+other:complexity-theoretic evaluation framework,2023,1
+other:compositional generalization,2021,1
+other:compositional generalization,2022,2
+other:compositional generalization,2023,3
+other:compositional generalization,2024,1
+other:compositional generalization in graph reasoning,2024,1
+other:compositional representation learning,2023,1
+other:compositionality diagnosis,2022,1
+other:compositionality in mathematical reasoning,2024,1
+other:compositionality in neural models,2024,1
+other:computational creativity,2024,1
+other:computational expressivity of RNN language models,2023,1
+other:computational framing analysis,2022,1
+other:computational meme understanding,2024,1
+other:concept extraction,2022,1
+other:concept prerequisite learning,2022,1
+other:concept representation,2023,1
+other:conceptual knowledge probing,2022,1
+other:conceptual role learning,2023,1
+other:conditional generative matching,2021,1
+other:conditional natural language inference,2023,1
+other:conditional semantic textual similarity,2023,1
+other:conditioned sentence representation,2024,1
+other:consistency evaluation,2024,1
+other:consistency identification,2021,1
+other:consistency regularization,2022,1
+other:construction grammar probing,2022,1
+other:content planning in data-to-text generation,2021,1
+other:context modeling,2021,1
+other:context-aware adapter tuning,2024,1
+other:context-aware evaluation,2022,1
+other:context-invariant structure learning,2022,1
+other:contextual faithfulness in LLMs,2023,1
+other:contextual privacy protection,2024,1
+other:contextual query rewriting,2023,1
+other:contextualized discourse representation,2021,1
+other:continual few-shot learning,2021,2
+other:continual learning,2023,1
+other:continual learning,2024,1
+other:continual learning calibration,2022,1
+other:continual learning for mixed tasks,2023,1
+other:continual learning for vision-and-language,2023,1
+other:continual learning in LMs,2022,1
+other:continual text classification,2023,1
+other:continuous-time dynamic embeddings,2021,1
+other:contradiction detection and modification,2024,1
+other:contrastive completion coding,2021,1
+other:contrastive conditioning,2022,1
+other:contrastive learning,2021,1
+other:contrastive learning,2022,1
+other:contrastive learning,2023,1
+other:contrastive learning for OpenKGs,2022,1
+other:contrastive learning for code search,2023,1
+other:contrastive learning for generation,2021,1
+other:contrastive learning improvements,2023,1
+other:contrastive learning with knowledge distillation,2023,1
+other:contrastive textual explanations,2022,1
+other:controllability in generation,2022,1
+other:controllable code-switched generation,2022,1
+other:controllable data generation,2023,1
+other:controllable generation,2022,1
+other:controllable generation,2023,1
+other:controllable recipe editing,2022,1
+other:controllable semantic parsing,2021,1
+other:controlled generation evaluation,2023,1
+other:controlled graph translation,2024,1
+other:controlled text generation,2021,1
+other:conversation redirection measure,2024,1
+other:conversational recommendation alignment,2022,1
+other:conversational recommender systems,2021,1
+other:conversational recommender systems,2024,1
+other:coordinated topic modeling,2022,1
+other:copy-paste operations,2024,1
+other:copyright compliance,2024,1
+other:counter-contrastive learning for language GANs,2021,1
+other:counter-narrative generation,2024,1
+other:counterfactual data augmentation,2021,1
+other:counterfactual data augmentation,2022,3
+other:counterfactual detection,2021,1
+other:counterfactual evaluation,2024,1
+other:counterfactual generation,2024,1
+other:counterfactual inference,2022,1
+other:counterfactual intervention,2024,1
+other:counterfactual thinking,2024,1
+other:creative problem solving,2024,1
+other:creative story generation,2024,1
+other:critique-based safety evaluation,2024,1
+other:cross-dataset generalization,2024,1
+other:cross-domain code vulnerability detection,2023,1
+other:cross-field citation analysis,2023,1
+other:cross-instance similarity quantification,2024,1
+other:cross-lingual chain-of-thought prompting,2023,1
+other:cross-lingual entity alignment,2024,1
+other:cross-lingual meta-learning,2023,1
+other:cross-lingual multi-step reasoning,2024,1
+other:cross-lingual prompting,2023,1
+other:cross-lingual syntactic transfer,2022,1
+other:cross-lingual transfer,2023,1
+other:cross-lingual transfer with dictionary-based graph,2021,1
+other:cross-modal and cross-lingual grounding,2023,1
+other:cross-modal attention,2023,1
+other:cross-modal concept bottleneck models,2023,1
+other:cross-modal retrieval with long texts,2024,1
+other:cross-model communication,2023,1
+other:cross-task dependency learning,2022,1
+other:crowd intelligence,2023,1
+other:cultural adaptation,2024,1
+other:cultural commonsense knowledge,2024,1
+other:cultural diversity,2022,1
+other:cultural variation,2023,1
+other:curriculum learning,2024,1
+other:curriculum learning for text graphs,2023,1
+other:data augmentation,2024,1
+other:data cleaning,2023,1
+other:data labeling with LLMs,2021,1
+other:data mixing optimization,2024,1
+other:data projection,2021,1
+other:data scaling,2022,1
+other:data-centric AI,2024,1
+other:data-driven storytelling,2024,1
+other:data-flow validation,2024,1
+other:data-generation zero-shot learning,2024,1
+other:data-to-text generation,2021,2
+other:data-to-text generation,2023,1
+other:data2text generation,2021,1
+other:dataset characterization,2024,1
+other:dataset creation,2022,1
+other:dataset interaction analysis,2023,1
+other:dataset release,2023,1
+other:dataset survey,2021,1
+other:de-stigmatization,2024,1
+other:debugging visual programs,2024,1
+other:decision making with dynamic memory,2023,1
+other:decision-making under pressure,2024,1
+other:decoding intervention,2023,1
+other:decontextualization,2023,1
+other:deep clustering optimization,2023,1
+other:defeasible commonsense norms,2023,1
+other:defeasible moral reasoning,2023,1
+other:definition modeling,2022,2
+other:degree modifiers,2023,1
+other:democratization analysis,2024,1
+other:deontic modality detection,2022,1
+other:depth-wise aggregation,2023,1
+other:detectability index,2023,1
+other:diachronic semantics,2021,1
+other:diagnostic evaluation,2021,1
+other:dialect adaptation,2023,1
+other:dialect identification,2022,1
+other:dialogue comprehension modeling,2022,1
+other:dialogue evaluation with LLM prompting,2023,1
+other:dialogue quality assessment,2023,1
+other:dialogue-based contrastive learning,2021,1
+other:dictionary-assisted contrastive learning,2022,1
+other:diffusion language modeling,2023,1
+other:diffusion language models,2024,1
+other:diffusion models for sequence labeling,2023,1
+other:diffusion models for text generation,2023,1
+other:directed semantic graph for text generation,2021,1
+other:directional entailment,2021,1
+other:discourse classification,2021,1
+other:discourse coherence assessment,2023,1
+other:discourse modeling,2021,1
+other:discourse relation recognition,2022,1
+other:discourse segmentation,2021,1
+other:discrete latent variables,2021,1
+other:disinformation detection,2023,2
+other:distractor generation,2024,1
+other:distributed text analysis framework,2023,1
+other:diversity enhancement,2023,1
+other:document logical structuring,2024,1
+other:document-level NLI,2022,1
+other:document-level paraphrase generation,2021,1
+other:domain transfer in text classification,2023,1
+other:domain-specific neuron analysis,2024,1
+other:dual use ethics,2023,1
+other:dynamic heuristic reasoning,2024,1
+other:dynamic pruning,2022,1
+other:dynamic semantic analysis,2024,1
+other:dynamic sparse finetuning,2023,1
+other:dynamic vocabulary generation,2024,1
+other:editable memory graphs,2024,1
+other:editing process modeling,2022,1
+other:efficient RNN-transformer hybrid,2023,1
+other:efficient fine-tuning,2024,1
+other:electronic circuit design from text,2023,1
+other:embedding axis ordering,2024,1
+other:embedding geometry,2023,1
+other:embedding inversion,2023,1
+other:embedding stability analysis,2021,1
+other:embodied sequence modeling,2023,1
+other:emergent communication compositionality,2024,1
+other:emerging topic detection,2021,1
+other:emoji prediction,2022,1
+other:emotion alignment,2024,1
+other:emotion annotation,2022,1
+other:emotion classification with MoE,2024,1
+other:emotion detection,2021,1
+other:emotion embeddings,2021,1
+other:emotion granularity,2024,1
+other:emotion recognition,2024,1
+other:emotion support conversation,2024,1
+other:empathic similarity modeling,2023,1
+other:empathy quantification,2024,1
+other:empowering language,2023,1
+other:end-to-end KGQA,2021,1
+other:ensemble boosting method,2021,1
+other:enthymeme detection and reconstruction,2023,1
+other:entity adaptation across languages,2021,1
+other:entity alignment,2022,1
+other:entity embedding completion,2022,1
+other:entity encoding,2024,1
+other:entity type injection in text generation,2021,1
+other:entity-aware metric,2024,1
+other:entity-centric VQA,2024,1
+other:environment manipulation,2022,1
+other:epistemology in LLMs,2024,1
+other:error correction training strategy,2022,1
+other:error generation,2024,1
+other:error verification,2024,1
+other:ethical concepts,2022,1
+other:ethical reasoning framework,2023,1
+other:ethical terminology analysis,2023,1
+other:ethics in abuse detection,2021,1
+other:evaluator LM training,2024,1
+other:evidence association,2021,1
+other:evidential closure,2023,1
+other:execution-based program selection,2022,1
+other:execution-guided pretraining,2022,1
+other:experience notebook for LLM task solving,2023,1
+other:explainable adaptive testing,2024,1
+other:explainable personality recognition,2024,1
+other:explanation graph generation,2021,1
+other:explanation regularization,2022,1
+other:explanatory sentence detection,2021,1
+other:explicit memory learning,2024,1
+other:expository text generation,2023,1
+other:expression tree decoding,2023,1
+other:extensional learning,2023,1
+other:extractive memorization,2022,1
+other:extreme multi-label classification,2022,1
+other:extreme multi-label classification,2024,3
+other:extremely weakly supervised text classification,2023,1
+other:eye movement analysis,2024,1
+other:fMRI-based semantic decoding,2024,1
+other:faithfulness evaluation,2022,1
+other:fallacy detection,2024,1
+other:fast weight programmers,2023,1
+other:feature extraction,2024,1
+other:feedback attribution,2021,1
+other:feedback generation for writing improvement,2024,1
+other:feedback mechanisms,2024,1
+other:few-shot cross-lingual transfer,2022,1
+other:field analysis and community study,2023,1
+other:figurative language understanding,2022,1
+other:figurative language understanding,2023,1
+other:figure caption evaluation,2023,1
+other:financial NLP evaluation,2023,1
+other:financial market prediction model,2024,1
+other:financial volatility prediction,2023,1
+other:fine-grained capability evaluation,2024,1
+other:fine-grained category discovery,2022,1
+other:fine-grained category discovery,2023,1
+other:fine-grained category discovery,2024,1
+other:fine-grained classification,2024,1
+other:fine-grained compositional reasoning,2024,1
+other:fine-grained emotion classification,2024,1
+other:fine-grained explanation structure,2022,1
+other:fine-grained reading comprehension prediction,2024,1
+other:fine-grained visual categorization,2024,1
+other:fine-grained visual knowledge integration,2023,1
+other:fine-tuning performance prediction,2022,1
+other:fingerspelling identification,2024,1
+other:font reconstruction,2021,1
+other:food culture understanding,2024,1
+other:forecast aggregation with justifications,2021,1
+other:formal mathematical proof reduction,2023,1
+other:formal theorem proving,2024,1
+other:formal theorem proving with backward chaining,2024,1
+other:frame identification,2023,1
+other:frozen initialization,2023,1
+other:future link forecasting,2021,1
+other:game commentary generation,2022,1
+other:game dialogue generation,2024,1
+other:gaze prediction,2023,1
+other:gender-neutral rewriting,2023,1
+other:generate-then-select framework,2024,1
+other:generative discriminator guidance,2021,1
+other:generative prompt tuning,2022,1
+other:geo-diverse commonsense inference,2023,1
+other:geo-diverse commonsense probing,2022,1
+other:geographical attribution,2024,1
+other:geometry problem solving,2022,1
+other:geospatial analysis,2021,1
+other:glossing,2024,1
+other:goal-driven explainable clustering,2023,1
+other:grammar concept extraction for L2 learning,2023,1
+other:grammar induction,2024,1
+other:grammar-constrained decoding,2023,1
+other:grammatical error correction,2021,1
+other:grammatical error correction,2022,3
+other:grammatical error correction,2023,1
+other:grammatical error correction,2024,1
+other:grammatical knowledge induction,2024,1
+other:graph attention networks,2021,1
+other:graph embedding,2021,1
+other:graph pre-training,2023,1
+other:graph prompt learning,2024,1
+other:graph residual networks,2021,1
+other:graph-based CN generation,2024,1
+other:graph-based text classification,2023,1
+other:graph-to-text generation,2021,1
+other:grid puzzle reasoning evaluation,2024,1
+other:grounded compositional generalization,2022,1
+other:grounded language understanding,2021,1
+other:grounded word meaning,2021,1
+other:grounding-based metaphor binding,2024,1
+other:growth mindset language,2023,1
+other:hallucination categorization,2023,1
+other:hallucination mitigation,2023,1
+other:hallucination quantification,2023,1
+other:hallucination/omission detection,2023,1
+other:handwritten mathematical expression recognition correction,2023,1
+other:handwritten text error detection,2023,1
+other:harm documentation,2022,1
+other:header sign identification,2022,1
+other:heart sound diagnosis,2024,1
+other:heritage NLP,2021,1
+other:heterogeneous graph attention,2023,1
+other:hierarchical composition,2023,1
+other:hierarchical contrastive learning,2023,1
+other:hierarchical expert verification,2024,1
+other:hierarchical heterogeneous graph learning,2021,1
+other:hierarchical multi-label classification,2021,1
+other:hierarchical multi-label classification,2022,1
+other:hierarchical text classification,2022,1
+other:hierarchical text rating,2024,1
+other:hierarchical topic modeling with anchor words,2024,1
+other:high-order interaction modeling,2024,1
+other:highlighting in metaphors,2023,1
+other:hint generation,2024,1
+other:historical discourse analysis,2024,1
+other:homophony quantification,2021,1
+other:human judgment distribution approximation,2024,1
+other:human-LLM co-annotation,2023,1
+other:humor detection,2021,1
+other:humor detection,2023,1
+other:humor prediction,2022,1
+other:humor understanding,2023,1
+other:humour rating,2021,1
+other:hyperbole generation,2021,1
+other:ideological worldview alignment,2021,1
+other:image transcreation,2024,1
+other:imbalanced text classification,2021,1
+other:implicit discourse relation recognition,2022,1
+other:implicit discourse relation recognition,2023,1
+other:implicit discourse relation recognition,2024,1
+other:implicit vocabulary probing,2024,1
+other:in-context compositional generalization,2024,2
+other:in-context demonstration selection,2023,1
+other:in-context example selection,2023,2
+other:in-context generation theory,2024,1
+other:in-context learning,2024,1
+other:in-context learning alignment,2024,1
+other:in-context learning analysis,2022,1
+other:in-context learning exemplars,2024,1
+other:in-context learning instability,2024,1
+other:in-context learning mechanism,2023,1
+other:in-context learning mechanism,2024,1
+other:incremental text classification,2023,1
+other:independent causal mechanisms,2024,1
+other:inductive bias in LSTMs,2023,1
+other:inductive biases in LMs,2022,1
+other:inductive reasoning augmentation,2023,1
+other:inference-time alignment,2024,1
+other:influence tuning,2021,1
+other:information distribution in L2 writing,2024,1
+other:instruction category analysis,2024,1
+other:instruction execution in grounded domains,2021,1
+other:instruction learning challenges,2022,1
+other:instruction meta-dataset,2024,1
+other:instruction variety,2024,1
+other:integer programming inference,2022,1
+other:integrated reasoning framework,2023,1
+other:integrative negotiation,2023,1
+other:intensional learning,2023,1
+other:intent classification,2024,1
+other:intent discovery,2023,1
+other:intent-based duplicate question detection,2023,1
+other:intention understanding,2022,1
+other:intention understanding in social intelligence,2024,1
+other:inter-annotator agreement metrics,2023,1
+other:interactive ToM evaluation,2023,1
+other:interactive testing tool,2023,1
+other:interactive text generation,2023,1
+other:interpretable sentence embeddings,2023,1
+other:invertible event transformation,2022,1
+other:isomorphism in embedding spaces,2022,1
+other:item difficulty estimation,2021,1
+other:iterated language learning with neural agents,2021,1
+other:iterative prompting for chain of thought,2022,1
+other:iterative retrieval,2024,1
+other:iterative text revision system,2022,1
+other:judicial decision-making agents,2024,1
+other:key visual entity identification,2024,1
+other:keyphrase generation,2022,2
+other:keyphrase generation,2023,1
+other:keyphrase generation calibration,2022,1
+other:keyphrase generation domain adaptation,2024,1
+other:keyphrase generation with LLMs,2024,1
+other:keyphrase-question-answer generation,2021,1
+other:keyword mnemonics generation,2024,1
+other:knowledge allocation in LLMs,2024,1
+other:knowledge awareness,2024,1
+other:knowledge conflict measurement,2024,1
+other:knowledge conflicts,2024,1
+other:knowledge differentiation,2023,1
+other:knowledge distillation for reasoning,2023,1
+other:knowledge editing conceptual knowledge,2024,1
+other:knowledge estimation,2024,1
+other:knowledge fusion,2023,1
+other:knowledge generation,2023,1
+other:knowledge graph completion,2024,2
+other:knowledge probing benchmark,2024,1
+other:knowledge utilization,2024,1
+other:label propagation,2022,1
+other:label synset augmentation,2024,1
+other:label-dependent noise denoising,2024,1
+other:language change in instruction following,2021,1
+other:language coherence for dementia monitoring,2023,1
+other:language development assessment,2024,1
+other:language disentanglement,2022,1
+other:language emergence in multi-entity referential games,2024,1
+other:language evolution,2024,1
+other:language identification,2023,1
+other:language resource equity,2023,1
+other:language selection diversity,2024,1
+other:language to action,2024,1
+other:language to program synthesis,2021,1
+other:language understanding theory,2023,1
+other:language-specific LLM adaptation,2024,1
+other:language-specific evaluation,2024,1
+other:latent pseudo label mapping,2022,1
+other:latent reasoning skills,2024,1
+other:latent space optimization,2021,1
+other:layout attention with gaussian biases,2023,1
+other:layout generation,2024,1
+other:layout-aware GUI understanding,2024,1
+other:lazy-k decoding,2023,1
+other:learning capabilities evaluation,2024,1
+other:learning dynamics analysis,2023,1
+other:learning from interaction,2024,1
+other:legal NLP interdisciplinary analysis,2023,1
+other:legal court view generation,2024,1
+other:legal document processing,2024,1
+other:legal judgement prediction,2024,1
+other:legal judgment prediction,2022,1
+other:legal judgment prediction,2023,2
+other:legal judgment prediction,2024,1
+other:legal knowledge integration,2024,1
+other:legal reasoning,2024,1
+other:legal reasoning classification,2023,1
+other:legal statute prediction,2023,1
+other:length control,2024,1
+other:length control in LLMs,2024,1
+other:level of dialectness quantification,2023,1
+other:leveled reading classification,2021,1
+other:lexical inference in context,2021,1
+other:lexically constrained NMT,2024,1
+other:lexically constrained generation,2024,1
+other:lifelong benchmark,2022,1
+other:lifelong sequence generation,2023,1
+other:linear transformers,2023,1
+other:linguistic analysis,2023,1
+other:linguistic bias mitigation,2023,1
+other:linguistic chaining,2021,1
+other:linguistic concept learning benchmark,2023,1
+other:linguistic disorder markers in dementia,2023,1
+other:linguistic generalisation,2023,1
+other:linguistic minimal pairs evaluation,2024,1
+other:linguistic probing,2023,1
+other:linguistic typology,2024,2
+other:link prediction,2022,1
+other:listwise ranking,2024,1
+other:local and global soft bias,2022,1
+other:logic,2022,1
+other:logic-guided entity recognition,2023,1
+other:logical consistency analysis,2023,1
+other:logical fallacy detection,2024,1
+other:logical prompt-enhanced learning,2022,1
+other:logical query answering,2022,1
+other:logical reasoning,2022,1
+other:logical reasoning evaluation,2024,1
+other:logical reasoning explanations,2022,1
+other:logical rule mining,2022,1
+other:logical structure analysis,2024,1
+other:long document modeling,2021,1
+other:long-form story generation,2022,1
+other:long-form table QA evaluation,2024,1
+other:long-tail data generation,2024,1
+other:loop invariant synthesis,2023,1
+other:loophole behavior,2023,1
+other:lottery ticket hypothesis,2023,1
+other:low-resource NLG benchmark,2021,1
+other:low-resource automatic program repair,2023,1
+other:lyric-to-melody generation,2022,1
+other:machine-generated text detection,2023,1
+other:marker gene selection,2024,1
+other:masked path modeling,2023,1
+other:masked token prediction method,2023,1
+other:math curriculum alignment,2024,1
+other:math problem generation,2024,1
+other:math problem tagging,2024,1
+other:math word problem generation,2021,1
+other:math word problems,2021,1
+other:math word problems,2023,1
+other:mathematical reasoning,2022,1
+other:mathematical reasoning with graph neural networks,2021,1
+other:measurement extraction,2022,1
+other:media framing,2021,2
+other:media storm modeling,2023,1
+other:medical report generation,2023,1
+other:medical term normalization,2022,1
+other:medical tool integration,2024,1
+other:memorization analysis,2023,1
+other:memory-assisted prompt editing,2022,1
+other:memory-augmented reasoning,2023,1
+other:mental disorder detection,2023,1
+other:mental health monitoring,2023,1
+other:meta learning,2022,1
+other:meta-embedding debiasing,2022,1
+other:meta-embedding evaluation,2021,1
+other:meta-learning,2023,1
+other:meta-learning for objective sampling,2022,1
+other:meta-learning gradient regularization,2021,1
+other:metaphor detection,2023,2
+other:metaphor identification,2021,1
+other:metaphor illustration,2024,1
+other:metaphorical relation extraction,2023,1
+other:mining-based zero-shot learning,2022,1
+other:misinformation mitigation,2023,1
+other:misleading content detection,2023,1
+other:missing modality inference,2022,1
+other:mixture of pretraining objectives,2023,1
+other:modal verb function classification,2022,1
+other:model collapse,2023,1
+other:model debugging,2021,1
+other:model editing,2024,1
+other:model editing benchmark,2023,1
+other:model editing bias amplification,2024,1
+other:model editing for commonsense,2023,1
+other:model editing for error mitigation,2024,1
+other:model editing methods,2024,2
+other:model editing robustness,2024,1
+other:model extraction attacks,2023,1
+other:model merging,2024,3
+other:model merging for multi-task learning,2024,1
+other:model merging for multimodal transformers,2023,1
+other:model selection for cross-lingual transfer,2021,1
+other:model simplification,2023,1
+other:model update compatibility,2024,1
+other:model watermarking,2022,1
+other:model watermarking,2023,1
+other:model weight space analysis,2023,1
+other:model-adaptive prompt optimization,2023,1
+other:model-based brain-language analysis,2021,1
+other:modular decomposition for reasoning,2023,1
+other:modular generation,2022,1
+other:modular neural networks,2023,1
+other:modular representation learning,2022,1
+other:molecular graph-language modeling,2023,1
+other:molecule captioning,2022,1
+other:momentum contrastive learning,2024,1
+other:moral change tracing,2021,1
+other:moral reasoning,2024,1
+other:multi granularity instructions,2024,1
+other:multi-agent collaboration,2024,1
+other:multi-agent debate for reasoning,2024,1
+other:multi-agent debate simulation,2024,1
+other:multi-agent root cause analysis,2024,1
+other:multi-armed bandits for data balancing,2021,1
+other:multi-attribute control,2023,1
+other:multi-constraint instruction following,2024,1
+other:multi-hop chain-of-thought reasoning,2024,1
+other:multi-hop reasoning,2022,1
+other:multi-hop reasoning analysis,2024,1
+other:multi-hop reasoning interpretability,2021,1
+other:multi-intent detection,2023,1
+other:multi-label annotation learning,2021,1
+other:multi-label classification imbalance,2021,1
+other:multi-label classification with definitions,2023,1
+other:multi-label document classification with heterogeneous graphs,2021,1
+other:multi-label text classification,2021,1
+other:multi-level contrastive learning,2022,1
+other:multi-loss optimization,2021,1
+other:multi-modal sarcasm detection,2024,1
+other:multi-path chain of thought inference,2024,1
+other:multi-perspective verification,2024,1
+other:multi-source language adapters,2023,1
+other:multi-span cyclic graph extraction,2023,1
+other:multi-task learning,2021,2
+other:multi-task learning,2022,2
+other:multi-task learning conflict analysis,2022,1
+other:multi-task learning with transformers,2021,1
+other:multi-trait essay scoring,2024,1
+other:multi-turn evaluation,2024,1
+other:multi-unknown math problem solving,2024,1
+other:multi-user dialogue,2023,1
+other:multi-view reasoning,2022,1
+other:multicultural reasoning,2021,1
+other:multilingual LLM evaluation,2023,1
+other:multilingual encoder-to-generator adaptation,2023,1
+other:multilingual multimodal benchmark,2024,1
+other:multimodal ASR,2024,1
+other:multimodal EHR data integration,2021,1
+other:multimodal LLM editing,2023,1
+other:multimodal classification,2024,1
+other:multimodal fashion generation and retrieval,2024,1
+other:multimodal fine-grained entity typing,2023,1
+other:multimodal jailbreaking,2024,1
+other:multimodal machine translation,2023,1
+other:multimodal mathematical reasoning,2023,1
+other:multimodal pretraining,2022,1
+other:multimodal query rewrite,2022,1
+other:multiparallel word alignment,2021,1
+other:multistage fine-tuning,2022,1
+other:multitask benchmark,2024,1
+other:multitask learning,2021,1
+other:multitask learning,2024,1
+other:multivalent entailment graphs,2021,1
+other:mutual exclusivity training,2022,1
+other:n-gram novelty analysis,2024,1
+other:narrative alignment,2023,1
+other:narrative alignment analysis,2023,1
+other:narrative analysis,2024,1
+other:narrative coherence detection,2022,1
+other:narrative extraction,2022,1
+other:narrative order modeling,2023,1
+other:narrative perception analysis,2024,1
+other:narrative reasoning,2024,1
+other:narrative schema labeling,2024,1
+other:narrative style analysis,2024,1
+other:narrative theory integration,2021,1
+other:narrative understanding,2023,1
+other:natural language inference,2022,1
+other:natural language program semantics annotation,2023,1
+other:natural language to temporal logic translation,2023,1
+other:natural language video localization,2021,1
+other:natural response generation,2023,1
+other:negation handling,2021,1
+other:negation interpretation,2022,1
+other:negation understanding,2023,1
+other:negotiation simulation,2024,1
+other:neural ODEs for graphs,2021,1
+other:neural architecture search,2021,1
+other:neural architecture search,2022,1
+other:neural program synthesis,2021,1
+other:neural scaling law,2024,1
+other:neural topic model reinterpretation,2022,1
+other:neural topic modeling,2021,2
+other:neural topic modeling for short texts,2021,1
+other:neural topic modeling with mutual information,2024,1
+other:neurosymbolic programming,2023,1
+other:new intent discovery,2023,1
+other:new knowledge handling,2023,1
+other:news headline generation,2022,1
+other:news recommendation,2021,1
+other:news recommendation bias mitigation,2022,1
+other:noise detection in literature,2024,1
+other:non-autoregressive graph decoding,2023,1
+other:non-autoregressive poetry generation,2022,1
+other:non-autoregressive text editing,2023,1
+other:non-compositional expression generation,2023,1
+other:non-compositional expression representation,2023,1
+other:non-transferable learning,2022,1
+other:null-shot prompting with hallucination,2024,1
+other:number encoding for numerical reasoning,2024,1
+other:numeracy learning,2021,1
+other:numerical reasoning,2024,1
+other:numerical reasoning in KBQA,2023,1
+other:numerical reasoning with DAG decoding,2022,1
+other:object use classification,2022,1
+other:off-policy policy gradient,2024,1
+other:on-demand keyphrase generation,2024,1
+other:one-class topic classification,2021,1
+other:one-to-many relation modeling,2022,1
+other:online continuous sign language recognition,2024,1
+other:online imitation learning,2022,1
+other:ontology expansion for conversational understanding,2024,1
+other:open information extraction,2022,1
+other:open information extraction,2023,1
+other:open world classification,2022,1
+other:open-world classification,2021,1
+other:open-world classification,2024,1
+other:opinion role labeling,2021,1
+other:opinion summarization,2023,1
+other:optimal transport,2022,1
+other:optimal transport assignment,2024,1
+other:optimal transport learning,2021,1
+other:ordinal regression,2022,1
+other:orthographic knowledge evaluation,2024,1
+other:out-of-context knowledge reasoning,2024,1
+other:parameter merging in fine-tuning,2024,1
+other:parameter-lite transfer,2022,1
+other:paraphrase evaluation metrics,2022,1
+other:paraphrase generation,2021,2
+other:paraphrase generation,2022,1
+other:paraphrase generation for intent classification,2023,1
+other:paraphrase tagging,2022,1
+other:paraphrase type modeling,2023,1
+other:paraphrasing attacks,2024,1
+other:path planning,2024,1
+other:path planning with LLMs,2024,1
+other:pedagogical ability of LLMs in math learning,2023,1
+other:pedagogical feedback framework,2024,1
+other:peer-review score prediction,2022,1
+other:perceptual learning,2023,1
+other:performance prediction,2024,1
+other:permission constraints,2024,1
+other:persona in LLMs,2024,1
+other:persona representation,2023,1
+other:persona-grounded minimal editing,2021,1
+other:personality detection model,2023,1
+other:personality detection with CoT,2023,1
+other:personality detection with questionnaire guidance,2021,1
+other:personality prediction,2022,1
+other:personality simulation,2024,1
+other:personality-indicative data,2024,1
+other:personalization evaluation,2023,1
+other:personalization with LLMs,2024,1
+other:personalized PEFT,2024,1
+other:personalized PEFT collaboration,2024,1
+other:personalized evaluation,2024,1
+other:personalized narrative generation,2024,1
+other:personalized video comment generation,2024,1
+other:persuasive argument evaluation,2024,1
+other:persuasive capability evaluation,2024,1
+other:persuasive explanation generation,2024,1
+other:philology tasks,2024,1
+other:philosophical perspective on LLM understanding,2023,1
+other:phonological reconstruction,2023,1
+other:phrase embeddings,2021,1
+other:physical reasoning,2023,1
+other:pixel-based text rendering,2023,1
+other:planning and creativity in news writing,2024,1
+other:player experience evaluation,2023,1
+other:plug-and-play decoding,2021,1
+other:poetry generation,2022,1
+other:poetry generation diversity,2024,1
+other:polarity sensitivity,2023,1
+other:policy discourse dataset,2024,1
+other:political scaling analysis,2023,1
+other:position bias alignment,2024,1
+other:position engineering,2024,1
+other:post-OCR correction,2024,1
+other:post-OCR error correction,2021,1
+other:pragmatic production strategies,2022,1
+other:pragmatic reasoning for cross-cultural communication,2024,1
+other:pragmatic reasoning in communication,2024,1
+other:pragmatic understanding,2023,1
+other:pragmatics in language grounding,2023,1
+other:pretraining data detection,2024,1
+other:primal-dual learning,2022,1
+other:primitive augmentation,2022,1
+other:privacy control,2024,1
+other:proactive engagement,2024,1
+other:probabilistic embedding,2022,1
+other:probabilistic finite-state automata,2023,1
+other:probabilistic grammar data,2023,1
+other:probabilistic programming,2021,1
+other:probabilistic reasoning,2024,1
+other:probability density extraction,2024,1
+other:problem formulation,2023,1
+other:problem-oriented segmentation,2024,1
+other:process evaluation,2024,1
+other:prompt compression,2022,1
+other:prompt engineering,2024,1
+other:prompt engineering analysis,2024,1
+other:prompt inversion,2024,1
+other:prompt lexical optimization,2024,1
+other:prompt obfuscation,2024,1
+other:prompt optimization,2024,2
+other:prompt optimization in multi-step tasks,2024,1
+other:prompt selection metric,2023,1
+other:prompt sensitivity,2024,1
+other:prompt taxonomy,2023,1
+other:prompt-based fine-tuning,2024,1
+other:prompt-based negative generation,2022,1
+other:prompt-guided continual pretraining,2023,1
+other:prompting LLMs for knowledge augmentation,2023,1
+other:prompting decision trees,2023,1
+other:proof generation,2022,1
+other:propaganda span annotation,2024,1
+other:proper noun compound semantic interpretation,2022,1
+other:protein function inference,2024,1
+other:prototype learning,2024,1
+other:pseudo label reconstruction,2024,1
+other:psychiatric assessment with LLMs,2024,1
+other:psycholinguistics,2023,1
+other:psychological impact measurement,2024,1
+other:psychological scale reliability,2024,1
+other:psychometric alignment,2024,1
+other:pun generation,2022,2
+other:pun humor understanding and generation,2022,1
+other:pun understanding,2024,1
+other:qualitative code suggestion,2023,1
+other:quantum NLP,2021,1
+other:quantum RNNs,2024,1
+other:query generation blending,2024,1
+other:question and passage augmentation,2024,1
+other:question difficulty estimation,2024,1
+other:question generation,2022,3
+other:question generation evaluation,2022,1
+other:question-to-action alignment,2022,1
+other:question-to-question alignment,2022,1
+other:randomly weighted subnetworks,2021,1
+other:readability assessment,2021,1
+other:readability assessment,2023,1
+other:reader model reasoning,2022,1
+other:reading order detection,2021,1
+other:reasoning graph generation,2021,1
+other:reasoning with programs,2024,1
+other:recipe generation,2022,1
+other:recommendation with LLM prompting,2024,1
+other:record linkage,2023,1
+other:recurrent FWPs,2023,1
+other:recurrent latent variable modeling,2022,1
+other:referenceless metric evaluation,2022,1
+other:referential communication,2024,1
+other:reflective augmentation for math reasoning,2024,1
+other:regulation and NLP,2023,1
+other:related work generation,2024,1
+other:relation-aware self-attention,2022,1
+other:relationship extraction,2021,1
+other:relationship-driven story generation,2022,1
+other:render tree integration,2023,1
+other:representation learning on text-attributed graphs,2024,1
+other:representation-based text matching,2022,1
+other:research directions in NLP,2023,1
+other:research impact assessment,2024,1
+other:research time allocation,2022,1
+other:response clarity classification,2024,1
+other:responsible data use,2021,1
+other:reversal curse analysis,2024,1
+other:reversal curse mitigation,2024,1
+other:review analysis,2024,1
+other:review disagreement detection,2023,1
+other:review standardization,2024,1
+other:rhetorical parallelism detection,2023,1
+other:rhetorical role labeling,2024,1
+other:rhetorical understanding and generation,2024,1
+other:robotic manipulation,2024,1
+other:robustness tuning,2022,1
+other:role-based paraphrasing,2023,1
+other:role-playing mechanism,2024,1
+other:rule accumulation for LLM error correction,2023,1
+other:rule-based generalization,2023,1
+other:rumor detection,2021,1
+other:salience detection,2021,1
+other:satire comprehension,2024,1
+other:scaling behavior analysis,2024,1
+other:scanpath generation,2023,1
+other:scarce resource allocation,2024,1
+other:schema induction,2023,1
+other:schema-augmented learning,2022,1
+other:scholarly corpus construction,2023,1
+other:scientific LLM survey,2024,1
+other:scientific document representation,2023,1
+other:scientific domain adaptation,2024,1
+other:scientific entity relation extraction,2024,1
+other:scientific exam evaluation,2024,1
+other:scientific field evolution,2023,1
+other:scientific topic classification,2024,1
+other:script evaluation,2024,1
+other:security-oriented adversarial NLP,2022,1
+other:seeded hierarchical clustering,2022,1
+other:segment-based generation policy,2021,1
+other:selective annotation for in-context learning,2024,1
+other:selective annotation framework,2024,1
+other:selective caching,2023,1
+other:self-adaptive rubrics,2024,1
+other:self-correction pipeline,2024,1
+other:self-critique pipeline,2024,1
+other:self-ensemble lexically constrained decoding,2023,1
+other:self-influence data cleaning,2023,1
+other:self-knowledge guided retrieval,2023,1
+other:self-play augmentation,2022,1
+other:self-referential weight matrices,2023,1
+other:self-refinement and cost-performance trade-offs,2023,1
+other:self-supervised behavior cloning,2023,1
+other:self-supervised prompting for cross-lingual transfer,2024,1
+other:self-supervised refinement,2021,1
+other:self-training for arithmetic reasoning,2024,1
+other:self-training with grammar rules,2021,1
+other:semantic diversity metric,2022,1
+other:semantic novelty detection,2021,1
+other:semantic novelty detection,2022,1
+other:semantic planning,2024,1
+other:semantic sentence embeddings,2021,1
+other:semantic space grounding,2023,1
+other:semantic textual similarity,2022,1
+other:semi-automated data creation,2023,1
+other:semi-automatic annotation,2023,1
+other:semi-autoregressive text editing,2022,1
+other:semi-parametric text classification,2023,1
+other:semi-structured object sequence encoding,2023,1
+other:semi-supervised crisis tweet classification debiasing,2023,1
+other:semi-supervised lifelong learning,2022,1
+other:sensorimotor metaphor modeling,2024,1
+other:sentence embedding dimensionality,2023,1
+other:sentence embedding improvement,2023,1
+other:sentence embedding learning,2021,1
+other:sentence embedding learning,2022,1
+other:sentence embedding with locality preserving,2021,1
+other:sentence embeddings,2021,1
+other:sentence embeddings,2022,1
+other:sentence embeddings from BERT layers combination,2023,1
+other:sentence insertion,2024,1
+other:sentence ordering,2021,1
+other:sentence ordering,2023,1
+other:sentence similarity metrics,2023,1
+other:sentence splitting,2021,1
+other:sentence-permuted generation,2021,1
+other:sequence continuation analysis,2024,1
+other:sequence generation for parsing,2022,1
+other:sequence tagging interpretability,2022,1
+other:sequential attention,2024,1
+other:sequential controlled text generation,2022,1
+other:sequential recommendation,2024,1
+other:sequential sentence classification,2024,1
+other:severity prediction,2021,1
+other:short text clustering,2024,1
+other:short text topic modeling,2022,1
+other:shortcut learning,2022,1
+other:shortcut mitigation,2024,1
+other:sign language processing,2024,1
+other:sign language recognition,2022,1
+other:sign language recognition,2023,1
+other:sign language synthesis,2024,1
+other:signed language processing,2024,1
+other:similarity representation learning,2024,1
+other:similarity-adjusted surprisal,2024,1
+other:simile recognition,2022,1
+other:simultaneous speech translation,2023,1
+other:simultaneous speech translation,2024,1
+other:situated social reasoning,2021,1
+other:situational awareness,2024,1
+other:slang paraphrasing,2024,1
+other:social bias evaluation,2024,1
+other:social context representation,2021,1
+other:social determinants of health extraction,2023,1
+other:social intelligence,2022,1
+other:social intelligence in AI agents,2024,1
+other:social intelligence understanding,2023,1
+other:social norm alignment,2024,1
+other:social norm reasoning,2023,1
+other:social norms quantification,2024,1
+other:social prediction with LLMs,2024,1
+other:social recommendation,2022,1
+other:social-pragmatic inference,2024,1
+other:sociolinguistic lexical variables,2021,1
+other:sociopragmatic understanding,2023,1
+other:soft label training for single-label classification,2023,1
+other:soft prompt communication,2023,1
+other:softmax tree classifier,2021,1
+other:sound symbolism,2024,1
+other:source planning,2023,1
+other:source selection planning,2024,1
+other:span interaction explanations,2023,1
+other:span retrieval,2024,1
+other:spatio-temporal video grounding,2024,1
+other:speaker differentiation,2021,1
+other:specialized lexicon learning,2024,1
+other:spectral modulation in LLMs,2024,1
+other:speech translation quality estimation,2024,1
+other:spelling correction,2024,1
+other:spoiler detection,2023,1
+other:sports narrative analysis,2024,1
+other:spreadsheet encoding,2024,1
+other:stance reasoning,2024,1
+other:standardization,2022,1
+other:statistical depth for embeddings,2023,1
+other:steganography in LLMs,2024,1
+other:story generation,2022,1
+other:story generation,2023,2
+other:story generation coherence,2022,1
+other:story generation from image sequences,2022,1
+other:story generation with action guidance,2024,1
+other:story pacing control,2023,1
+other:story-level analogy,2023,1
+other:storytelling evaluation,2024,1
+other:structural generalization in seq2seq,2022,1
+other:structural probing,2021,1
+other:structure discovery,2023,1
+other:structure-aware contrastive learning,2024,1
+other:structured autoencoding,2023,1
+other:structured dialogue summarization,2022,1
+other:structured knowledge grounding,2022,1
+other:structured problem solving with compositionality,2024,1
+other:structured text generation,2024,1
+other:student modeling,2024,1
+other:student-tutor modeling,2024,1
+other:stylometry-based authorship attribution,2021,1
+other:subevent relation extraction,2022,1
+other:subgraph semantics,2024,1
+other:subjective rationale generation,2024,1
+other:subjective reasoning,2024,1
+other:suicidal risk assessment,2022,1
+other:suicide detection and risk assessment,2024,1
+other:super-resolution learning for text classification,2023,1
+other:surface structure bias in sentence embeddings,2023,1
+other:surprisal effect on reading times,2023,1
+other:surprisal prediction in discourse,2024,1
+other:surprisal-duration trade-off,2021,1
+other:survey,2023,1
+other:survey,2024,2
+other:susceptibility modeling,2024,1
+other:symbol grounding problem analysis,2024,1
+other:symbolic prompt program optimization,2024,1
+other:symptom identification,2022,1
+other:synaesthesia analysis,2023,1
+other:syntactic change detection,2023,1
+other:syntactic frame extension,2021,1
+other:syntactic masking,2024,1
+other:syntactic partial observability,2022,1
+other:syntactically-controlled paraphrase generation,2023,1
+other:syntax understanding in embeddings,2023,1
+other:syntax-semantics disentanglement,2021,1
+other:synthetic gaze augmentation,2023,1
+other:systematic generalization,2022,1
+other:table reasoning preprocessing,2024,1
+other:table representation,2023,1
+other:table-to-text generation,2023,2
+other:tabular data to text transformation,2024,1
+other:tabular inference augmentation,2022,1
+other:tag recommendation,2021,1
+other:tag-aware retrieval,2023,1
+other:targeted unlearning,2024,1
+other:task ambiguity in NLG instructions,2024,1
+other:task and argument grounding for embodied agents,2023,1
+other:task difficulty,2024,1
+other:task generalization,2022,1
+other:task guidance systems,2023,1
+other:task interference in conversational LLMs,2024,1
+other:task sampling policy learning,2021,1
+other:task similarity analysis,2021,1
+other:task transferability prediction,2023,1
+other:task-personalized entity retrieval,2023,1
+other:task-specific neuron localization,2024,1
+other:taxonomy,2022,1
+other:taxonomy completion,2023,1
+other:taxonomy expansion,2023,1
+other:teacher supervision in decoding,2024,1
+other:template augmentation,2024,1
+other:temporal graph generation,2024,1
+other:temporal knowledge graph forecasting,2024,1
+other:temporal knowledge graph reasoning,2024,1
+other:temporal language modeling with syntax,2023,1
+other:temporal representation learning,2024,1
+other:test-time adaptation,2022,1
+other:test-time adaptation,2023,1
+other:text answer aggregation,2024,1
+other:text autoencoders,2024,1
+other:text classification data generation,2024,1
+other:text clustering refinement,2024,1
+other:text clustering with LLM guidance,2023,1
+other:text coherence,2021,1
+other:text editing,2023,1
+other:text game world modeling,2023,1
+other:text revision in scientific writing,2022,1
+other:text-attributed hypergraph node classification,2024,1
+other:text-based molecule generation,2022,1
+other:text-based zero-shot model induction,2024,1
+other:text-to-SQL adaptation,2022,1
+other:text-to-SQL interaction,2023,1
+other:text-to-SQL parsing,2022,1
+other:text-to-table,2024,1
+other:text-to-table generation,2024,1
+other:textual counterfactuals,2022,1
+other:thematic analysis with LLMs,2023,1
+other:theoretical analysis,2022,1
+other:theory of mind complexity measurement,2024,1
+other:theory of mind evaluation,2023,1
+other:theory of mind evaluation,2024,2
+other:theory of mind in LMs,2024,1
+other:theory of mind modeling,2021,1
+other:time series feature understanding,2024,1
+other:time series reasoning,2024,1
+other:time-aware prompting,2022,1
+other:token bias analysis,2024,1
+other:token-level ensembling,2024,1
+other:token-level feature mixing,2022,1
+other:tone transcription and clustering,2024,1
+other:tool creation,2023,1
+other:top-view spatial reasoning,2024,1
+other:topic clustering with noise filtering,2021,1
+other:topic modeling,2024,1
+other:topic modeling update algorithms,2021,1
+other:topic modeling with contextual embeddings,2024,1
+other:topic modeling with diffusion-enhanced embeddings,2023,1
+other:topic segmentation,2023,1
+other:topic-aware discrete latent variable modeling,2022,1
+other:topic-oriented relation extraction,2024,1
+other:topical segmentation of spoken narratives,2022,1
+other:topical text classification,2023,1
+other:topological analysis of embeddings,2024,1
+other:topological topic modeling,2022,1
+other:training data attribution,2024,1
+other:training data influence analysis,2024,1
+other:training-free safety alignment,2024,1
+other:transcribed error correction,2023,1
+other:transferability estimation,2022,1
+other:transferability estimation,2023,1
+other:transformer topic disentanglement,2023,1
+other:transformer working memory,2023,1
+other:transformer-rnn connection,2024,1
+other:transformers learning n-gram LMs,2024,1
+other:translation artifacts,2022,1
+other:trauma event modeling,2024,1
+other:tree positional encoding,2022,1
+other:tree-based evaluation metric,2024,1
+other:tuple-level speculation detection,2023,1
+other:typological databases in NLP,2023,1
+other:uncertainty communication in instruction guidance,2024,1
+other:uncommon word generation,2022,1
+other:uniform complexity control,2023,1
+other:uniform information density hypothesis,2021,1
+other:universal adversarial attacks,2024,1
+other:universum class classification,2023,1
+other:unlearning methods,2023,1
+other:unlikelihood training,2022,1
+other:unsupervised paraphrase generation,2023,1
+other:unsupervised paraphrasing,2021,1
+other:unsupervised sentence embedding learning,2022,1
+other:unsupervised sentence embeddings,2021,1
+other:urban activity planning with LLMs,2024,1
+other:user and community modeling for abuse detection,2021,1
+other:user behavior pretraining,2023,1
+other:utterance predictability measurement,2023,1
+other:valence bias quantification,2021,1
+other:valency in predicates,2021,1
+other:value injection,2023,1
+other:variational Bayesian interpretation,2024,1
+other:variational autoencoder optimization,2021,1
+other:variational autoencoder with disentanglement priors,2022,1
+other:variational modeling,2022,1
+other:vector graphics understanding and generation,2024,1
+other:vector-quantized prompt learning,2023,1
+other:verbalizer augmentation,2024,1
+other:video humor dataset,2023,1
+other:video-helpful MMT modeling,2023,1
+other:violent incident detection,2024,1
+other:virtual persona conditioning,2024,1
+other:vision-augmented table-to-text generation,2022,1
+other:visual programming with LLMs,2024,1
+other:visual question decomposition,2024,1
+other:visual storytelling,2023,1
+other:visual word sense disambiguation,2023,1
+other:visually-rich document dataset with eye-tracking,2023,1
+other:watermarking robustness,2024,1
+other:weak supervision,2024,1
+other:weak supervision debiasing,2023,1
+other:weak supervision for minority classes,2024,1
+other:weak supervision noise correction,2023,1
+other:weak supervision noise separation,2022,1
+other:weakly supervised adversarial learning,2021,1
+other:web scraper generation,2024,1
+other:weighted automata learning,2024,1
+other:weighted finite-state automata algorithms,2022,1
+other:word length optimization,2023,1
+other:word order analysis,2021,1
+other:word reordering,2021,1
+other:word vector post-processing,2023,1
+other:word-anxiety association lexicon,2024,1
+other:word-level auto completion,2023,1
+other:word-level quality estimation,2021,1
+other:workflow extraction,2024,1
+other:working memory in LLMs,2024,1
+other:wrong information utilization,2024,1
+other:zero pronoun recovery,2021,1
+other:zero-cost proxy search,2024,1
+other:zero-resource hallucination prevention,2024,1
+other:zero-shot NAS,2023,1
+other:zero-shot cross-lingual IE,2021,1
+other:zero-shot cross-lingual transfer,2023,1
+other:zero-shot evaluation,2023,1
+other:zero-shot learning,2022,1
+other:zero-shot multi-label classification,2022,1
+other:zero-shot re-ranking,2024,1
+other:zero-shot topic inference,2023,1
+other:zero-shot video-text understanding,2021,1
+other:zeroth-order prompt tuning,2024,1
+out-of-distribution detection,2023,1
+out-of-distribution evaluation,2022,1
+out-of-distribution robustness,2024,1
+out-of-domain detection,2022,2
+out-of-scope detection,2023,1
+overfitting mitigation,2023,1
+pairwise CRF,2022,1
+pairwise relationship reasoning,2024,1
+parallel decoding,2022,1
+parallel generation methods,2023,1
+parallelization,2024,1
+parameter effective rank,2024,1
+parameter efficient fine-tuning,2023,2
+parameter efficient fine-tuning,2024,2
+parameter efficient tuning,2023,1
+parameter generation,2021,1
+parameter sensitivity,2022,1
+parameter sharing,2024,1
+parameter-efficient adaptation,2023,1
+parameter-efficient algorithms,2023,1
+parameter-efficient fine-tuning,2022,2
+parameter-efficient fine-tuning,2023,3
+parameter-efficient fine-tuning,2024,8
+parameter-efficient finetuning,2024,1
+parameter-efficient training,2024,1
+parameter-efficient tuning,2022,7
+parameter-efficient tuning,2023,8
+parameter-efficient tuning,2024,1
+parametric vs non-parametric memory,2024,1
+paraphrase detection,2022,1
+paraphrase detection,2023,1
+paraphrase detection,2024,1
+paraphrase generation,2021,5
+paraphrase generation,2022,5
+paraphrase generation,2023,1
+paraphrase identification,2021,2
+paraphrase identification,2022,1
+paraphrase identification,2023,1
+paraphrasing,2021,1
+parsing/constituency,2021,17
+parsing/constituency,2022,18
+parsing/constituency,2023,15
+parsing/constituency,2024,12
+parsing/dependency,2021,48
+parsing/dependency,2022,43
+parsing/dependency,2023,45
+parsing/dependency,2024,27
+parsing/semantic,2021,2
+parsing/semantic parsing,2022,1
+part-of-speech,2021,1
+partial annotation,2023,1
+partial supervision,2023,1
+parts of speech,2024,1
+passage retrieval,2022,1
+patent classification,2022,1
+path consistency learning,2022,1
+patient outcome prediction,2022,1
+pattern exploitation,2022,1
+pattern-exploiting training,2021,1
+peer review,2023,1
+per-channel quantization,2023,1
+performance improvement,2023,1
+performance modeling,2023,1
+performance prediction,2023,1
+permutation-invariance,2022,1
+persona consistency,2023,1
+persona modeling,2023,1
+personality analysis,2022,1
+personalization,2021,1
+personalization,2022,2
+personalization,2023,8
+personalization,2024,5
+personalized search,2024,1
+personalized text generation,2023,1
+persuasion prediction,2021,1
+perturbation methods,2023,1
+perturbed word suggestion,2022,1
+phoneme classification,2024,1
+phonetic analysis,2024,1
+phonology,2021,1
+phonology,2024,1
+phrase detection,2021,1
+phrase grounding,2022,2
+phrase grounding,2023,1
+phrase selection,2023,1
+physical property reasoning,2022,1
+pipeline models,2021,1
+pipeline optimization,2023,1
+planning,2021,1
+planning,2024,1
+planning/sequence modeling,2023,1
+planning/structured generation,2022,1
+planning/trajectory learning,2024,1
+plausibility processing,2023,1
+plot analysis,2021,1
+pointer mechanism,2022,1
+pointer networks,2021,2
+pointwise usable information,2023,1
+poisoning attacks,2023,2
+poisoning defense,2021,1
+policy compliance detection,2021,1
+policy gradient,2021,1
+policy gradient,2022,2
+policy learning,2021,3
+policy learning,2024,1
+policy optimization,2024,2
+politeness and empathy,2023,1
+politeness modeling,2024,1
+political decision-making,2021,1
+population-based training,2024,1
+pose estimation,2023,1
+position embeddings,2021,1
+positional encoding,2022,2
+positive-unlabeled learning,2022,1
+post-editing,2022,1
+post-processing methods,2024,1
+post-training calibration,2022,1
+post-training methods,2021,1
+post-training methods,2023,1
+post-training pruning,2024,1
+post-training quantization,2021,1
+post-training quantization,2022,1
+post-training quantization,2023,3
+post-training quantization,2024,1
+pragmatics,2021,2
+pre-trained language models,2023,1
+predicate debiasing,2024,1
+prediction correction,2022,1
+prediction modeling,2022,1
+predictive modeling,2021,1
+preference learning/DPO,2022,1
+preference learning/DPO,2023,12
+preference learning/DPO,2024,92
+prefix tuning,2023,3
+prefix tuning,2024,1
+prefix-tuning,2022,1
+prefix-tuning,2023,1
+prefix-tuning,2024,1
+premise identification,2024,1
+premise localization,2024,1
+preprocessing methods,2023,1
+presentation bias,2023,1
+pretrained LMs,2024,1
+pretrained language models,2021,1
+pretrained language models,2022,1
+pretrained language models,2023,1
+pretraining/objectives,2021,359
+pretraining/objectives,2022,386
+pretraining/objectives,2023,516
+pretraining/objectives,2024,541
+privacy,2022,2
+privacy protection,2022,1
+privacy-preserving training,2021,1
+privacy/anonymity in sign language data,2023,1
+privacy/deidentification,2022,1
+privacy/federated/DP,2021,14
+privacy/federated/DP,2022,17
+privacy/federated/DP,2023,18
+privacy/federated/DP,2024,28
+privacy/jailbreak defense,2023,1
+privacy/joint attack-defense benchmark,2024,1
+probabilistic modeling,2021,2
+probabilistic models,2023,1
+probability calibration,2023,1
+probing,2022,3
+probing methods,2022,1
+probing methods,2023,1
+probing tasks,2023,1
+procedural planning,2024,1
+program repair,2021,1
+program repair,2022,1
+program repair,2023,1
+program repair,2024,3
+program synthesis,2021,2
+program synthesis,2022,3
+program synthesis,2023,2
+programming languages,2021,1
+prompt engineering,2022,3
+prompt engineering,2023,10
+prompt engineering,2024,4
+prompt evaluation,2024,1
+prompt generation,2023,1
+prompt injection attacks,2024,1
+prompt learning,2022,3
+prompt learning,2023,4
+prompt learning/SFT,2022,4
+prompt learning/SFT,2024,1
+prompt refinement,2024,1
+prompt tuning,2022,14
+prompt tuning,2023,6
+prompt tuning,2024,3
+prompt tuning/vision-language models,2022,1
+prompt-based bias mitigation,2024,1
+prompt-based learning,2022,3
+prompt-based learning,2023,1
+prompt-based learning,2024,1
+prompting,2022,6
+prompting,2023,8
+prompting,2024,9
+prompting methods,2021,1
+prompting methods,2023,3
+prompting methods,2024,3
+prompting sensitivity,2022,1
+prompting strategies,2023,1
+prompting techniques,2022,2
+prompting techniques,2023,1
+prompting techniques,2024,1
+propaganda detection,2024,1
+proposal generation,2021,1
+proposal methods,2021,1
+prosody,2023,1
+prosody assessment,2024,1
+prosody modeling,2022,1
+prosody modeling,2023,1
+prosody modeling,2024,1
+protein representation learning,2024,1
+prototype learning,2023,2
+prototype networks,2022,1
+prototype networks,2023,1
+prototype-based networks,2024,1
+prototypical networks,2022,1
+proxy learning,2024,1
+pruning/LoRA/adapters,2021,19
+pruning/LoRA/adapters,2022,30
+pruning/LoRA/adapters,2023,40
+pruning/LoRA/adapters,2024,79
+pseudo labeling,2023,1
+pseudo-data construction,2023,1
+pseudo-labeling,2021,1
+pseudo-labeling,2022,3
+pseudo-labeling,2023,5
+pseudo-labeling,2024,2
+psycholinguistics,2021,1
+psycholinguistics,2022,2
+psycholinguistics,2023,3
+psycholinguistics,2024,5
+psychological modeling,2021,1
+psychological trait analysis,2023,1
+psychology,2023,1
+psychology,2024,1
+psychology in NLP,2022,1
+psychometrics,2021,1
+psychometrics,2024,1
+qualitative reasoning,2024,1
+quality assessment,2022,1
+quality estimation,2021,3
+quality estimation,2022,2
+quality estimation,2023,3
+quality estimation,2024,1
+quality estimation/word-level QE,2021,1
+quantitative measurements,2024,1
+quantization,2021,4
+quantization,2022,4
+quantization,2023,10
+quantization,2024,19
+quantization-aware training,2021,1
+quantization/sub-8-bit LLM inference,2023,1
+quantum probability modeling,2021,1
+query decomposition,2023,1
+query languages,2023,1
+query rewriting,2022,1
+query rewriting,2024,1
+query-by-committee,2022,1
+question decomposition,2021,1
+question decomposition,2023,1
+question generation,2021,3
+question generation,2022,3
+question generation,2023,3
+quotation attribution,2024,1
+radiology report generation,2023,1
+randomized smoothing,2024,1
+ranking,2021,2
+ranking,2022,2
+ranking,2023,1
+ranking,2024,5
+ranking aggregation,2024,1
+ranking consistency,2024,1
+ranking loss,2022,1
+ranking methods,2021,2
+ranking methods,2022,2
+ranking methods,2023,2
+ranking optimization,2023,1
+rare embeddings,2022,1
+rare word translation,2024,1
+rating prediction,2021,1
+rationale extraction,2021,1
+rationale extraction,2024,3
+re-ranking,2022,1
+readability assessment,2024,1
+readability metrics,2023,1
+readability optimization,2023,1
+reading order modeling,2024,1
+reasoning,2023,2
+reasoning tasks,2024,1
+reasoning with tools,2021,31
+reasoning with tools,2022,47
+reasoning with tools,2023,78
+reasoning with tools,2024,110
+recipe generation,2022,1
+recipe understanding,2023,1
+recommendation systems,2021,5
+recommendation systems,2022,2
+recommendation systems,2023,4
+recommendation systems,2024,4
+reconstruction error minimization,2024,1
+recurrent memory,2021,1
+recurrent networks,2023,1
+recurrent neural networks,2022,1
+recurrent neural networks,2023,1
+recursive methods,2023,1
+recursive neural networks,2022,2
+redundancy reduction,2022,1
+reference expression comprehension,2022,1
+reference expression generation,2022,1
+reference resolution,2021,1
+reference-less evaluation,2021,1
+referential games,2024,1
+referring expression comprehension,2023,2
+reflection,2024,1
+reformulation,2022,1
+regression,2021,1
+regression,2023,1
+regression,2024,1
+regression modeling,2024,1
+regression-based triplet count estimation,2023,1
+regular languages,2023,1
+regularization,2021,4
+regularization,2022,2
+regularization,2023,2
+regularization techniques,2023,2
+reinforcement learning,2021,16
+reinforcement learning,2022,11
+reinforcement learning,2023,13
+reinforcement learning,2024,12
+reinforcement learning/DPO,2021,1
+reinforcement learning/DPO,2022,1
+reinforcement learning/GRPO/PPO,2021,1
+reinforcement learning/RL,2023,1
+reinforcement learning/RLHF/GRPO/PPO,2024,2
+reinforcement learning/agent,2023,1
+reinforcement learning/optimization,2023,2
+relation extraction,2021,6
+relation extraction,2022,3
+relation extraction,2023,5
+relation extraction,2024,1
+relation modeling,2023,1
+relation representation learning,2022,1
+relation understanding,2023,1
+relational learning,2021,1
+rephrase detection,2021,1
+replacement detection,2022,1
+replay-based learning,2023,1
+representation alignment,2024,1
+representation analysis,2023,1
+representation disentanglement,2023,1
+representation learning,2021,30
+representation learning,2022,35
+representation learning,2023,43
+representation learning,2024,16
+representation space preservation,2024,1
+representativeness measure integration,2022,1
+reproducibility,2022,1
+reranked beam search,2023,1
+residual connections,2024,1
+residual vector quantization,2024,1
+response forecasting,2023,1
+response generation,2021,6
+response generation,2022,2
+response generation,2023,2
+response ranking,2023,1
+response selection,2021,1
+response selection,2022,1
+response template generation,2021,1
+retrieval augmentation,2024,1
+retrieval augmentation/dense,2021,68
+retrieval augmentation/dense,2022,97
+retrieval augmentation/dense,2023,171
+retrieval augmentation/dense,2024,227
+retrieval augmentation/sparse,2021,9
+retrieval augmentation/sparse,2022,18
+retrieval augmentation/sparse,2023,36
+retrieval augmentation/sparse,2024,27
+review-based recommendation,2024,1
+reward design,2024,1
+reward dropout,2024,1
+reward learning,2023,1
+reward learning,2024,1
+reward model,2024,1
+reward modeling,2021,2
+reward modeling,2023,3
+reward modeling,2024,4
+robotics/navigation,2023,1
+robustness/OOD/adversarial,2021,106
+robustness/OOD/adversarial,2022,124
+robustness/OOD/adversarial,2023,147
+robustness/OOD/adversarial,2024,182
+role-filler entity extraction,2021,1
+root cause analysis,2024,1
+rotation-aware fine-tuning,2024,1
+routing/mixture-of-experts,2021,3
+routing/mixture-of-experts,2022,6
+routing/mixture-of-experts,2023,16
+routing/mixture-of-experts,2024,20
+rule distillation,2023,1
+rule extraction,2021,1
+rule induction,2022,1
+rule-based methods,2021,2
+rule-based methods,2023,1
+rumor detection,2021,1
+rumor detection,2023,1
+safety/bias/fairness,2023,3
+safety/bias/fairness,2024,2
+safety/jailbreak defense,2021,8
+safety/jailbreak defense,2022,7
+safety/jailbreak defense,2023,16
+safety/jailbreak defense,2024,66
+safety/privacy/federated/DP,2022,1
+safety/privacy/federated/DP,2024,1
+safety/robustness,2023,3
+safety/robustness,2024,5
+safety/robustness/OOD adversarial attacks,2024,1
+safety/robustness/OOD/adversarial,2021,1
+safety/robustness/OOD/adversarial,2022,3
+safety/robustness/OOD/adversarial,2024,4
+safety/robustness/interpretability,2024,1
+safety/toxicity/hallucination,2021,26
+safety/toxicity/hallucination,2022,42
+safety/toxicity/hallucination,2023,124
+safety/toxicity/hallucination,2024,254
+safety/uncertainty/calibration,2022,2
+safety/uncertainty/calibration,2024,2
+sample efficiency,2021,1
+sample efficiency,2022,1
+sample selection,2022,1
+sampling strategies,2023,1
+sampling/decoding control,2021,31
+sampling/decoding control,2022,33
+sampling/decoding control,2023,81
+sampling/decoding control,2024,106
+sarcasm detection,2021,1
+sarcasm detection,2022,1
+sarcasm/irony,2023,1
+satisfaction estimation,2021,1
+scaling laws,2021,2
+scaling laws,2022,3
+scaling laws,2023,10
+scaling laws,2024,17
+scene graph generation,2024,1
+scene graphs,2023,1
+schema induction,2023,1
+schema-driven IE,2024,1
+schema-guided generation,2023,1
+schema-guided generation,2024,1
+schema-guided prompting,2023,1
+scientific NLP,2023,1
+scientific claim verification,2023,1
+scientific discovery,2024,1
+scientific document processing,2023,1
+scientific leaderboards,2024,1
+scientific literature,2021,3
+scientific literature,2023,3
+scientific literature,2024,4
+scientific literature NLP,2021,1
+scientific literature analysis,2024,1
+scientific peer review,2023,1
+scoring methods,2023,1
+search strategies,2024,1
+second language acquisition,2024,1
+security,2022,2
+security vulnerabilities,2023,1
+security/cybersecurity,2024,1
+security/privacy,2024,1
+segment-level interaction,2021,1
+segmentation,2022,1
+segmentation,2023,2
+selection bias,2023,1
+selective prediction,2023,1
+selective prediction,2024,1
+self-attention,2023,1
+self-attention,2024,1
+self-attention reweighting,2024,1
+self-chat data generation,2023,1
+self-collaborative learning,2021,2
+self-consistency,2023,1
+self-consistency,2024,2
+self-distillation,2023,4
+self-paced learning,2021,1
+self-rationalization,2023,1
+self-renewal prompt optimization,2024,1
+self-supervised learning,2021,12
+self-supervised learning,2022,9
+self-supervised learning,2023,11
+self-supervised learning,2024,7
+self-teaching,2021,1
+self-training,2021,11
+self-training,2022,8
+self-training,2023,5
+self-training,2024,4
+semantic adequacy,2021,1
+semantic alignment,2022,1
+semantic analysis,2021,1
+semantic analysis,2023,1
+semantic analysis,2024,1
+semantic change detection,2021,1
+semantic change detection,2023,1
+semantic change modeling,2022,1
+semantic coherence,2021,2
+semantic compositionality,2022,1
+semantic consistency,2023,1
+semantic dependencies,2024,1
+semantic embeddings,2022,2
+semantic embeddings,2023,1
+semantic equivalence,2021,1
+semantic extension,2023,1
+semantic filtering,2022,1
+semantic interactions,2022,1
+semantic knowledge,2023,1
+semantic label utilization,2024,1
+semantic matching,2021,1
+semantic matching,2022,1
+semantic matching,2023,2
+semantic parsing,2021,12
+semantic parsing,2022,13
+semantic parsing,2023,17
+semantic parsing,2024,3
+semantic parsing/text-to-SQL,2022,2
+semantic parsing/text-to-SQL,2023,1
+semantic reasoning,2024,1
+semantic relationships,2021,1
+semantic representation,2022,5
+semantic representation,2023,2
+semantic representation,2024,1
+semantic representations,2021,1
+semantic retrieval,2022,2
+semantic role labeling,2021,5
+semantic role labeling,2022,3
+semantic role labeling,2023,8
+semantic role labeling,2024,1
+semantic roles,2022,1
+semantic segmentation,2022,1
+semantic similarity,2021,2
+semantic similarity,2022,1
+semantic similarity,2023,6
+semantic similarity,2024,3
+semantic tagging,2021,1
+semantic text matching,2023,1
+semantic textual similarity,2021,2
+semantic textual similarity,2024,4
+semantic training,2024,1
+semantics repair,2024,1
+semi-parametric methods,2023,1
+semi-structured sparsity,2024,1
+semi-supervised learning,2021,13
+semi-supervised learning,2022,11
+semi-supervised learning,2023,13
+semi-supervised learning,2024,3
+sentence alignment,2022,1
+sentence alignment,2023,1
+sentence classification,2021,3
+sentence classification,2022,2
+sentence clustering,2021,1
+sentence embedding,2021,1
+sentence embeddings,2021,1
+sentence embeddings,2022,3
+sentence embeddings,2023,4
+sentence embeddings,2024,4
+sentence fusion,2022,1
+sentence ordering,2021,1
+sentence pair modeling,2023,1
+sentence reordering,2021,1
+sentence representation,2021,2
+sentence representation,2023,1
+sentence representation,2024,1
+sentence representation learning,2021,2
+sentence representation learning,2022,1
+sentence rewriting,2021,1
+sentence segmentation,2021,1
+sentence similarity,2021,1
+sentence simplification,2024,1
+sentence splitting,2024,1
+sentence-level modeling,2023,1
+sentence-level sentiment,2022,1
+sentence-level training,2023,1
+sentence-pair classification,2021,1
+sentiment analysis,2021,26
+sentiment analysis,2022,22
+sentiment analysis,2023,27
+sentiment analysis,2024,9
+sentiment analysis/moral sentiment,2021,1
+sentiment classification,2021,2
+sentiment classification,2022,1
+sentiment classification,2024,1
+sentiment detection,2023,1
+sentiment detection,2024,1
+sentiment polarity classification,2021,1
+sentiment polarity detection,2021,1
+sentiment quadruplet extraction,2024,1
+sequence alignment,2021,1
+sequence classification,2021,3
+sequence classification,2022,2
+sequence correction,2023,1
+sequence generation,2021,4
+sequence generation,2022,2
+sequence generation,2023,1
+sequence labeling,2021,9
+sequence labeling,2022,7
+sequence labeling,2023,6
+sequence labeling,2024,5
+sequence modeling,2021,4
+sequence modeling,2022,2
+sequence modeling,2023,9
+sequence modeling,2024,2
+sequence pair classification,2021,1
+sequence span rewriting,2021,1
+sequence tagging,2021,2
+sequence tagging,2022,2
+sequence tagging,2023,1
+sequence-attention,2023,1
+sequence-level knowledge distillation,2024,1
+sequence-to-graph conversion,2021,1
+sequence-to-sequence,2023,3
+sequence-to-sequence learning,2021,1
+sequence-to-sequence modeling,2021,1
+sequence-to-sequence modeling,2022,3
+sequence-to-sequence modeling,2023,1
+sequence-to-sequence models,2021,3
+sequence-to-sequence models,2022,3
+sequence-to-sequence models,2023,4
+sequence-to-sequence models,2024,2
+sequence-to-set modeling,2021,1
+sequence-to-structure modeling,2023,1
+sequence-to-tree generation,2021,1
+sequential editing,2024,1
+sequential modeling,2022,1
+set generation,2021,1
+set learning,2023,1
+set prediction networks,2023,1
+severity classification,2022,1
+shallow fusion,2024,1
+short text classification,2021,1
+short text classification,2022,2
+short text processing,2024,1
+similar clause relation,2022,1
+similarity learning,2023,1
+similarity measures,2021,1
+similarity measures,2024,1
+similarity sampling,2023,1
+similarity/semantic similarity,2023,1
+simplification,2021,4
+simplification,2022,3
+simplification,2023,11
+simplification,2024,9
+simulation,2022,1
+simulation,2024,3
+slot filling,2021,9
+slot filling,2022,9
+slot filling,2023,18
+slot filling,2024,4
+small language models,2023,1
+small model adaptation,2023,1
+small model training,2023,1
+social attitude analysis,2021,1
+social context modeling,2022,1
+social impact,2023,1
+social influence modeling,2021,1
+social media,2021,7
+social media,2022,6
+social media,2023,9
+social media,2024,14
+social media NLP,2021,1
+social media analysis,2021,7
+social media analysis,2022,4
+social media analysis,2023,9
+social media analysis,2024,9
+social media content moderation,2021,1
+social media text analysis,2023,1
+social media text analysis,2024,1
+social network analysis,2023,1
+social science NLP,2023,1
+sociolinguistics,2022,1
+sociotechnical analysis,2023,1
+soft Q-learning,2022,1
+soft clustering,2024,1
+soft labeling,2022,1
+soft-masking,2023,1
+soft-prompt tuning,2024,1
+software engineering,2022,1
+software engineering,2024,1
+software security,2023,1
+software vulnerability classification,2024,1
+software vulnerability detection,2024,1
+source selection,2021,1
+span alignment,2022,1
+span detection,2021,1
+span detection,2022,1
+span prediction,2021,1
+span representation,2021,1
+span representation,2023,1
+span-based NER,2023,1
+span-based methods,2022,1
+span-level modeling,2022,1
+sparse attention,2021,1
+sparse attention,2022,1
+sparse reward learning,2022,1
+spatial localization,2024,1
+spatial reasoning,2021,1
+spatial reasoning,2023,4
+spatial reasoning,2024,1
+spatial role labeling,2022,1
+spatio-temporal reasoning,2023,1
+speaker diarization,2022,2
+speaker diarization,2024,1
+speaker identification,2021,1
+speaker modeling,2023,1
+speaker modeling,2024,1
+speaker verification,2021,1
+spectral analysis,2022,1
+spectral analysis,2023,1
+spectral methods,2021,1
+spectral methods,2023,1
+speculative decoding/medusa,2023,1
+speculative decoding/medusa,2024,7
+speech LMs,2024,1
+speech act classification,2023,1
+speech corpus creation,2023,1
+speech emotion captioning,2024,1
+speech emotion recognition,2023,1
+speech emotion recognition,2024,1
+speech integration,2024,1
+speech processing,2023,3
+speech processing,2024,1
+speech recognition,2022,2
+speech recognition,2023,1
+speech recognition,2024,5
+speech recognition/language identification,2024,1
+speech resynthesis,2024,1
+speech synthesis,2022,2
+speech synthesis,2023,2
+speech translation,2021,1
+speech translation,2022,6
+speech translation,2023,10
+speech translation,2024,1
+speech-to-singing synthesis,2024,1
+speech-to-speech translation,2023,1
+speech-to-speech translation,2024,2
+speech-to-text,2024,1
+spell checking,2022,1
+spelling correction,2022,1
+spelling error correction,2021,1
+spoken language modeling,2024,1
+spoken language processing,2022,1
+spoken language processing,2023,1
+spoken language understanding,2023,2
+spoken language understanding,2024,2
+stability analysis,2022,1
+stability analysis,2023,1
+stance detection,2021,15
+stance detection,2022,14
+stance detection,2023,35
+stance detection,2024,21
+starting and stopping criteria,2022,1
+state tracking,2022,1
+statistical analysis,2021,1
+statistical analysis,2022,1
+statistical analysis,2023,1
+statistical analysis,2024,2
+statistical linguistics,2021,1
+statistical methods,2021,1
+statistical significance testing,2024,1
+statistical testing,2023,1
+stochastic methods,2021,1
+story visualization,2022,1
+strategic planning,2023,1
+strategy planning,2022,1
+strategy planning,2024,1
+streaming ASR,2023,1
+streaming ASR,2024,1
+streaming inference adaptation,2023,1
+streaming text generation,2024,1
+streaming translation,2023,1
+structural alignment,2021,1
+structural causal models,2022,1
+structural control,2022,1
+structural generalization,2023,1
+structural generalization,2024,1
+structure generation,2023,1
+structure induction,2023,1
+structure-aware modeling,2022,1
+structured commonsense reasoning,2021,1
+structured commonsense reasoning,2022,1
+structured data modeling,2022,1
+structured evidence extraction,2023,1
+structured explanations,2021,1
+structured prediction,2021,2
+structured prediction,2022,7
+structured prediction,2023,7
+structured prediction,2024,2
+structured reasoning,2022,1
+structured representation,2022,1
+student modeling,2022,1
+style transfer,2022,2
+style transfer/controllable text,2021,32
+style transfer/controllable text,2022,18
+style transfer/controllable text,2023,29
+style transfer/controllable text,2024,20
+stylometry,2023,1
+stylometry,2024,1
+sub-network discovery,2023,1
+subjective NLP,2024,1
+subjectivity modeling,2023,1
+subsentence modeling,2022,1
+summarization,2021,86
+summarization,2022,100
+summarization,2023,132
+summarization,2024,62
+supertagging,2023,1
+supervised contrastive learning,2021,2
+supervised contrastive learning,2022,2
+supervised contrastive learning,2023,1
+supervised learning,2021,2
+supervised learning,2022,2
+supervised learning,2023,2
+supervised learning,2024,2
+supervised training,2024,1
+surprisal,2022,1
+survey,2021,1
+survey,2024,1
+survey alignment,2021,1
+symbolic knowledge distillation,2023,1
+syntactic diversity,2021,1
+syntactic parsing,2023,1
+syntactic priming,2022,1
+syntactic representations,2021,1
+syntactic robustness,2022,1
+syntactic similarity sampling,2023,1
+syntax,2021,1
+syntax,2022,1
+syntax,2023,1
+syntax analysis,2021,1
+syntax and semantics,2023,1
+syntax control,2021,1
+syntax refinement,2022,1
+syntax-aware methods,2023,1
+syntax-based reordering,2023,1
+syntax-enhanced modeling,2022,1
+syntax/dependency,2022,1
+synthetic data generation,2021,2
+synthetic data generation,2022,1
+synthetic data generation,2023,2
+synthetic data generation,2024,5
+synthetic feedback,2023,1
+synthetic-to-real gap,2024,1
+system combination,2023,1
+systematic generalization,2021,2
+systematic generalization,2022,1
+table filling,2021,1
+table reasoning,2024,1
+table understanding,2021,1
+table understanding,2023,1
+table-filling methods,2022,1
+table-to-text generation,2021,1
+table-to-text generation,2022,2
+tabular data,2023,1
+tabular data,2024,1
+tabular data reasoning,2023,1
+tabular language models,2023,1
+tagging-based opinion term detection,2023,1
+target-oriented sentiment classification,2023,1
+task adaptation,2023,1
+task analysis,2023,1
+task arithmetic,2024,1
+task augmentation,2021,1
+task augmentation,2022,1
+task clustering,2022,1
+task conditioning,2024,1
+task decomposition,2022,2
+task distribution,2021,1
+task embeddings,2022,1
+task introduction,2024,1
+task relationships,2022,1
+task selection,2023,1
+task selection,2024,2
+task-oriented dialogue,2023,2
+template filling,2024,1
+template generation,2021,1
+template-based methods,2022,1
+template-based prompting,2022,1
+temporal IE,2021,15
+temporal IE,2022,11
+temporal IE,2023,24
+temporal IE,2024,13
+temporal adaptation,2021,1
+temporal modeling,2023,1
+temporal reasoning,2021,1
+term-definition relation,2022,1
+test-time adaptation,2024,1
+text and graph learning,2023,1
+text auto-completion,2021,1
+text classification,2021,17
+text classification,2022,25
+text classification,2023,17
+text classification,2024,13
+text coherence,2022,1
+text detoxification,2024,1
+text generation,2021,2
+text generation,2022,3
+text generation,2023,5
+text generation,2024,2
+text hierarchy generation,2024,1
+text matching,2022,1
+text normalization,2023,1
+text refinement,2024,1
+text representation,2021,1
+text reuse detection,2024,1
+text segmentation,2021,1
+text segmentation,2022,1
+text segmentation,2024,1
+text similarity,2023,1
+text simplification,2022,1
+text style transfer,2024,1
+text-attributed graph,2023,1
+text-based games,2021,1
+text-based models,2023,1
+text-editing,2024,1
+text-to-SQL,2023,3
+text-to-SQL,2024,1
+text-to-SQL reformulation,2022,1
+text-to-image,2022,5
+text-to-image,2023,1
+text-to-image,2024,7
+text-to-text generation,2022,2
+textual entailment,2022,1
+theorem proving,2021,1
+theoretical analysis,2021,1
+theoretical analysis,2023,1
+theoretical analysis,2024,1
+theoretical convergence,2024,1
+theory of mind,2023,3
+theory/generalization,2021,4
+theory/generalization,2022,1
+theory/generalization,2023,10
+theory/generalization,2024,4
+thresholding,2023,1
+thresholding methods,2022,1
+throughput/latency/inference serving,2021,24
+throughput/latency/inference serving,2022,21
+throughput/latency/inference serving,2023,28
+throughput/latency/inference serving,2024,59
+time prediction,2023,1
+time series analysis,2021,1
+time series analysis,2022,1
+time series analysis,2024,1
+time series forecasting,2022,1
+time series forecasting,2024,2
+time series modeling,2023,1
+time series prediction,2023,1
+time series representation,2024,1
+time-series forecasting,2024,1
+timeline extraction,2022,1
+token classification,2023,1
+token classification,2024,1
+token-level interaction,2021,1
+tokenization/subwording,2021,22
+tokenization/subwording,2022,25
+tokenization/subwording,2023,31
+tokenization/subwording,2024,33
+tool use/function calling,2022,1
+tool use/function calling,2023,6
+tool use/function calling,2024,19
+topic modeling,2021,4
+topic modeling,2022,4
+topic modeling,2023,4
+topic modeling,2024,5
+topic prediction,2022,1
+topic segmentation,2022,1
+topic segmentation,2023,2
+topic segmentation,2024,1
+topic-agnostic sentiment,2021,1
+topic-aware generation,2021,1
+topic-shift detection,2021,1
+topicality evaluation,2022,1
+toxicity detection,2021,12
+toxicity detection,2022,10
+toxicity detection,2023,30
+toxicity detection,2024,20
+tracking,2023,1
+training augmentation,2022,1
+training data attribution,2022,1
+training data attribution,2023,1
+training data augmentation,2023,1
+training data augmentation,2024,1
+training data effects,2022,1
+training data selection,2024,1
+training dynamics,2022,1
+training dynamics,2024,2
+training efficiency,2022,2
+training efficiency,2023,1
+training efficiency,2024,1
+training framework,2023,1
+training methods,2021,3
+training methods,2022,2
+training methods,2023,1
+training objectives,2022,1
+training objectives,2023,1
+training schedule optimization,2023,1
+training stability,2024,1
+training strategies,2021,2
+training strategies,2023,4
+training techniques,2022,1
+training/objectives,2022,1
+trajectory augmentation,2022,1
+transducer models,2024,1
+transductive learning,2023,1
+transfer learning,2021,15
+transfer learning,2022,22
+transfer learning,2023,14
+transfer learning,2024,7
+transfer learning/continued pretraining/domain-adapt,2022,1
+transformer LMs,2022,1
+transformer architectures,2022,2
+transformer architectures,2023,1
+transformer models,2021,3
+transformer models,2022,2
+transformer models,2023,6
+transformer models,2024,2
+transformer-based modeling,2022,1
+transformers,2021,8
+transformers,2022,5
+transformers,2023,15
+transformers,2024,4
+translation,2024,2
+translation instruction,2023,1
+translation-based alignment,2023,1
+transliteration,2023,1
+transliteration,2024,1
+treebanking,2022,1
+trigger detection,2021,1
+triplet extraction,2022,1
+triplet loss,2023,1
+trustworthiness,2022,1
+uncertainty estimation,2023,2
+uncertainty estimation,2024,1
+uncertainty modeling,2021,1
+uncertainty quantification,2021,1
+uncertainty sampling,2021,1
+uncertainty sampling,2023,1
+uncertainty/calibration,2021,10
+uncertainty/calibration,2022,12
+uncertainty/calibration,2023,19
+uncertainty/calibration,2024,32
+universal dependencies,2024,1
+unknown entity discovery,2022,1
+unlikelihood learning,2022,1
+unlikelihood training,2022,2
+unlikelihood training,2023,1
+unstructured prediction,2022,1
+unstructured sparsity,2024,1
+unsupervised anomaly detection,2024,1
+unsupervised clustering,2023,2
+unsupervised domain adaptation,2021,1
+unsupervised domain adaptation,2022,1
+unsupervised domain adaptation,2024,1
+unsupervised evaluation,2023,1
+unsupervised learning,2021,32
+unsupervised learning,2022,25
+unsupervised learning,2023,26
+unsupervised learning,2024,8
+unsupervised parsing,2022,1
+unsupervised parsing,2024,1
+unsupervised pattern discovery,2024,1
+unsupervised probing,2024,1
+unsupervised representation analysis,2022,1
+unsupervised sentence embedding,2023,1
+unsupervised sentence representation,2024,1
+user behavior modeling,2023,1
+user feedback,2022,1
+user feedback integration,2024,1
+user intention prediction,2024,1
+user interaction,2023,1
+user interaction analysis,2023,1
+user interest modeling,2024,1
+user modeling,2021,3
+user modeling,2022,1
+user modeling,2023,2
+user modeling,2024,2
+user profiling,2021,1
+user simulation,2022,1
+user simulation,2024,1
+user state modeling,2022,1
+user studies,2024,1
+user study,2024,1
+user targeting,2021,1
+user-agent interaction,2021,1
+user-centric evaluation,2024,1
+user-generated data,2022,1
+utterance representation,2023,1
+utterance splitting,2022,1
+variable disentanglement,2023,1
+variational EM,2021,1
+variational auto-encoder,2022,2
+variational auto-encoder,2024,1
+variational autoencoder,2024,1
+variational autoencoders,2021,4
+variational autoencoders,2022,1
+variational autoencoders,2024,1
+variational methods,2021,1
+vector quantization,2022,3
+vector quantization,2024,1
+verbalizer design,2022,1
+video QA/reasoning,2021,4
+video QA/reasoning,2022,4
+video QA/reasoning,2023,11
+video QA/reasoning,2024,11
+video captioning,2022,1
+video grounding,2022,1
+video processing,2022,1
+video question generation,2024,1
+video representation learning,2023,1
+video retrieval,2024,1
+video understanding,2021,1
+video understanding,2022,1
+visio-linguistic reasoning,2024,1
+vision-language,2024,1
+visual grounding,2023,1
+visual grounding,2024,1
+visual metaphor understanding,2023,1
+visual question answering,2021,1
+visual question answering,2022,2
+visual question answering,2023,1
+visual question answering,2024,1
+visual reasoning,2024,2
+visual speech recognition,2024,1
+visualization,2023,1
+visually-rich documents,2024,1
+vocabulary expansion,2024,1
+vocabulary extension,2024,1
+voice activity detection,2024,1
+voice cloning,2024,1
+voice conversion,2023,1
+voice conversion,2024,1
+weak supervision,2021,11
+weak supervision,2022,8
+weak supervision,2023,9
+weak supervision,2024,4
+weakly supervised learning,2022,1
+weakly-supervised classification,2021,1
+weakly-supervised classification,2022,1
+weakly-supervised classification,2023,1
+web mining,2023,1
+weight perturbation,2023,1
+weight quantization,2023,2
+weight quantization,2024,1
+weight-activation quantization,2024,1
+weighting methods,2021,1
+word embedding compression,2021,1
+word embeddings,2021,2
+word embeddings,2022,1
+word embeddings,2023,1
+word error rate improvement,2024,1
+word order,2022,1
+word recognition,2023,1
+word representations,2021,1
+word sense disambiguation,2022,1
+word sense induction,2024,1
+word-level language identification,2023,1
+word-level sentiment,2022,1
+working memory,2022,1
+zero-shot cross-lingual transfer,2023,1
+zero-shot entity linking,2023,1
+zero-shot evaluation,2021,2
+zero-shot generalization,2023,1
+zero-shot generalization,2024,1
+zero-shot learning,2021,13
+zero-shot learning,2022,27
+zero-shot learning,2023,42
+zero-shot learning,2024,23
+zero-shot transfer,2022,1
+zero-shot transfer,2024,1

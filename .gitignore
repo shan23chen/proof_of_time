@@ -186,6 +186,9 @@ ctgov_studies_summary.csv
 .vscode/
 .cursor/
 
+# Persist analysis reports
+!reports/*.csv
+
 # macOS
 .DS_Store
 .AppleDouble
