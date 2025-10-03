@@ -1,40 +1,43 @@
-# future_work_with_verification.py
+#!/usr/bin/env python3
+# future_work_with_verification.py (LLM-as-a-Judge, normalized scoring)
 
 import os
 import json
 import asyncio
+import time
 from typing import Dict, Any, List, Optional
-from datasets import Dataset
 from tqdm import tqdm
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 from jsonschema import Draft202012Validator, ValidationError
 from litellm import acompletion
-
-import requests  # for Semantic Scholar HTTP API
+import requests
 
 # -------------------- CONFIG --------------------
 MODEL = os.getenv("LITELLM_MODEL", "openai/gpt-4o-mini")
 TEMPERATURE = 0
 TIMEOUT = 120
-MAX_CONCURRENCY = int(os.getenv("MAX_CONCURRENCY", "6"))
+MAX_CONCURRENCY = int(os.getenv("MAX_CONCURRENCY", "2"))
 MAX_TOKENS = 400
 ENABLE_REPAIR_PASS = True
+FREQ_AWARE = False  # set True to reward frequency of occurrence across multiple papers
 
 SEMANTIC_SCHOLAR_API = "https://api.semanticscholar.org/graph/v1"
-API_KEY = os.getenv("SCHOLAR_API_KEY", None)  # optional header
+API_KEY = os.getenv("SCHOLAR_API_KEY", None)
 
-# -------------------- PROMPT & SCHEMA --------------------
+last_request_time = 0
+def rate_limit():
+    global last_request_time
+    current_time = time.time()
+    time_since_last = current_time - last_request_time
+    if time_since_last < 3.1:
+        sleep_time = 3.1 - time_since_last
+        print(f"Rate limiting: sleeping {sleep_time:.2f}s")
+        time.sleep(sleep_time)
+    last_request_time = time.time()
+
+# -------------------- Forecast Schema --------------------
 SYSTEM_PROMPT = """You are an expert research analyst.
 Given a professor’s name and affiliation, forecast their most likely research direction in 2025.
-
-Output STRICT JSON matching the schema.
-
-Rules:
-- predicted_keywords: 3–10 concise future-oriented keywords.
-- predicted_subfields: map to broad AI/ML subfields (e.g., "causal inference", "retrieval augmentation", "fairness").
-- predicted_modalities: choose from {"text", "vision", "speech", "multimodal", "structured data", "policy/society"}.
-- Provide a rationale field, 1–3 sentences grounded in their reputation or past expertise.
-- Be conservative; do not speculate beyond known research identity.
 """
 
 JSON_SCHEMA = {
@@ -44,19 +47,18 @@ JSON_SCHEMA = {
         "properties": {
             "professor": {"type": "string"},
             "affiliation": {"type": "string"},
-            "predicted_keywords": {"type": "array", "items": {"type": "string"}, "minItems": 3, "maxItems": 10},
-            "predicted_subfields": {"type": "array", "items": {"type": "string"}, "minItems": 1, "maxItems": 5},
-            "predicted_modalities": {"type": "array", "items": {"type": "string"}, "minItems": 1, "maxItems": 3},
+            "predicted_keywords": {"type": "array", "items": {"type": "string"}},
+            "predicted_subfields": {"type": "array", "items": {"type": "string"}},
+            "predicted_modalities": {"type": "array", "items": {"type": "string"}},
         },
-        "required": ["professor", "affiliation", "predicted_keywords", "predicted_subfields", "predicted_modalities"],
+        "required": ["professor", "affiliation", "predicted_keywords",
+                     "predicted_subfields", "predicted_modalities"],
         "additionalProperties": False
-    },
-    "strict": True
+    }
 }
-
 JSON_VALIDATOR = Draft202012Validator(JSON_SCHEMA["schema"])
 
-# -------------------- LLM Prediction Logic --------------------
+# -------------------- LLM Prediction --------------------
 class TemporaryModelError(Exception):
     pass
 
@@ -80,19 +82,11 @@ async def llm_once(name: str, affiliation: str, repair_note: str = "") -> Dict[s
         temperature=TEMPERATURE,
         timeout=TIMEOUT,
         max_tokens=MAX_TOKENS,
-        response_format={"type": "json_schema", "json_schema": JSON_SCHEMA, "strict": True},
+        response_format={"type": "json_schema", "json_schema": JSON_SCHEMA},
     )
     text = resp.choices[0].message["content"]
-    if not text:
-        raise TemporaryModelError("Empty LLM content")
-    try:
-        data = json.loads(text)
-    except Exception:
-        raise TemporaryModelError("Malformed JSON")
-    try:
-        validate_or_raise(data)
-    except ValidationError as ve:
-        raise TemporaryModelError(f"Schema validation failed: {ve.message}")
+    data = json.loads(text)
+    validate_or_raise(data)
     return data
 
 @retry(
@@ -102,156 +96,214 @@ async def llm_once(name: str, affiliation: str, repair_note: str = "") -> Dict[s
     retry=retry_if_exception_type(TemporaryModelError)
 )
 async def call_model_with_repairs(name: str, affiliation: str) -> Dict[str, Any]:
-    try:
-        return await llm_once(name, affiliation)
-    except TemporaryModelError as e:
-        if ENABLE_REPAIR_PASS:
-            return await llm_once(name, affiliation, repair_note=str(e))
-        raise
+    return await llm_once(name, affiliation)
 
-# -------------------- Semantic Scholar Fetch & Verification --------------------
-def get_author_id_by_name(name: str) -> Optional[str]:
-    """
-    Use Semantic Scholar search endpoint to find author ID by name.
-    Returns first matching author_id or None.
-    """
+# -------------------- Semantic Scholar Fetch --------------------
+def get_author_id_by_name(name: str, affiliation: str = "") -> Optional[str]:
+    headers = {"x-api-key": API_KEY} if API_KEY else {}
+    rate_limit()
     url = f"{SEMANTIC_SCHOLAR_API}/author/search"
-    params = {"query": name, "limit": 1}
-    headers = {}
-    if API_KEY:
-        headers["x-api-key"] = API_KEY
+    params = {"query": name, "fields": "name,affiliations,url,citationCount"}
     resp = requests.get(url, params=params, headers=headers)
     if resp.status_code != 200:
         return None
-    data = resp.json()
-    matches = data.get("data", [])
-    if not matches:
+    results = resp.json().get("data", [])
+    if not results:
         return None
-    return matches[0].get("authorId")
+    if affiliation:
+        for a in results:
+            if affiliation.lower() in str(a.get("affiliations", "")).lower():
+                return a["authorId"]
+    sorted_results = sorted(results, key=lambda x: x.get("citationCount", 0), reverse=True)
+    return sorted_results[0]["authorId"]
 
-def get_first_2025_paper(author_id: str) -> Optional[Dict[str, Any]]:
-    """
-    Given a Semantic Scholar authorId, fetch that author's papers,
-    filter to publication year = 2025, and return the one with the earliest pub date (or any).
-    Returns dict with title, abstract, year.
-    """
+def get_all_2025_papers(author_id: str, author_name: str = "") -> List[Dict[str, Any]]:
+    headers = {"x-api-key": API_KEY} if API_KEY else {}
+    rate_limit()
     url = f"{SEMANTIC_SCHOLAR_API}/author/{author_id}/papers"
-    params = {
-        "fields": "title,abstract,year",
-        "limit": 1000
-    }
-    headers = {}
-    if API_KEY:
-        headers["x-api-key"] = API_KEY
+    params = {"fields": "title,abstract,year,venue,url", "limit": 1000}
     resp = requests.get(url, params=params, headers=headers)
     if resp.status_code != 200:
-        return None
-    data = resp.json().get("data", [])
-    # filter year == 2025
-    papers_2025 = [p for p in data if p.get("year") == 2025]
-    if not papers_2025:
-        return None
-    # choose one (e.g. first in list)
-    return papers_2025[0]
+        return []
+    return [p for p in resp.json().get("data", []) if p.get("year") == 2025]
 
-def compare_prediction_with_paper(pred: Dict[str, Any], paper: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Simple alignment metrics:
-    - keyword overlap: fraction of predicted_keywords appearing in title/abstract
-    - subfield match: whether any predicted_subfields appear in title/abstract
-    - modality check: whether modality (like "multimodal") is consistent with paper text (heuristic)
-    - returns a report dict
-    """
-    title = paper.get("title", "").lower()
-    abstract = (paper.get("abstract") or "").lower()
-    text = title + " " + abstract
+# -------------------- Paper Metadata Extraction --------------------
+async def extract_paper_metadata(paper: Dict[str, Any]) -> Dict[str, Any]:
+    title = paper.get("title", "No title")
+    abstract = paper.get("abstract", "No abstract available")
+    venue = paper.get("venue", "Unknown venue")
 
-    # keyword overlap count
-    kw_pred = [kw.lower() for kw in pred.get("predicted_keywords", [])]
-    matched_kw = [kw for kw in kw_pred if kw in text]
-    frac_kw = len(matched_kw) / max(1, len(kw_pred))
+    extraction_prompt = f"""Extract structured metadata from this 2025 research paper.
 
-    # subfield match (any)
-    sf_pred = [sf.lower() for sf in pred.get("predicted_subfields", [])]
-    matched_sf = [sf for sf in sf_pred if sf in text]
-    subfield_hit = bool(matched_sf)
+PAPER:
+- Title: {title}
+- Abstract: {abstract}
+- Venue: {venue}
 
-    # modality heuristic: check for modality words in text
-    modalities = pred.get("predicted_modalities", [])
-    modality_hits = []
-    for m in modalities:
-        if m.lower() in text:
-            modality_hits.append(m)
-    modality_match = bool(modality_hits)
-
-    report = {
-        "paper_title": paper.get("title"),
-        "paper_year": paper.get("year"),
-        "matched_keywords": matched_kw,
-        "keyword_overlap_fraction": frac_kw,
-        "matched_subfields": matched_sf,
-        "subfield_match": subfield_hit,
-        "modality_matched": modality_match,
-        "matched_modalities": modality_hits,
+Return JSON with arrays for actual_keywords, actual_subfields, actual_modalities.
+"""
+    schema = {
+        "name": "paper_metadata",
+        "schema": {
+            "type": "object",
+            "properties": {
+                "actual_keywords": {"type": "array", "items": {"type": "string"}},
+                "actual_subfields": {"type": "array", "items": {"type": "string"}},
+                "actual_modalities": {"type": "array", "items": {"type": "string"}},
+            },
+            "required": ["actual_keywords", "actual_subfields", "actual_modalities"],
+            "additionalProperties": False
+        }
     }
-    return report
 
+    try:
+        resp = await acompletion(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": "You are an expert extracting metadata."},
+                {"role": "user", "content": extraction_prompt}
+            ],
+            temperature=0,
+            max_tokens=300,
+            response_format={"type": "json_schema", "json_schema": schema}
+        )
+        return json.loads(resp.choices[0].message["content"]) | {"title": title}
+    except Exception:
+        return {
+            "actual_keywords": title.lower().split()[:5],
+            "actual_subfields": ["unknown"],
+            "actual_modalities": ["unknown"],
+            "title": title
+        }
+
+# -------------------- LLM Judge --------------------
+async def llm_judge_prediction_vs_actual(pred: Dict[str, Any], paper_metas: List[Dict[str, Any]]) -> Dict[str, Any]:
+    # Collapse all actuals into one set
+    actual_keywords = {kw.lower() for p in paper_metas for kw in p.get("actual_keywords", [])}
+    actual_subfields = {sf.lower() for p in paper_metas for sf in p.get("actual_subfields", [])}
+    actual_modalities = {md.lower() for p in paper_metas for md in p.get("actual_modalities", [])}
+
+    papers_str = "\n".join(
+        [f"- {p['title']}: keywords={p.get('actual_keywords', [])}, "
+         f"subfields={p.get('actual_subfields', [])}, "
+         f"modalities={p.get('actual_modalities', [])}" for p in paper_metas]
+    )
+
+    prompt = f"""You are an expert judge of AI research forecasts.
+
+Forecast:
+- Keywords: {pred.get("predicted_keywords", [])}
+- Subfields: {pred.get("predicted_subfields", [])}
+- Modalities: {pred.get("predicted_modalities", [])}
+
+Actual 2025 publications:
+{papers_str}
+
+For each forecasted keyword, subfield, and modality:
+- Return 1 if it appears in the actual research (allow synonyms/close topics), else 0.
+If FREQ_AWARE = True, return a fractional value 0–1 representing its frequency across papers.
+
+Return strict JSON with arrays matching forecast order.
+"""
+    schema = {
+        "name": "prediction_match",
+        "schema": {
+            "type": "object",
+            "properties": {
+                "keyword_matches": {"type": "array", "items": {"type": "number"}},
+                "subfield_matches": {"type": "array", "items": {"type": "number"}},
+                "modality_matches": {"type": "array", "items": {"type": "number"}},
+            },
+            "required": ["keyword_matches", "subfield_matches", "modality_matches"]
+        }
+    }
+
+    resp = await acompletion(
+        model=MODEL,
+        messages=[{"role": "system", "content": "You are an expert evaluator."},
+                  {"role": "user", "content": prompt}],
+        temperature=0,
+        max_tokens=500,
+        response_format={"type": "json_schema", "json_schema": schema}
+    )
+    matches = json.loads(resp.choices[0].message["content"])
+
+    # compute scores
+    def compute_scores(pred_list, match_list, actual_set):
+        tp = sum(1 for m in match_list if m > 0)
+        precision = tp / len(pred_list) if pred_list else 0
+        recall = tp / len(actual_set) if actual_set else 0
+        f1 = (2 * precision * recall / (precision + recall)) if (precision+recall) > 0 else 0
+        return precision, recall, f1, tp
+
+    kw_p, kw_r, kw_f1, _ = compute_scores(pred["predicted_keywords"], matches["keyword_matches"], actual_keywords)
+    sf_p, sf_r, sf_f1, _ = compute_scores(pred["predicted_subfields"], matches["subfield_matches"], actual_subfields)
+    md_p, md_r, md_f1, _ = compute_scores(pred["predicted_modalities"], matches["modality_matches"], actual_modalities)
+
+    return {
+        "keyword_precision": round(kw_p, 3),
+        "keyword_recall": round(kw_r, 3),
+        "subfield_precision": round(sf_p, 3),
+        "subfield_recall": round(sf_r, 3),
+        "modality_precision": round(md_p, 3),
+        "modality_recall": round(md_r, 3),
+        "overall_score": round((kw_f1 + sf_f1 + md_f1)/3, 3),
+        "matches": matches,
+        "n_actual_items": len(paper_metas),
+        "author_prediction": pred
+    }
+
+# -------------------- Verification --------------------
 async def verify_prediction(name: str, affiliation: str, pred: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    For one professor: try to fetch their first 2025 paper and compare.
-    Returns a dict with pred + verification report (or None if no paper).
-    """
-    # Step 1: find author_id
-    author_id = get_author_id_by_name(name)
-    if author_id is None:
-        return {"prediction": pred, "verification": None, "error": "author_id not found"}
+    try:
+        author_id = await asyncio.get_event_loop().run_in_executor(None, get_author_id_by_name, name, affiliation)
+        if not author_id:
+            return {"prediction": pred, "verification": None, "error": "author_id not found"}
+        papers_2025 = await asyncio.get_event_loop().run_in_executor(None, get_all_2025_papers, author_id, name)
+        if not papers_2025:
+            return {"prediction": pred, "verification": None, "error": "no 2025 papers found"}
 
-    # Step 2: fetch first 2025 paper
-    paper = get_first_2025_paper(author_id)
-    if paper is None:
-        return {"prediction": pred, "verification": None, "error": "no 2025 paper found"}
+        paper_metas = [await extract_paper_metadata(p) for p in papers_2025]
+        assessment = await llm_judge_prediction_vs_actual(pred, paper_metas)
+        return {"prediction": pred, "verification": assessment}
+    except Exception as e:
+        return {"prediction": pred, "verification": None, "error": str(e)}
 
-    # Step 3: compare
-    report = compare_prediction_with_paper(pred, paper)
-    return {"prediction": pred, "verification": report}
-
-# -------------------- Pipeline: Predict + Verify --------------------
+# -------------------- Batch --------------------
 async def process_and_verify(professors: List[Dict[str, str]]) -> List[Dict[str, Any]]:
-    """
-    For each professor, produce prediction and attempt verification.
-    """
     results = []
-    # first get predictions in parallel
     sem = asyncio.Semaphore(MAX_CONCURRENCY)
-
     async def worker(entry):
         async with sem:
             pred = await call_model_with_repairs(entry["professor"], entry["affiliation"])
-            # synchronous verify
-            verify_res = await asyncio.get_event_loop().run_in_executor(
-                None, verify_prediction, entry["professor"], entry["affiliation"], pred
-            )
-            results.append(verify_res)
-
+            return await verify_prediction(entry["professor"], entry["affiliation"], pred)
     tasks = [worker(entry) for entry in professors]
     for fut in tqdm(asyncio.as_completed(tasks), total=len(professors), desc="Predict+Verify"):
-        await fut
-
+        results.append(await fut)
     return results
 
+def load_professors_from_json(file_path="data/influential_ai_ppl_list.json") -> List[Dict[str, str]]:
+    with open(file_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    professors = []
+    if "TIME100_AI_Professors" in data:
+        for year_data in data["TIME100_AI_Professors"].values():
+            for person in year_data.get("people", []):
+                professors.append({"professor": person["name"], "affiliation": person["affiliation"]})
+    if "AI2050_Fellows" in data:
+        for year_data in data["AI2050_Fellows"].values():
+            for year, level_data in year_data.items():
+                for person in level_data:
+                    professors.append({"professor": person, "affiliation": ""})
+    return professors
+
+# -------------------- Main --------------------
 async def main():
-    professors = [
-        {"professor": "Regina Barzilay", "affiliation": "MIT"},
-        {"professor": "Anton Korinek", "affiliation": "University of Virginia"},
-        # ... add others
-    ]
-
+    professors = load_professors_from_json()
+    print(f"Loaded {len(professors)} professors from data file")
     results = await process_and_verify(professors)
-
-    # Save to JSON for inspection
     with open("predictions_with_verification.json", "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
-
     print("Finished. Results saved to predictions_with_verification.json")
 
 if __name__ == "__main__":
