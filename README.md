@@ -40,6 +40,10 @@ This project includes Inspect AI benchmarks for paper classification using ReAct
 
 `inspect/future_work_react/` mirrors the EMNLP prototype but uses per-professor publication CSVs to ask 2025 research forecasting questions (professor focus, article attribution, and field-level focus). Build the sandbox via `python dataset_building/generate_faculty_futurework.py` and run tasks from `inspect/future_work_react/benchmark.py`.
 
+### SOTA Forecast Benchmark
+
+`inspect/sota_forecast/` provides a sandboxed table of October 2025 frontier-model metrics. Agents must look up benchmarks (e.g., MMLU, IFEval, Livebench) and place the SOTA score into coarse performance buckets (a=0-20 … e=80-100). Regenerate data with `python dataset_building/generate_sota_forecast.py`.
+
 ### Running with FreeInference
 
 Use Inspect AI's OpenAI provider with a custom base URL:
