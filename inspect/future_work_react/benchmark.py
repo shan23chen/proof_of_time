@@ -25,6 +25,8 @@ from inspect_ai.scorer import answer, match
 from inspect_ai.solver import generate, system_message
 from inspect_ai.tool import bash, bash_session, python, text_editor, think
 
+from inspect.common.prompt_utils import get_offline_preamble
+
 SANDBOX_ROOT = Path(__file__).resolve().parent / "sandbox"
 PROFESSOR_FIELD_DATASET = Path(__file__).resolve().parent / "professor_field_mcq.jsonl"
 PROFESSOR_ARTICLE_DATASET = Path(__file__).resolve().parent / "professor_article_mcq.jsonl"
@@ -60,11 +62,13 @@ def _load_dataset(path: Path) -> Dataset:
     return MemoryDataset(samples)
 
 
-def build_agent() -> react:
+def build_agent(use_offline_prompt: bool = True) -> react:
     """Configure a React agent for faculty research prediction in sandbox."""
+    offline_prefix = f"{get_offline_preamble()}\n\n" if use_offline_prompt else ""
     return react(
         name="faculty-research-prediction",
         prompt=(
+            f"{offline_prefix}"
             "You are a research trend analyst working inside a sandbox with "
             "faculty publication data. Your goal is to predict 2025 research focus "
             "areas for AI professors and fields based on their actual publications.\n\n"
@@ -112,6 +116,51 @@ def faculty_professor_field_task() -> Task:
 
 
 @task()
+def faculty_professor_field_task_local() -> Task:
+    """Professor field MCQ without Docker sandbox (direct file access)."""
+    dataset = _load_dataset(PROFESSOR_FIELD_DATASET)
+    agent = build_agent()
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=match(),
+        sandbox=None,
+        max_messages=40,
+        metadata={"benchmark": "faculty_professor_field_local"},
+    )
+
+
+@task()
+def faculty_professor_field_task_no_offline_prompt() -> Task:
+    """Professor field MCQ without the shared offline Antigravity preamble."""
+    dataset = _load_dataset(PROFESSOR_FIELD_DATASET)
+    agent = build_agent(use_offline_prompt=False)
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=match(),
+        sandbox="docker",
+        max_messages=40,
+        metadata={"benchmark": "faculty_professor_field_no_offline"},
+    )
+
+
+@task()
+def faculty_professor_field_task_no_offline_prompt_local() -> Task:
+    """Professor field MCQ (no preamble) without Docker sandbox."""
+    dataset = _load_dataset(PROFESSOR_FIELD_DATASET)
+    agent = build_agent(use_offline_prompt=False)
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=match(),
+        sandbox=None,
+        max_messages=40,
+        metadata={"benchmark": "faculty_professor_field_no_offline_local"},
+    )
+
+
+@task()
 def faculty_professor_article_task() -> Task:
     """Professor-level article attribution: Identify which 2025 paper belongs to a professor (or None)."""
     dataset = _load_dataset(PROFESSOR_ARTICLE_DATASET)
@@ -127,6 +176,51 @@ def faculty_professor_article_task() -> Task:
 
 
 @task()
+def faculty_professor_article_task_local() -> Task:
+    """Professor article attribution without Docker sandbox (direct file access)."""
+    dataset = _load_dataset(PROFESSOR_ARTICLE_DATASET)
+    agent = build_agent()
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=answer("word"),  # Expects A, B, C, D, or None
+        sandbox=None,
+        max_messages=40,
+        metadata={"benchmark": "faculty_professor_article_local"},
+    )
+
+
+@task()
+def faculty_professor_article_task_no_offline_prompt() -> Task:
+    """Professor article attribution without the shared offline Antigravity preamble."""
+    dataset = _load_dataset(PROFESSOR_ARTICLE_DATASET)
+    agent = build_agent(use_offline_prompt=False)
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=answer("word"),  # Expects A, B, C, D, or None
+        sandbox="docker",
+        max_messages=40,
+        metadata={"benchmark": "faculty_professor_article_no_offline"},
+    )
+
+
+@task()
+def faculty_professor_article_task_no_offline_prompt_local() -> Task:
+    """Professor article attribution (no preamble) without Docker sandbox."""
+    dataset = _load_dataset(PROFESSOR_ARTICLE_DATASET)
+    agent = build_agent(use_offline_prompt=False)
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=answer("word"),  # Expects A, B, C, D, or None
+        sandbox=None,
+        max_messages=40,
+        metadata={"benchmark": "faculty_professor_article_no_offline_local"},
+    )
+
+
+@task()
 def faculty_field_focus_task() -> Task:
     """Field-level focus MCQ: Given 2025 papers, identify the research field they represent."""
     dataset = _load_dataset(FIELD_FOCUS_DATASET)
@@ -138,6 +232,51 @@ def faculty_field_focus_task() -> Task:
         sandbox="docker",
         max_messages=40,
         metadata={"benchmark": "faculty_field_focus"},
+    )
+
+
+@task()
+def faculty_field_focus_task_local() -> Task:
+    """Field focus MCQ without Docker sandbox (direct file access)."""
+    dataset = _load_dataset(FIELD_FOCUS_DATASET)
+    agent = build_agent()
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=match(),  # Expects exact field name match
+        sandbox=None,
+        max_messages=40,
+        metadata={"benchmark": "faculty_field_focus_local"},
+    )
+
+
+@task()
+def faculty_field_focus_task_no_offline_prompt() -> Task:
+    """Field focus MCQ without the shared offline Antigravity preamble."""
+    dataset = _load_dataset(FIELD_FOCUS_DATASET)
+    agent = build_agent(use_offline_prompt=False)
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=match(),  # Expects exact field name match
+        sandbox="docker",
+        max_messages=40,
+        metadata={"benchmark": "faculty_field_focus_no_offline"},
+    )
+
+
+@task()
+def faculty_field_focus_task_no_offline_prompt_local() -> Task:
+    """Field focus MCQ (no preamble) without Docker sandbox."""
+    dataset = _load_dataset(FIELD_FOCUS_DATASET)
+    agent = build_agent(use_offline_prompt=False)
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=match(),  # Expects exact field name match
+        sandbox=None,
+        max_messages=40,
+        metadata={"benchmark": "faculty_field_focus_no_offline_local"},
     )
 
 
@@ -164,6 +303,69 @@ def faculty_all_tasks() -> Task:
 
 
 @task()
+def faculty_all_tasks_local() -> Task:
+    """Run all faculty prediction tasks without Docker sandbox (direct file access)."""
+    professor_field_samples = list(_load_samples(PROFESSOR_FIELD_DATASET))
+    professor_article_samples = list(_load_samples(PROFESSOR_ARTICLE_DATASET))
+    field_focus_samples = list(_load_samples(FIELD_FOCUS_DATASET))
+
+    all_samples = professor_field_samples + professor_article_samples + field_focus_samples
+    dataset = MemoryDataset(all_samples)
+    agent = build_agent()
+
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=match(),  # Generic match for all task types
+        sandbox=None,
+        max_messages=40,
+        metadata={"benchmark": "faculty_all_tasks_local"},
+    )
+
+
+@task()
+def faculty_all_tasks_no_offline_prompt() -> Task:
+    """Run all faculty prediction tasks without the shared offline Antigravity preamble."""
+    professor_field_samples = list(_load_samples(PROFESSOR_FIELD_DATASET))
+    professor_article_samples = list(_load_samples(PROFESSOR_ARTICLE_DATASET))
+    field_focus_samples = list(_load_samples(FIELD_FOCUS_DATASET))
+
+    all_samples = professor_field_samples + professor_article_samples + field_focus_samples
+    dataset = MemoryDataset(all_samples)
+    agent = build_agent(use_offline_prompt=False)
+
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=match(),  # Generic match for all task types
+        sandbox="docker",
+        max_messages=40,
+        metadata={"benchmark": "faculty_all_tasks_no_offline"},
+    )
+
+
+@task()
+def faculty_all_tasks_no_offline_prompt_local() -> Task:
+    """Run all faculty prediction tasks (no preamble) without Docker sandbox."""
+    professor_field_samples = list(_load_samples(PROFESSOR_FIELD_DATASET))
+    professor_article_samples = list(_load_samples(PROFESSOR_ARTICLE_DATASET))
+    field_focus_samples = list(_load_samples(FIELD_FOCUS_DATASET))
+
+    all_samples = professor_field_samples + professor_article_samples + field_focus_samples
+    dataset = MemoryDataset(all_samples)
+    agent = build_agent(use_offline_prompt=False)
+
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=match(),  # Generic match for all task types
+        sandbox=None,
+        max_messages=40,
+        metadata={"benchmark": "faculty_all_tasks_no_offline_local"},
+    )
+
+
+@task()
 def faculty_professor_field_simple_task() -> Task:
     """Fast baseline without tools for professor field predictions."""
     dataset = _load_dataset(PROFESSOR_FIELD_DATASET)
@@ -171,6 +373,7 @@ def faculty_professor_field_simple_task() -> Task:
         dataset=dataset,
         solver=[
             system_message(
+                f"{get_offline_preamble()}\n\n"
                 "You are an expert on AI faculty. Based on the prompt, answer with exactly one field label."
             ),
             generate(),

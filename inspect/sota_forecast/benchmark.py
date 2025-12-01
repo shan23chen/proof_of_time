@@ -13,6 +13,8 @@ from inspect_ai.scorer import match
 from inspect_ai.solver import generate, system_message
 from inspect_ai.tool import bash, bash_session, python, text_editor, think
 
+from inspect.common.prompt_utils import get_offline_preamble
+
 SANDBOX_ROOT = Path(__file__).resolve().parent / "sandbox"
 DATASET_PATH = Path(__file__).resolve().parent / "mcq_dataset.jsonl"
 
@@ -45,10 +47,12 @@ def _load_dataset() -> Dataset:
     return MemoryDataset(samples)
 
 
-def build_agent() -> react:
+def build_agent(use_offline_prompt: bool = True) -> react:
+    offline_prefix = f"{get_offline_preamble()}\n\n" if use_offline_prompt else ""
     return react(
         name="sota-forecast-react",
         prompt=(
+            f"{offline_prefix}"
             "You are analyzing frontier-model benchmark performance. All answers are bucket letters "
             "from the set {a,b,c,d,e} following these ranges: "
             "a=0-20, b=20-40, c=40-60, d=60-80, e=80-100.\n\n"
@@ -76,12 +80,57 @@ def sota_bucket_task() -> Task:
 
 
 @task()
+def sota_bucket_task_local() -> Task:
+    """SOTA bucket task without Docker sandbox (direct file access)."""
+    dataset = _load_dataset()
+    agent = build_agent()
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=match(),
+        sandbox=None,
+        max_messages=30,
+        metadata={"benchmark": "sota_forecast_mcq_local"},
+    )
+
+
+@task()
+def sota_bucket_task_no_offline_prompt() -> Task:
+    dataset = _load_dataset()
+    agent = build_agent(use_offline_prompt=False)
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=match(),
+        sandbox="docker",
+        max_messages=30,
+        metadata={"benchmark": "sota_forecast_mcq_no_offline"},
+    )
+
+
+@task()
+def sota_bucket_task_no_offline_prompt_local() -> Task:
+    """SOTA bucket task (no preamble) without Docker sandbox."""
+    dataset = _load_dataset()
+    agent = build_agent(use_offline_prompt=False)
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=match(),
+        sandbox=None,
+        max_messages=30,
+        metadata={"benchmark": "sota_forecast_mcq_no_offline_local"},
+    )
+
+
+@task()
 def sota_bucket_simple_task() -> Task:
     dataset = _load_dataset()
     return Task(
         dataset=dataset,
         solver=[
             system_message(
+                f"{get_offline_preamble()}\n\n"
                 "Answer each question with the correct bucket letter (a/b/c/d/e) using the provided prompt only."
             ),
             generate(),

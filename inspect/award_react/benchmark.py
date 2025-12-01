@@ -20,6 +20,8 @@ from inspect_ai.scorer import match
 from inspect_ai.solver import generate, system_message
 from inspect_ai.tool import bash, bash_session, python, text_editor, think
 
+from inspect.common.prompt_utils import get_offline_preamble
+
 SANDBOX_ROOT = Path(__file__).resolve().parent / "sandbox"
 MCQ_DATASET_PATH = Path(__file__).resolve().parent / "mcq_dataset.jsonl"
 HISTORICAL_MCQ_PATH = Path(__file__).resolve().parent / "historical_mcq_dataset.jsonl"
@@ -62,11 +64,13 @@ def build_historical_mcq_dataset() -> Dataset:
     samples: List[Sample] = list(_load_samples(HISTORICAL_MCQ_PATH))
     return MemoryDataset(samples)
 
-def build_agent():
+def build_agent(use_offline_prompt: bool = True):
     """Configure a React agent confined to the EMNLP sandbox."""
+    offline_prefix = f"{get_offline_preamble()}\n\n" if use_offline_prompt else ""
     return react(
         name="emnlp-react",
         prompt=(
+            f"{offline_prefix}"
             "You are a research paper quality assessor. Your task is to classify papers into recognition tiers "
             "by comparing them to previous award-winning and accepted papers.\n\n"
             "Recognition tiers:\n"
@@ -109,6 +113,51 @@ def emnlp_awards_mcq_task() -> Task:
 
 
 @task()
+def emnlp_awards_mcq_local_task() -> Task:
+    """Same as emnlp_awards_mcq_task but without Docker sandbox (direct file access)."""
+    dataset = build_mcq_dataset()
+    agent = build_agent()
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=match(),
+        sandbox=None,
+        max_messages=30,
+        metadata={"benchmark": "emnlp_awards_mcq_local"},
+    )
+
+
+@task()
+def emnlp_awards_mcq_no_offline_prompt_task() -> Task:
+    """Same as emnlp_awards_mcq_task but without the shared offline Antigravity preamble."""
+    dataset = build_mcq_dataset()
+    agent = build_agent(use_offline_prompt=False)
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=match(),
+        sandbox="docker",
+        max_messages=30,
+        metadata={"benchmark": "emnlp_awards_mcq_no_offline"},
+    )
+
+
+@task()
+def emnlp_awards_mcq_no_offline_prompt_local_task() -> Task:
+    """No-preamble variant without Docker sandbox (direct file access)."""
+    dataset = build_mcq_dataset()
+    agent = build_agent(use_offline_prompt=False)
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=match(),
+        sandbox=None,
+        max_messages=30,
+        metadata={"benchmark": "emnlp_awards_mcq_no_offline_local"},
+    )
+
+
+@task()
 def emnlp_awards_mcq_simple_task() -> Task:
     """Simple MCQ benchmark - direct generation without tools (fast but no investigation)."""
     dataset = build_mcq_dataset()
@@ -116,6 +165,7 @@ def emnlp_awards_mcq_simple_task() -> Task:
         dataset=dataset,
         solver=[
             system_message(
+                f"{get_offline_preamble()}\n\n"
                 "You are an expert at classifying research papers into conference recognition tiers. "
                 "Given a paper's title and abstract, determine which tier it belongs to:\n\n"
                 "- **Best**: Best Paper Award winners (groundbreaking, top 0.1% contributions)\n"
@@ -144,4 +194,49 @@ def emnlp_historical_mcq_task() -> Task:
         sandbox="docker",
         max_messages=30,  # Limit conversation turns to prevent loops
         metadata={"benchmark": "emnlp_historical_mcq"},
+    )
+
+
+@task()
+def emnlp_historical_mcq_local_task() -> Task:
+    """Historical MCQ benchmark without Docker sandbox (direct file access)."""
+    dataset = build_historical_mcq_dataset()
+    agent = build_agent()
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=match(),
+        sandbox=None,
+        max_messages=30,
+        metadata={"benchmark": "emnlp_historical_mcq_local"},
+    )
+
+
+@task()
+def emnlp_historical_mcq_no_offline_prompt_task() -> Task:
+    """Historical MCQ benchmark without the shared offline Antigravity preamble."""
+    dataset = build_historical_mcq_dataset()
+    agent = build_agent(use_offline_prompt=False)
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=match(),
+        sandbox="docker",
+        max_messages=30,
+        metadata={"benchmark": "emnlp_historical_mcq_no_offline"},
+    )
+
+
+@task()
+def emnlp_historical_mcq_no_offline_prompt_local_task() -> Task:
+    """Historical MCQ benchmark (no preamble) without Docker sandbox."""
+    dataset = build_historical_mcq_dataset()
+    agent = build_agent(use_offline_prompt=False)
+    return Task(
+        dataset=dataset,
+        solver=agent,
+        scorer=match(),
+        sandbox=None,
+        max_messages=30,
+        metadata={"benchmark": "emnlp_historical_mcq_no_offline_local"},
     )
