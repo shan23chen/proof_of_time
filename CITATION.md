@@ -2,16 +2,21 @@
 
 This repository contains the code for the paper:
 
-**Proof of Time: Benchmarking LLM Agents on Academic Paper Analysis**
-*Under Review*
+**Proof of Time: Evaluating Scientific Idea Judgments**
+
+Bingyang Ye*, Shan Chen*, Jingxuan Tu, Chen Liu, Zidi Xiong, Samuel Schmidgall, Danielle S. Bitterman
+
+*Harvard University, Mass General Brigham, Boston Children's Hospital, Google DeepMind*
+
+(*Co-first authors)
 
 If you use this codebase in your research, please cite our work:
 
 ```bibtex
-@article{proof-of-time-2025,
-  title={Proof of Time: Benchmarking LLM Agents on Academic Paper Analysis},
-  author={TBD},
-  journal={Under Review},
+@article{ye2025proofoftime,
+  title={Proof of Time: Evaluating Scientific Idea Judgments},
+  author={Ye, Bingyang and Chen, Shan and Tu, Jingxuan and Liu, Chen and Xiong, Zidi and Schmidgall, Samuel and Bitterman, Danielle S.},
+  journal={arXiv preprint arXiv:2501.xxxxx},
   year={2025}
 }
 ```
@@ -24,8 +29,8 @@ The benchmark datasets are available on HuggingFace:
 
 ```bibtex
 @dataset{proof-of-time-dataset-2025,
-  title={Proof of Time: Academic Paper Analysis Benchmarks},
-  author={AIM Harvard},
+  title={Proof of Time: Scientific Idea Judgment Benchmarks},
+  author={Ye, Bingyang and Chen, Shan and Tu, Jingxuan and Liu, Chen and Xiong, Zidi and Schmidgall, Samuel and Bitterman, Danielle S.},
   year={2025},
   publisher={HuggingFace},
   url={https://huggingface.co/datasets/AIM-Harvard/proof-of-time}

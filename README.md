@@ -1,19 +1,18 @@
-# Proof of Time: Benchmarking LLM Agents on Academic Paper Analysis
+# Proof of Time: Evaluating Scientific Idea Judgments
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Dataset](https://img.shields.io/badge/🤗-Dataset-yellow)](https://huggingface.co/datasets/AIM-Harvard/proof-of-time)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
-**Proof of Time** is a benchmark suite for evaluating LLM agents on academic paper analysis tasks that require understanding research trends, citations, and future directions. All tasks use post-training-cutoff data to avoid data contamination.
+**Proof of Time (PoT)** is a semi-verifiable benchmarking framework for evaluating scientific idea judgments. By *time-partitioning* evaluation data, we freeze evidence before a cutoff, ask models to forecast outcomes, and score them when the future arrives—enabling scalable, verifiable evaluation without manual labeling.
 
-**Paper**: *Proof of Time: Benchmarking LLM Agents on Academic Paper Analysis* (Under Review)
+**Paper**: *Proof of Time: Evaluating Scientific Idea Judgments* (Under Review)
 
 **Key Features:**
-- 4 benchmark families with 10+ evaluation tasks
-- Post-training-cutoff datasets (2025 papers)
-- ReAct agent framework with sandboxed paper data
-- Comprehensive analysis pipeline for results
-- Support for OpenAI, Google Gemini, and Anthropic Claude models
+- **Time-Partitioned**: Ground truth arrives naturally as time passes—no manual labeling needed
+- **Semi-Verifiable**: Benchmarks link to real-world signals (citations, awards, leaderboards) that become observable post-cutoff
+- **Scalable**: Over 30,000 instances spanning four task families
+- **Agentic**: ReAct agents with sandboxed access to historical paper data
 
 ## Quick Start
 
@@ -39,18 +38,25 @@ For detailed setup instructions, see [SETUP.md](SETUP.md).
 ## Table of Contents
 
 - [Overview](#overview)
-- [Benchmarks](#benchmarks)
+- [Task Families](#task-families)
 - [Installation](#installation)
 - [Running Benchmarks](#running-benchmarks)
 - [Dataset](#dataset)
 - [Analysis](#analysis)
 - [Repository Structure](#repository-structure)
+- [Key Results](#key-results)
 - [Citation](#citation)
 - [License](#license)
 
 ## Overview
 
-Proof of Time evaluates LLM agents on tasks that require understanding research trends and making predictions about academic papers. All evaluation data is from **post-training-cutoff** (2025), ensuring models cannot rely on memorized information.
+Judging the quality of scientific ideas is hard. Current methods rely on immediate proxies—but true impact takes **time** to reveal itself. **Proof of Time (PoT)** solves this by *time-partitioning* the evaluation: we freeze evidence before a cutoff, ask models to forecast outcomes, and score them when the future arrives.
+
+<p align="center">
+  <img src="assets/workflow.png" alt="Proof of Time Workflow" width="800"/>
+</p>
+
+*The PoT workflow: Evidence is frozen at a cutoff. Models forecast future outcomes. Ground truth arrives—enabling scalable, verifiable evaluation.*
 
 ### Why "Proof of Time"?
 
@@ -63,59 +69,40 @@ The name reflects our focus on temporal reasoning: agents must analyze historica
 - **Offline Prompt**: Custom "Antigravity" prompt inspired by principles of focused exploration
 - **Multiple Variants**: Each task has standard (agent), simple (zero-shot), and no-offline-prompt versions
 
-## Benchmarks
+## Task Families
 
-The suite includes 4 benchmark families:
+The suite includes 4 task families:
 
-### 1. Award Prediction ([benchmarks/award_react/](benchmarks/award_react/))
+| Task Family | Description | Agent Access |
+|-------------|-------------|--------------|
+| **Impact Prediction** | Forecasting paper influence (citations) from limited cues | Historical papers with citation counts |
+| **Scientific Value** | Predicting peer-review awards (Best Papers) | Conference accepted papers |
+| **Research Evolution** | Longitudinal reasoning about faculty trajectories | Per-professor publication histories |
+| **Technological Frontier** | Extrapolating benchmark progress (SOTA) | Frontier model benchmark scores |
 
-Predict which papers will win best paper awards at top NLP conferences.
+### 1. Impact Prediction ([benchmarks/citation_react/](benchmarks/citation_react/))
 
-**Tasks:**
-- Pre-cutoff awards (ACL/EMNLP/NAACL 2018-2024)
-- Post-cutoff EMNLP 2025 awards
-- Post-cutoff ACL/NAACL 2025 awards
+Predict future citation counts for recently published papers. Can models identify which papers will have higher impact?
 
-**Agent Access:** CSV of accepted papers with titles, authors, abstracts
+**Tasks:** Multiple choice, Ranking, Bucket prediction (0-1, 1-5, 5-10, 10-50, 50+ citations)
 
-**Example:** Given 5 EMNLP 2025 papers, which won the best paper award?
+### 2. Scientific Value ([benchmarks/award_react/](benchmarks/award_react/))
 
-### 2. Citation Forecasting ([benchmarks/citation_react/](benchmarks/citation_react/))
+Predict which papers will win best paper awards. Can models align with expert judgments?
 
-Predict future citation counts for recently published papers.
+**Tasks:** Pre-cutoff awards (2018-2024), Post-cutoff EMNLP/ACL/NAACL 2025 awards
 
-**Tasks:**
-- Multiple choice: Select highest-cited paper
-- Ranking: Rank papers by predicted citations
-- Bucket prediction: Classify into citation ranges (0-1, 1-5, 5-10, 10-50, 50+)
-
-**Agent Access:** Historical papers (2021-2024) with citation counts
-
-**Example:** Which of these 2025 papers will have the most citations by 2026?
-
-### 3. Faculty Future Work ([benchmarks/future_work_react/](benchmarks/future_work_react/))
+### 3. Research Evolution ([benchmarks/future_work_react/](benchmarks/future_work_react/))
 
 Predict research directions of AI faculty members based on publication history.
 
-**Tasks:**
-- Professor field: Predict research field for future work
-- Professor article: Predict which paper a professor would author
-- Field focus: Classify focus area within a field
+**Tasks:** Professor field prediction, Article attribution, Field focus classification
 
-**Agent Access:** Per-professor CSV files with publication history
+### 4. Technological Frontier ([benchmarks/sota_forecast/](benchmarks/sota_forecast/))
 
-**Example:** Based on their publications, will this professor's next paper be in NLP, CV, or RL?
+Extrapolate benchmark progress and forecast future SOTA metrics.
 
-### 4. SOTA Forecasting ([benchmarks/sota_forecast/](benchmarks/sota_forecast/))
-
-Predict state-of-the-art performance ranges on ML benchmarks.
-
-**Tasks:**
-- Bucket prediction: Classify SOTA scores into ranges (0-20, 20-40, 40-60, 60-80, 80-100)
-
-**Agent Access:** JSON table of October 2025 frontier model scores
-
-**Example:** What performance bucket does the best model achieve on MMLU in Oct 2025?
+**Tasks:** Bucket prediction for benchmark scores (0-20, 20-40, 40-60, 60-80, 80-100)
 
 ## Installation
 
@@ -316,28 +303,34 @@ proof_of_time/
 └── LICENSE                  # MIT License
 ```
 
+## Key Results
+
+### Do Agents Help?
+
+Agentic systems generally outperform zero-shot baselines on tasks requiring evidence exploration.
+
+<p align="center">
+  <img src="assets/simple_vs_agentic.png" alt="Agent vs Zero-shot Comparison" width="500"/>
+</p>
+
+### Performance Across Models and Tasks
+
+<p align="center">
+  <img src="assets/model_task_heatmap_msg50.png" alt="Model-Task Performance Heatmap" width="700"/>
+</p>
+
+*Performance heatmap across different models and tasks at high message limits.*
+
 ## Citation
 
 If you use this benchmark suite in your research, please cite our work:
 
 ```bibtex
-@article{proof-of-time-2025,
-  title={Proof of Time: Benchmarking LLM Agents on Academic Paper Analysis},
-  author={TBD},
-  journal={Under Review},
+@article{ye2025proofoftime,
+  title={Proof of Time: Evaluating Scientific Idea Judgments},
+  author={Ye, Bingyang and Chen, Shan and Tu, Jingxuan and Liu, Chen and Xiong, Zidi and Schmidgall, Samuel and Bitterman, Danielle S.},
+  journal={arXiv preprint arXiv:2501.xxxxx},
   year={2025}
-}
-```
-
-For the dataset:
-
-```bibtex
-@dataset{proof-of-time-dataset-2025,
-  title={Proof of Time: Academic Paper Analysis Benchmarks},
-  author={AIM Harvard},
-  year={2025},
-  publisher={HuggingFace},
-  url={https://huggingface.co/datasets/AIM-Harvard/proof-of-time}
 }
 ```
 

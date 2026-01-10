@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Temporary web content (not for public release)
+web/
+
 # pdm related
 .pdm.toml
 
