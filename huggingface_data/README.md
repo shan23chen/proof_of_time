@@ -23,7 +23,7 @@ This dataset contains benchmarks for evaluating LLM agents on academic paper ana
 
 ## Dataset Description
 
-**Paper**: *Proof of Time: Benchmarking LLM Agents on Academic Paper Analysis* (Under Review)
+**Paper**: *Proof of Time: A Benchmark for Evaluating Scientific Idea Judgments*
 
 **Repository**: [https://github.com/shan23chen/proof_of_time](https://github.com/shan23chen/proof_of_time)
 
