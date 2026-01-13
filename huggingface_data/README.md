@@ -130,14 +130,10 @@ Example from award prediction:
 
 ```json
 {
-  "question": "Which paper won the best paper award at EMNLP 2025?",
+  "question": "Which recognition tier (Findings/Main/Outstanding/Best) best fits the paper?",
+  "context": "{title}+{abstract}+{author}"
   "answer": "A",
-  "choices": ["Paper Title 1", "Paper Title 2", "Paper Title 3", "Paper Title 4", "Paper Title 5"],
-  "metadata": {
-    "venue": "EMNLP 2025",
-    "papers": [...],
-    "award_type": "best_paper"
-  }
+  "choices": ["Best", "Outstanding", "Main", "Findings"],
 }
 ```
 
@@ -173,11 +169,14 @@ The benchmark suite has been tested with:
 If you use this dataset in your research, please cite:
 
 ```bibtex
-@article{proof-of-time-2025,
-  title={Proof of Time: Benchmarking LLM Agents on Academic Paper Analysis},
-  author={TBD},
-  journal={Under Review},
-  year={2025}
+@misc{ye2026prooftimebenchmarkevaluating,
+      title={Proof of Time: A Benchmark for Evaluating Scientific Idea Judgments}, 
+      author={Bingyang Ye and Shan Chen and Jingxuan Tu and Chen Liu and Zidi Xiong and Samuel Schmidgall and Danielle S. Bitterman},
+      year={2026},
+      eprint={2601.07606},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2601.07606}, 
 }
 ```
 
@@ -208,4 +207,4 @@ For the dataset:
 
 ## Updates
 
-- **2025-01-08**: Initial release (Tiers 1-2: benchmarks + sandbox data, 69.8 MB total)
+- **2026-01-08**: Initial release (Tiers 1-2: benchmarks + sandbox data, 69.8 MB total)

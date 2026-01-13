@@ -1,4 +1,4 @@
-# Proof of Time: Evaluating Scientific Idea Judgments
+# Proof of Time: A Benchmark for Evaluating Scientific Idea Judgments
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Dataset](https://img.shields.io/badge/🤗-Dataset-yellow)](https://huggingface.co/datasets/AIM-Harvard/proof-of-time)
@@ -6,7 +6,7 @@
 
 **Proof of Time (PoT)** is a semi-verifiable benchmarking framework for evaluating scientific idea judgments. By *time-partitioning* evaluation data, we freeze evidence before a cutoff, ask models to forecast outcomes, and score them when the future arrives—enabling scalable, verifiable evaluation without manual labeling.
 
-**Paper**: *Proof of Time: Evaluating Scientific Idea Judgments* (Under Review)
+**Paper**: *Proof of Time: A Benchmark for Evaluating Scientific Idea Judgments* (Under Review)
 
 **Key Features:**
 - **Time-Partitioned**: Ground truth arrives naturally as time passes—no manual labeling needed
