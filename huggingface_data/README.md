@@ -197,7 +197,7 @@ For the dataset:
 - **GitHub Repository**: [https://github.com/shan23chen/proof_of_time](https://github.com/shan23chen/proof_of_time)
 - **Documentation**: See repository README for detailed usage
 - **Setup Guide**: [SETUP.md](https://github.com/shan23chen/proof_of_time/blob/main/SETUP.md)
-- **Paper**: [Link when available]
+- **Paper**: [arXiv](https://www.arxiv.org/abs/2601.07606)
 
 ## Contact
 
