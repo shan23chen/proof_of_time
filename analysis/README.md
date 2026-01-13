@@ -1,117 +1,167 @@
-# Agent Query and Cost Analysis
+# Analysis Pipeline
 
-This directory contains analysis of agent tool usage, token consumption, and estimated costs from Inspect AI evaluation runs.
+This directory contains tools for analyzing Proof of Time benchmark results.
 
-## Files
+## Directory Structure
 
-- **agent_query_analysis.csv** - Raw data with per-run statistics (127 eval runs)
-- **correlation_matrix.csv** - Correlation coefficients between metrics
-- **AGENT_QUERY_ANALYSIS.md** - Comprehensive analysis report with findings and recommendations
+```
+analysis/
+├── comprehensive/           # Main analysis pipeline
+│   ├── main.py              # Entry point for full analysis
+│   ├── data_loader.py       # Load and preprocess evaluation CSVs
+│   ├── plots.py             # Plot generation functions
+│   ├── generate_plots.py    # Plot orchestration
+│   ├── report_generator.py  # Markdown report generation
+│   ├── plots/               # Generated figures (PNG + PDF)
+│   └── REPORT.md            # Generated analysis report
+│
+├── agent_behavior/          # Agent execution analysis
+│   ├── sample_task_examples_stratified.py  # Stratified sampling
+│   ├── inputs/              # Input data directory
+│   ├── outputs/             # Generated analysis outputs
+│   └── README.md            # Detailed documentation
+│
+└── README.md                # This file
+```
 
 ## Quick Start
 
-### Generate Analysis
+### Comprehensive Analysis Pipeline
+
+Generate publication-ready plots and reports from evaluation logs:
 
 ```bash
-# Analyze all .eval files in logs/
-uv run python scripts/analyze_agent_queries.py --output analysis/agent_query_analysis.csv
+cd analysis/comprehensive
 
-# Compute correlations and statistics
-uv run python scripts/correlation_analysis.py --input analysis/agent_query_analysis.csv
+# Run full analysis (plots + report)
+python main.py
+
+# Generate plots only
+python main.py --plots-only
+
+# Generate report only
+python main.py --report-only
 ```
 
-### Analyze Specific Log Directories
+**Outputs:**
+- `plots/` - Performance visualizations (PNG and PDF formats)
+- `REPORT.md` - Comprehensive markdown analysis report
+
+### Agent Behavior Analysis
+
+Analyze agent execution patterns with stratified sampling:
 
 ```bash
-# Analyze message limit sweeps (when available)
-uv run python scripts/analyze_agent_queries.py \
-    --log-dirs logs/ablations_msg15 logs/ablations_msg30 logs/ablations_msg50 \
-    --output analysis/msg_limit_analysis.csv
+cd analysis/agent_behavior
+
+# Sample 2 examples per stratum (default)
+python sample_task_examples_stratified.py
+
+# Sample more examples per stratum
+python sample_task_examples_stratified.py --samples-per-stratum 5
+
+# Save combined output
+python sample_task_examples_stratified.py \
+  --combined-output outputs/all_samples_combined.jsonl
 ```
 
-## Key Findings
+**Stratification Categories:**
+- **Complete + Correct**: Agent got right answer, didn't hit message limit
+- **Complete + Wrong**: Agent got wrong answer, didn't hit message limit
+- **Incomplete**: Agent hit the message limit
 
-### Strong Correlations
-- **Tool calls ↔ Cost:** r = 0.779 (strong)
-- **Tool calls ↔ Total tokens:** r = 0.886 (strong)
-- **Tool calls ↔ Messages:** r = 0.993 (very strong)
+See [agent_behavior/README.md](agent_behavior/README.md) for detailed documentation.
 
-### Cost Insights
-- Average cost per run: $0.15
-- Citation tasks most expensive: $0.48/run
-- Simple baselines nearly free: < $0.01/run
+## Prerequisites
 
-### Model Efficiency
-- Claude Opus 4.5: Thorough (71.5 calls) but expensive ($0.51/run)
-- GPT-5.1: Balanced (18.1 calls, $0.28/run)
-- GPT-5 Nano: Budget-friendly (5.6 calls, $0.01/run)
+### Input Data
 
-## Data Schema
+The analysis pipeline requires summary CSV files generated from Inspect AI evaluation logs:
 
-### agent_query_analysis.csv
+```
+logs_msg15_summary.csv   # 15 message limit results
+logs_msg30_summary.csv   # 30 message limit results
+logs_msg50_summary.csv   # 50 message limit results
+```
 
-| Column | Description |
-|--------|-------------|
-| log_file | Eval log filename |
-| task | Benchmark task name |
-| model | Model identifier |
-| message_limit | Max message limit (if available) |
-| status | success/error/cancelled |
-| num_samples | Number of samples in run |
-| total_messages | Total messages exchanged |
-| total_tool_calls | Total agent tool invocations |
-| avg_messages_per_sample | Messages per sample |
-| avg_tool_calls_per_sample | Tool calls per sample |
-| input_tokens | Total input tokens |
-| output_tokens | Total output tokens |
-| total_tokens | Total tokens (input + output) |
-| cache_read_tokens | Cache read tokens |
-| cache_write_tokens | Cache write tokens |
-| estimated_cost_usd | Estimated cost in USD |
-| duration_seconds | Run duration in seconds |
+These files should be in the project root directory.
 
-## Scripts
+### Dependencies
 
-### analyze_agent_queries.py
+```bash
+# Install project dependencies
+uv sync
 
-Processes .eval files and extracts:
-- Tool call counts
-- Message statistics
-- Token usage
-- Cost estimates
+# Required packages (included in pyproject.toml):
+# - pandas
+# - matplotlib
+# - seaborn
+# - numpy
+```
 
-### correlation_analysis.py
+## Output Examples
 
-Computes:
-- Correlation matrices
-- Summary statistics
-- Task-level analysis
-- Model-level analysis
+### Plots Generated
 
-## Example Usage
+The comprehensive pipeline generates several plot types:
+
+1. **Model-Task Heatmaps** - Performance across all model/task combinations
+2. **Scaling Analysis** - Performance vs. message limit
+3. **Agent vs Zero-shot** - Comparison of agentic vs simple baselines
+4. **Task Family Comparisons** - Performance by task category
+
+### Report Sections
+
+The generated REPORT.md includes:
+
+- Data summary and statistics
+- Model performance rankings
+- Task difficulty analysis
+- Scaling behavior insights
+- Key findings and recommendations
+
+## Customization
+
+### Adding New Plots
+
+Extend `plots.py` with new visualization functions:
 
 ```python
-import pandas as pd
+def plot_custom_analysis(df, output_dir):
+    """Generate custom analysis plot."""
+    fig, ax = plt.subplots(figsize=(10, 6))
+    # ... plotting code ...
+    fig.savefig(output_dir / "plots" / "custom_analysis.png", dpi=300)
+```
 
-# Load analysis results
-df = pd.read_csv('analysis/agent_query_analysis.csv')
+Then register in `generate_plots.py`.
 
-# Filter successful runs
-df_success = df[df['status'] == 'success']
+### Modifying Report Structure
 
-# Top 5 most expensive tasks
-top_tasks = df_success.groupby('task')['estimated_cost_usd'].sum().sort_values(ascending=False).head(5)
-print(top_tasks)
+Edit `report_generator.py` to customize report sections and formatting.
 
-# Cost per tool call by model
-df_success['cost_per_call'] = df_success['estimated_cost_usd'] / df_success['total_tool_calls']
-model_efficiency = df_success.groupby('model')['cost_per_call'].mean().sort_values()
-print(model_efficiency)
+## Troubleshooting
+
+### Missing CSV Files
+
+If you see "Failed to load data", ensure summary CSV files exist:
+
+```bash
+ls -la logs_msg*_summary.csv
+```
+
+Generate them by running the log parsing scripts first.
+
+### Plot Generation Errors
+
+Ensure matplotlib backend is configured:
+
+```bash
+export MPLBACKEND=Agg  # For headless environments
 ```
 
 ## Notes
 
-- Cost estimates based on public API pricing as of Jan 2026
-- Actual costs may vary based on volume discounts, regional pricing, etc.
-- Tool call counts may underestimate if some tools are not properly detected
-- Message limit data requires logs from specific ablation directories
+- Analysis assumes Inspect AI evaluation log format
+- Plots are generated in both PNG (for web) and PDF (for papers) formats
+- Stratified sampling uses fixed random seed (42) for reproducibility
