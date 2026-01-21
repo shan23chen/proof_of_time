@@ -100,22 +100,22 @@ docker ps
 
 ```bash
 # Professor field prediction
-inspect eval inspect/future_work_react/benchmark.py@faculty_professor_field_task \
+inspect eval benchmarks/future_work_react/benchmark.py@faculty_professor_field_task \
   --model openai/gpt-4o-mini
 
 # Professor article attribution
-inspect eval inspect/future_work_react/benchmark.py@faculty_professor_article_task \
+inspect eval benchmarks/future_work_react/benchmark.py@faculty_professor_article_task \
   --model openai/gpt-4o-mini
 
 # Field focus prediction
-inspect eval inspect/future_work_react/benchmark.py@faculty_field_focus_task \
+inspect eval benchmarks/future_work_react/benchmark.py@faculty_field_focus_task \
   --model openai/gpt-4o-mini
 ```
 
 ### Run All Tasks
 
 ```bash
-inspect eval inspect/future_work_react/benchmark.py@faculty_all_tasks \
+inspect eval benchmarks/future_work_react/benchmark.py@faculty_all_tasks \
   --model openai/gpt-4o-mini
 ```
 
@@ -123,15 +123,15 @@ inspect eval inspect/future_work_react/benchmark.py@faculty_all_tasks \
 
 ```bash
 # Claude
-inspect eval inspect/future_work_react/benchmark.py@faculty_all_tasks \
+inspect eval benchmarks/future_work_react/benchmark.py@faculty_all_tasks \
   --model anthropic/claude-3-5-sonnet-20241022
 
 # GPT-4
-inspect eval inspect/future_work_react/benchmark.py@faculty_all_tasks \
+inspect eval benchmarks/future_work_react/benchmark.py@faculty_all_tasks \
   --model openai/gpt-4o
 
 # Limit samples for quick testing
-inspect eval inspect/future_work_react/benchmark.py@faculty_professor_field_task \
+inspect eval benchmarks/future_work_react/benchmark.py@faculty_professor_field_task \
   --model openai/gpt-4o-mini \
   --limit 5
 ```
@@ -140,7 +140,7 @@ inspect eval inspect/future_work_react/benchmark.py@faculty_professor_field_task
 
 ```bash
 # Fast baseline that uses direct generation without sandbox tools
-inspect eval inspect/future_work_react/benchmark.py@faculty_professor_field_simple_task \
+inspect eval benchmarks/future_work_react/benchmark.py@faculty_professor_field_simple_task \
   --model openai/gpt-4o-mini
 ```
 
@@ -226,10 +226,10 @@ The datasets are generated from faculty publication data:
 ```bash
 python dataset_building/generate_faculty_futurework.py \
   --source-dir faculty_publications \
-  --sandbox-dir inspect/future_work_react/sandbox/data \
-  --professor-field-output inspect/future_work_react/professor_field_mcq.jsonl \
-  --professor-article-output inspect/future_work_react/professor_article_mcq.jsonl \
-  --field-focus-output inspect/future_work_react/field_focus_mcq.jsonl
+  --sandbox-dir benchmarks/future_work_react/sandbox/data \
+  --professor-field-output benchmarks/future_work_react/professor_field_mcq.jsonl \
+  --professor-article-output benchmarks/future_work_react/professor_article_mcq.jsonl \
+  --field-focus-output benchmarks/future_work_react/field_focus_mcq.jsonl
 ```
 
 The script:
@@ -255,7 +255,7 @@ docker pull python:3.11-slim
 
 ```bash
 # Verify data exists
-ls -lh inspect/future_work_react/sandbox/data/
+ls -lh benchmarks/future_work_react/sandbox/data/
 
 # Should show:
 # - faculty_publications.jsonl (~2.5MB)
@@ -271,11 +271,11 @@ python dataset_building/generate_faculty_futurework.py
 ## Example Run
 
 ```bash
-$ inspect eval inspect/future_work_react/benchmark.py@faculty_professor_field_task \
+$ inspect eval benchmarks/future_work_react/benchmark.py@faculty_professor_field_task \
     --model openai/gpt-4o-mini \
     --limit 3
 
-Target: .../inspect/future_work_react/benchmark.py@faculty_professor_field_task
+Target: .../benchmarks/future_work_react/benchmark.py@faculty_professor_field_task
 Model: openai/gpt-4o-mini
 Samples: 3
 Sandbox: docker
@@ -295,7 +295,7 @@ Results:
 ## Directory Structure
 
 ```
-inspect/future_work_react/
+benchmarks/future_work_react/
 ├── __init__.py
 ├── benchmark.py              # Main benchmark tasks
 ├── docker_check.py           # Docker sandbox tests

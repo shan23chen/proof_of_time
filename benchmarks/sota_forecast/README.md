@@ -14,8 +14,8 @@ You can download our generated questions from: https://huggingface.co/datasets/A
 
 ```bash
 python dataset_building/generate_sota_forecast.py \
-  --sandbox-dir inspect/sota_forecast/sandbox/data \
-  --dataset-path inspect/sota_forecast/mcq_dataset.jsonl
+  --sandbox-dir benchmarks/sota_forecast/sandbox/data \
+  --dataset-path benchmarks/sota_forecast/mcq_dataset.jsonl
 ```
 
 The generator script embeds the current SOTA table. Update the list in `load_static_metrics()` to add new benchmarks or refresh scores before re-running.
@@ -23,7 +23,7 @@ The generator script embeds the current SOTA table. Update the list in `load_sta
 ## Running the Benchmark
 
 ```bash
-inspect eval inspect/sota_forecast/benchmark.py@sota_bucket_task \
+inspect eval benchmarks/sota_forecast/benchmark.py@sota_bucket_task \
   --model openai/gpt-4o-mini \
   --limit 5
 ```

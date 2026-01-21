@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>REPORT</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+</head>
+<body>
+<h1
+id="proof-of-time-benchmarking-temporal-reasoning-in-llm-agents">Proof
+of Time: Benchmarking Temporal Reasoning in LLM Agents</h1>
+<p><em>Analysis Report — Generated: 2025-12-22</em></p>
+<hr />
+<h2 id="abstract">Abstract</h2>
+<p>This report presents comprehensive results from the <strong>Proof of
+Time</strong> benchmark, which evaluates large language models (LLMs) on
+temporal reasoning tasks requiring prediction of future events based on
+historical data analysis. We introduce tasks spanning citation
+prediction, conference award classification, faculty research trajectory
+prediction, and benchmark performance forecasting. Critically, we
+include <strong>post-training-cutoff evaluation sets</strong> from ACL
+2025 and EMNLP 2025 to eliminate potential data contamination concerns.
+Our experiments compare zero-shot generation, ReAct agents with tool
+access, and structured agentic prompts across 10 frontier LLMs from
+Anthropic, Google, and OpenAI.</p>
+<hr />
+<h2 id="introduction-and-motivation">1. Introduction and Motivation</h2>
+<h3 id="research-questions">1.1 Research Questions</h3>
+<p>We investigate four primary research questions:</p>
+<ol type="1">
+<li><p><strong>RQ1 (Test-Time Scaling)</strong>: How does LLM accuracy
+scale with increased inference-time computation, operationalized as
+message/turn limits in agentic settings?</p></li>
+<li><p><strong>RQ2 (Agentic vs Direct Generation)</strong>: Do
+tool-using agents substantially outperform direct (zero-shot) generation
+on temporal reasoning tasks?</p></li>
+<li><p><strong>RQ3 (Prompt Engineering)</strong>: Does a structured
+agentic prompt improve performance over vanilla ReAct agents?</p></li>
+<li><p><strong>RQ4 (Data Contamination)</strong>: Do models perform
+worse on post-cutoff tasks (ACL 2025, EMNLP 2025) compared to historical
+tasks, suggesting prior results were inflated by memorization?</p></li>
+</ol>
+<h3 id="why-temporal-reasoning-matters">1.2 Why Temporal Reasoning
+Matters</h3>
+<p>Temporal reasoning—predicting future outcomes based on historical
+patterns—is a critical capability for deploying LLMs in dynamic domains
+like scientific research, finance, and policy. Unlike static knowledge
+retrieval, temporal reasoning requires:</p>
+<ul>
+<li><strong>Pattern recognition</strong> across time-varying data</li>
+<li><strong>Extrapolation</strong> beyond training distribution</li>
+<li><strong>Integration</strong> of multiple evidence sources</li>
+<li><strong>Uncertainty quantification</strong> about future events</li>
+</ul>
+<p>Our benchmark specifically targets the scientific domain, where LLMs
+could assist with research evaluation, funding decisions, trend
+forecasting, and literature analysis.</p>
+<hr />
+<h2 id="task-suite-design-and-motivation">2. Task Suite: Design and
+Motivation</h2>
+<p>We design seven task families, each probing different aspects of
+temporal reasoning. Below we describe each task’s motivation, setup, and
+the intuition for why it tests meaningful capabilities.</p>
+<h3 id="citation-count-prediction">2.1 Citation Count Prediction</h3>
+<p><strong>Motivation</strong>: Citation counts serve as a proxy for
+research impact, yet predicting future citations requires understanding
+both the intrinsic quality of research and the complex dynamics of
+scientific attention. We hypothesize that models with access to
+historical publication data can learn implicit patterns correlating
+paper characteristics with citation trajectories.</p>
+<p><strong>Task Setup</strong>: Given a paper’s title, abstract, venue,
+and publication year, the model must predict its citation count relative
+to other papers. We design three sub-tasks: (1) <strong>MCQ</strong>:
+Select which of four papers received the highest citations; (2)
+<strong>Ranking</strong>: Order four papers by citation count; (3)
+<strong>Bucket Prediction</strong>: Classify papers into citation
+percentile buckets (0-25th, 25-50th, 50-75th, 75-100th).</p>
+<p><strong>Sandbox Contents</strong>: Historical NLP papers from
+2021-2024 with metadata including titles, abstracts, authors, venues,
+publication dates, and citation counts as of December 2024. The agent
+can analyze patterns across ~2,000 papers from major venues (ACL, EMNLP,
+NAACL, etc.).</p>
+<p><strong>Intuition</strong>: This task tests whether LLMs can identify
+implicit signals of paper quality and predict scientific impact—a
+capability with practical applications in research evaluation, funding
+decisions, and scientific search. The agentic setting allows models to
+verify hypotheses against historical data rather than relying solely on
+parametric knowledge.</p>
+<h3 id="conference-award-tier-classification-historical">2.2 Conference
+Award Tier Classification (Historical)</h3>
+<p><strong>Motivation</strong>: Peer review outcomes, while imperfect,
+represent expert consensus on research quality. Major NLP venues (ACL,
+EMNLP) use tiered acceptance: Best Paper, Outstanding Paper, Main
+Conference, and Findings. We investigate whether LLMs can learn the
+implicit criteria reviewers use to distinguish these tiers.</p>
+<p><strong>Task Setup</strong>: Given only a paper’s title and abstract
+(no author information to prevent bias), the model must classify the
+paper into one of four tiers: Best, Outstanding, Main, or Findings. This
+is a 4-way classification task framed as MCQ.</p>
+<p><strong>Sandbox Contents</strong>: Historical EMNLP papers from
+2021-2024 with acceptance tier labels. The sandbox contains ~800 papers
+across all tiers, enabling the agent to analyze linguistic patterns,
+topic distributions, and structural characteristics associated with each
+tier.</p>
+<p><strong>Intuition</strong>: This task evaluates whether LLMs have
+internalized the criteria for research excellence in NLP. Success
+requires understanding not just technical correctness but also novelty,
+significance, and presentation quality—meta-scientific reasoning that
+goes beyond surface-level pattern matching.</p>
+<h3 id="acl-2025-award-classification-post-cutoff">2.3 ACL 2025 Award
+Classification (Post-Cutoff)</h3>
+<p><strong>Motivation</strong>: A fundamental concern with LLM
+evaluation is <strong>data contamination</strong>: models may have
+memorized award outcomes from their training data rather than genuinely
+reasoning about paper quality. ACL 2025 papers (published July 2025) are
+definitively beyond all current models’ training cutoffs, providing a
+<strong>true blind evaluation</strong>.</p>
+<p><strong>Task Setup</strong>: Identical to the historical award
+classification task: given title and abstract, classify into
+Best/Outstanding/Main/Findings tiers. However, these papers were
+published after model training, eliminating the possibility of
+memorization.</p>
+<p><strong>Sandbox Contents</strong>: Same historical papers as the
+baseline task (2021-2024), but test queries are from ACL 2025. The agent
+must generalize from historical patterns to evaluate papers it has never
+seen and could not have memorized.</p>
+<p><strong>Intuition</strong>: This is our strongest test of genuine
+temporal reasoning. Any model succeeding here must be applying learned
+criteria rather than recalling memorized facts. Poor performance
+relative to historical tasks would suggest previous results were
+inflated by contamination; similar performance would validate the
+benchmark.</p>
+<h3 id="emnlp-2025-award-classification-post-cutoff">2.4 EMNLP 2025
+Award Classification (Post-Cutoff)</h3>
+<p><strong>Motivation</strong>: EMNLP 2025 (November 2025) provides an
+even more recent test set than ACL 2025, maximizing temporal separation
+from training data. This enables us to study whether model performance
+degrades as we move further beyond the training cutoff.</p>
+<p><strong>Task Setup</strong>: Same classification framework as other
+award tasks. Test papers from EMNLP 2025 represent the newest publicly
+available conference proceedings at time of evaluation.</p>
+<p><strong>Sandbox Contents</strong>: Historical sandbox remains
+unchanged. The agent must transfer learned patterns to the newest papers
+in the field.</p>
+<p><strong>Intuition</strong>: Comparing performance on EMNLP 2025
+vs. ACL 2025 vs. historical papers reveals whether models exhibit
+temporal degradation—a critical consideration for deploying LLMs in
+rapidly evolving scientific fields.</p>
+<h3 id="historical-conference-paper-classification">2.5 Historical
+Conference Paper Classification</h3>
+<p><strong>Motivation</strong>: We complement the award prediction task
+with broader historical classification: identifying which papers were
+accepted to which venues/years. This tests whether models can recognize
+temporal and venue-specific patterns in NLP research.</p>
+<p><strong>Task Setup</strong>: Given a paper’s title and abstract,
+identify its venue and/or year of publication from multiple choices.
+This requires understanding both content (topic relevance) and temporal
+signals (terminology evolution, emerging research directions).</p>
+<p><strong>Sandbox Contents</strong>: Historical papers from multiple
+NLP venues (ACL, EMNLP, NAACL, etc.) spanning 2021-2024, with venue and
+year metadata.</p>
+<p><strong>Intuition</strong>: This task probes whether LLMs have
+learned the evolution of NLP research. Success requires understanding
+which topics emerged when, how methodology has shifted, and what
+distinguishes different venues’ focus areas.</p>
+<h3 id="faculty-research-prediction">2.6 Faculty Research
+Prediction</h3>
+<p><strong>Motivation</strong>: Research labs develop distinctive
+expertise and publication patterns over time. We test whether LLMs can
+model these patterns to predict faculty research activities based on
+their historical publication records.</p>
+<p><strong>Task Setup</strong>: Three sub-tasks: (1)
+<strong>Professor-Article</strong>: Match papers to their likely authors
+from a set of faculty candidates; (2) <strong>Professor-Field</strong>:
+Predict a professor’s primary research area given their publication
+history; (3) <strong>Field-Focus</strong>: Identify emerging research
+directions based on recent publications.</p>
+<p><strong>Sandbox Contents</strong>: Publication records for ~20 NLP
+faculty members from top institutions, including paper titles,
+abstracts, venues, years, and citation counts. Enables analysis of
+individual research trajectories and lab-specific patterns.</p>
+<p><strong>Intuition</strong>: This task evaluates whether LLMs can
+model the latent structure of academic research—recognizing that certain
+researchers have distinctive styles, focus areas, and collaboration
+patterns that leave fingerprints in their publications.</p>
+<h3 id="sota-benchmark-performance-prediction">2.7 SOTA Benchmark
+Performance Prediction</h3>
+<p><strong>Motivation</strong>: Tracking state-of-the-art performance on
+benchmarks reveals the pace of progress in AI capabilities. We test
+whether models can extrapolate performance trajectories given historical
+benchmark results.</p>
+<p><strong>Task Setup</strong>: Given a benchmark name and historical
+performance data up to a certain date, predict the performance bucket
+(0-20%, 20-40%, 40-60%, 60-80%, 80-100%) that SOTA models will achieve
+by a future date.</p>
+<p><strong>Sandbox Contents</strong>: Historical SOTA metrics from
+Papers With Code spanning 2020-2024, covering ~50 major benchmarks
+across NLP tasks (text classification, QA, summarization, etc.). Each
+entry includes benchmark name, date, model name, and performance
+metrics.</p>
+<p><strong>Intuition</strong>: Predicting benchmark progress requires
+understanding both the inherent difficulty of tasks and the trajectory
+of methodological improvements. This probes whether LLMs have
+internalized the meta-patterns of AI research progress.</p>
+<hr />
+<h2 id="experimental-methodology">3. Experimental Methodology</h2>
+<h3 id="the-three-experimental-modes">3.1 The Three Experimental
+Modes</h3>
+<p>We compare three fundamentally different approaches to temporal
+reasoning tasks:</p>
+<h4 id="mode-1-zero-shot-direct-generation">Mode 1: Zero-Shot (Direct
+Generation)</h4>
+<p>The model receives only the task instruction and question, with no
+access to tools or external data. This baseline tests whether models can
+solve tasks using only their parametric knowledge (i.e., patterns
+learned during pre-training).</p>
+<pre><code>┌─────────────────────────────────────────────────────────────────┐
+│  Input:                                                         │
+│    • System prompt with task instructions                       │
+│    • Question with paper title/abstract                         │
+│                                                                 │
+│  Output:                                                        │
+│    • Single answer (e.g., &quot;Best&quot;, &quot;Main&quot;, &quot;A&quot;)                  │
+│                                                                 │
+│  NO access to: tools, sandbox, historical data files            │
+└─────────────────────────────────────────────────────────────────┘</code></pre>
+<p><strong>Implementation</strong>: Uses <code>system_message()</code> +
+<code>generate()</code> in Inspect AI framework.</p>
+<h4 id="mode-2-react-agent-tools-sandbox">Mode 2: ReAct Agent (Tools +
+Sandbox)</h4>
+<p>The model operates as a ReAct agent with access to:</p>
+<ul>
+<li><code>python()</code>: Execute arbitrary Python code</li>
+<li><code>bash()</code>: Run shell commands</li>
+<li><code>text_editor()</code>: Read and edit files</li>
+<li><code>think()</code>: Internal reasoning scratchpad</li>
+</ul>
+<p>The agent runs in a Docker sandbox containing historical data files
+relevant to each task.</p>
+<pre><code>┌─────────────────────────────────────────────────────────────────┐
+│  Input:                                                         │
+│    • Task-specific instructions                                 │
+│    • Question with paper metadata                               │
+│                                                                 │
+│  Agent Capabilities:                                            │
+│    • Execute Python (pandas, json, etc.)                        │
+│    • Run shell commands (grep, cat, etc.)                       │
+│    • Read/write files in sandbox                                │
+│    • Multi-turn reasoning with tool feedback                    │
+│                                                                 │
+│  Sandbox Contents:                                              │
+│    • Historical papers (2021-2024) with metadata                │
+│    • Citation counts, award labels, author info                 │
+│    • Benchmark performance trajectories                         │
+└─────────────────────────────────────────────────────────────────┘</code></pre>
+<p><strong>Implementation</strong>: Uses <code>react()</code> agent with
+<code>use_offline_prompt=False</code>.</p>
+<h4 id="mode-3-react-agent-structured-agentic-prompt">Mode 3: ReAct
+Agent + Structured Agentic Prompt</h4>
+<p>Same as Mode 2, but with an additional structured preamble (“Offline
+Antigravity”) that:</p>
+<ul>
+<li>Emphasizes offline-only operation (no web access)</li>
+<li>Provides guidance on efficient tool use (<code>rg</code> for search,
+concise outputs)</li>
+<li>Establishes behavioral expectations for the agent</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Offline Antigravity Agent (Local-Only)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>You are Antigravity, a powerful agentic AI assistant. Operate entirely offline: </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>do not use the internet, web tools, or external APIs. Rely only on local files </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>and built-in shell tools.</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Core Behavior</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Default to concise, plain-text replies; prioritize actionable output</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Prefer <span class="in">`rg`</span> for searches and <span class="in">`apply_patch`</span> for small edits</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Never revert user changes unless explicitly asked</span></code></pre></div>
+<p><strong>Implementation</strong>: Uses <code>react()</code> agent with
+<code>use_offline_prompt=True</code> (default).</p>
+<h3 id="test-time-compute-message-limits">3.2 Test-Time Compute: Message
+Limits</h3>
+<p>We operationalize test-time compute scaling via <strong>message
+limits</strong>—the maximum number of agent-environment interaction
+turns allowed before forcing a final answer. This directly controls how
+much “thinking time” the agent has:</p>
+<table>
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 30%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Message Limit</th>
+<th style="text-align: left;">Interpretation</th>
+<th style="text-align: left;">Typical Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>15</strong></td>
+<td style="text-align: left;">Minimal budget</td>
+<td style="text-align: left;">Quick exploration, may miss complex
+patterns</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>30</strong></td>
+<td style="text-align: left;">Moderate budget</td>
+<td style="text-align: left;">Standard operation, sufficient for most
+tasks</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>50</strong></td>
+<td style="text-align: left;">Maximum budget</td>
+<td style="text-align: left;">Deep exploration, extensive data
+analysis</td>
+</tr>
+</tbody>
+</table>
+<p>Higher limits allow agents to: - Explore more of the sandbox data -
+Iterate on analysis strategies - Verify hypotheses against multiple
+evidence sources - Recover from initial errors</p>
+<h3 id="models-evaluated">3.3 Models Evaluated</h3>
+<p>We evaluate 10 frontier LLMs from three major providers:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Provider</th>
+<th style="text-align: left;">Models</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Anthropic</strong></td>
+<td style="text-align: left;">Claude Opus 4.5, Claude Sonnet 4.5, Claude
+Haiku 4.5</td>
+<td style="text-align: left;">Claude 4.5 family</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Google</strong></td>
+<td style="text-align: left;">Gemini 3 Pro Preview, Gemini 2.5 Pro,
+Gemini 2.5 Flash</td>
+<td style="text-align: left;">Latest Gemini models</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>OpenAI</strong></td>
+<td style="text-align: left;">GPT-5.2, GPT-5.1, GPT-5 Mini, GPT-5
+Nano</td>
+<td style="text-align: left;">GPT-5 series</td>
+</tr>
+</tbody>
+</table>
+<p>All models were accessed via their respective APIs in December 2024 -
+December 2025.</p>
+<h3 id="task-statistics">3.4 Task Statistics</h3>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 30%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Task Family</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">N Samples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Citation</td>
+<td style="text-align: left;">Citation prediction (MCQ, ranking,
+bucket)</td>
+<td style="text-align: center;">15,185</td>
+</tr>
+<tr>
+<td style="text-align: left;">Emnlp Awards</td>
+<td style="text-align: left;">Award classification (historical,
+2021-2024)</td>
+<td style="text-align: center;">5,900</td>
+</tr>
+<tr>
+<td style="text-align: left;">Emnlp Awards Acl2025</td>
+<td style="text-align: left;">Award classification (ACL 2025,
+<strong>post-cutoff</strong>)</td>
+<td style="text-align: center;">1,588</td>
+</tr>
+<tr>
+<td style="text-align: left;">Emnlp Awards Emnlp2025</td>
+<td style="text-align: left;">Award classification (EMNLP 2025,
+<strong>post-cutoff</strong>)</td>
+<td style="text-align: center;">238</td>
+</tr>
+<tr>
+<td style="text-align: left;">Emnlp Historical</td>
+<td style="text-align: left;">Historical paper classification</td>
+<td style="text-align: center;">1,800</td>
+</tr>
+<tr>
+<td style="text-align: left;">Faculty</td>
+<td style="text-align: left;">Faculty research prediction</td>
+<td style="text-align: center;">4,734</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sota</td>
+<td style="text-align: left;">SOTA benchmark forecasting</td>
+<td style="text-align: center;">1,350</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total</strong>: 899 experimental runs across 10 models and 11
+unique tasks.</p>
+<hr />
+<h2 id="results">4. Results</h2>
+<h3 id="rq1-test-time-compute-scaling">4.1 RQ1: Test-Time Compute
+Scaling</h3>
+<p><strong>Finding</strong>: All model families show substantial
+accuracy gains with increased message limits, but the magnitude varies
+dramatically. Claude models exhibit the strongest scaling behavior.</p>
+<p><img src="plots/scaling_by_model.png" alt="Scaling by Model" />
+<em>Figure 1: Test-time scaling curves showing accuracy vs. message
+limit for each model. Claude models (orange) show the steepest
+improvement.</em></p>
+<h4 id="scaling-gains-summary">Scaling Gains Summary</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Model</th>
+<th style="text-align: center;">Acc@15</th>
+<th style="text-align: center;">Acc@30</th>
+<th style="text-align: center;">Acc@50</th>
+<th style="text-align: center;">Δ(15→50)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">claude-haiku-4-5</td>
+<td style="text-align: center;">9.6%</td>
+<td style="text-align: center;">41.0%</td>
+<td style="text-align: center;">58.5%</td>
+<td style="text-align: center;"><strong>+48.9pp</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">claude-sonnet-4-5</td>
+<td style="text-align: center;">3.3%</td>
+<td style="text-align: center;">37.7%</td>
+<td style="text-align: center;">48.4%</td>
+<td style="text-align: center;"><strong>+45.2pp</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">claude-opus-4-5</td>
+<td style="text-align: center;">19.7%</td>
+<td style="text-align: center;">45.6%</td>
+<td style="text-align: center;">56.6%</td>
+<td style="text-align: center;"><strong>+36.8pp</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">gemini-3-pro-preview</td>
+<td style="text-align: center;">34.6%</td>
+<td style="text-align: center;">53.7%</td>
+<td style="text-align: center;">61.6%</td>
+<td style="text-align: center;"><strong>+27.0pp</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">gpt-5.2-2025-12-11</td>
+<td style="text-align: center;">24.1%</td>
+<td style="text-align: center;">50.5%</td>
+<td style="text-align: center;">50.5%</td>
+<td style="text-align: center;"><strong>+26.5pp</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">gemini-2.5-pro</td>
+<td style="text-align: center;">32.1%</td>
+<td style="text-align: center;">55.6%</td>
+<td style="text-align: center;">56.2%</td>
+<td style="text-align: center;"><strong>+24.1pp</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">gpt-5.1-2025-11-13</td>
+<td style="text-align: center;">34.3%</td>
+<td style="text-align: center;">50.8%</td>
+<td style="text-align: center;">53.4%</td>
+<td style="text-align: center;"><strong>+19.1pp</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">gemini-2.5-flash</td>
+<td style="text-align: center;">27.4%</td>
+<td style="text-align: center;">48.5%</td>
+<td style="text-align: center;">45.4%</td>
+<td style="text-align: center;"><strong>+17.9pp</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">gpt-5-nano-2025-08-07</td>
+<td style="text-align: center;">22.6%</td>
+<td style="text-align: center;">40.5%</td>
+<td style="text-align: center;">36.9%</td>
+<td style="text-align: center;"><strong>+14.3pp</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">gpt-5-mini-2025-08-07</td>
+<td style="text-align: center;">27.4%</td>
+<td style="text-align: center;">40.0%</td>
+<td style="text-align: center;">38.8%</td>
+<td style="text-align: center;"><strong>+11.5pp</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Observations</strong>: - <strong>Claude models</strong>
+show dramatic scaling (+37-49pp from 15→50 messages), suggesting they
+effectively leverage additional reasoning steps - <strong>Gemini
+models</strong> show strong initial performance but moderate scaling
+gains (+18-27pp) - <strong>GPT models</strong> plateau earlier, with
+smaller marginal gains at higher limits (+11-27pp)</p>
+<p><img src="plots/scaling_gain_waterfall.png"
+alt="Scaling Gain Waterfall" /> <em>Figure 2: Waterfall chart showing
+test-time scaling gains (Acc@50 - Acc@15) by model.</em></p>
+<h3 id="rq2-agentic-vs-zero-shot-performance">4.2 RQ2: Agentic vs
+Zero-Shot Performance</h3>
+<p><strong>Finding</strong>: Tool-using agents dramatically outperform
+zero-shot generation, with gaps of 20-50 percentage points on complex
+tasks.</p>
+<p><img src="plots/simple_vs_agentic.png" alt="Simple vs Agentic" />
+<em>Figure 3: Scatter plot comparing zero-shot (x-axis) vs agentic
+(y-axis) accuracy. Points above the diagonal indicate agentic
+superiority.</em></p>
+<p><strong>Key Observations</strong>: - The agentic advantage is largest
+on <strong>data-intensive tasks</strong> (citation prediction, faculty
+research) - Even on tasks where zero-shot performs reasonably, agents
+achieve higher accuracy - The gap suggests that <strong>tool access
+enables verification</strong> of model hypotheses against data</p>
+<h3 id="rq3-structured-agentic-prompt-effect">4.3 RQ3: Structured
+Agentic Prompt Effect</h3>
+<p><strong>Finding</strong>: The “Offline Antigravity” prompt has
+model-specific effects—beneficial for Claude, neutral-to-negative for
+GPT models.</p>
+<p><img src="plots/ablation_scatter_msg50.png"
+alt="Ablation Scatter 50" /> <em>Figure 4: Ablation comparing
+ReAct+Prompt (y-axis) vs ReAct-only (x-axis). Points above diagonal
+indicate the prompt helps.</em></p>
+<h4 id="prompt-effect-by-model">Prompt Effect by Model</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Model</th>
+<th style="text-align: center;">With Prompt</th>
+<th style="text-align: center;">Without</th>
+<th style="text-align: center;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">claude-haiku-4-5</td>
+<td style="text-align: center;">58.5%</td>
+<td style="text-align: center;">49.7%</td>
+<td style="text-align: center;"><strong>+8.8pp</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">claude-sonnet-4-5</td>
+<td style="text-align: center;">48.4%</td>
+<td style="text-align: center;">43.7%</td>
+<td style="text-align: center;"><strong>+4.7pp</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">claude-opus-4-5</td>
+<td style="text-align: center;">56.6%</td>
+<td style="text-align: center;">53.5%</td>
+<td style="text-align: center;"><strong>+3.1pp</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">gpt-5.1-2025-11-13</td>
+<td style="text-align: center;">53.4%</td>
+<td style="text-align: center;">51.8%</td>
+<td style="text-align: center;"><strong>+1.6pp</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">gemini-3-pro-preview</td>
+<td style="text-align: center;">61.6%</td>
+<td style="text-align: center;">62.3%</td>
+<td style="text-align: center;"><strong>-0.6pp</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">gemini-2.5-pro</td>
+<td style="text-align: center;">56.2%</td>
+<td style="text-align: center;">59.6%</td>
+<td style="text-align: center;"><strong>-3.4pp</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">gemini-2.5-flash</td>
+<td style="text-align: center;">45.4%</td>
+<td style="text-align: center;">49.3%</td>
+<td style="text-align: center;"><strong>-3.9pp</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">gpt-5-nano-2025-08-07</td>
+<td style="text-align: center;">36.9%</td>
+<td style="text-align: center;">42.2%</td>
+<td style="text-align: center;"><strong>-5.3pp</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">gpt-5.2-2025-12-11</td>
+<td style="text-align: center;">50.5%</td>
+<td style="text-align: center;">57.5%</td>
+<td style="text-align: center;"><strong>-7.0pp</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">gpt-5-mini-2025-08-07</td>
+<td style="text-align: center;">38.8%</td>
+<td style="text-align: center;">54.9%</td>
+<td style="text-align: center;"><strong>-16.1pp</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation</strong>: - <strong>Claude models</strong>
+(+3-9pp) appear to benefit from explicit constraints on behavior -
+<strong>GPT models</strong> (-5 to -16pp) may be over-constrained by the
+prompt’s prescriptive style - <strong>Gemini models</strong> show mixed
+results, suggesting model-specific prompt engineering is valuable</p>
+<h3 id="rq4-post-cutoff-performance-data-contamination-analysis">4.4
+RQ4: Post-Cutoff Performance (Data Contamination Analysis)</h3>
+<p><strong>Critical Finding</strong>: Performance on post-cutoff tasks
+(ACL 2025, EMNLP 2025) is substantially <strong>lower</strong> than on
+historical tasks, but this pattern is not uniform across models.</p>
+<p>We compare award classification accuracy on: -
+<strong>Historical</strong> (EMNLP 2021-2024): Papers potentially in
+training data - <strong>ACL 2025</strong>: Published July 2025,
+definitively post-cutoff - <strong>EMNLP 2025</strong>: Published
+November 2025, maximum temporal separation</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Model</th>
+<th style="text-align: center;">Historical</th>
+<th style="text-align: center;">ACL 2025</th>
+<th style="text-align: center;">EMNLP 2025</th>
+<th style="text-align: center;">Δ(Hist→Post)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">claude-haiku-4-5</td>
+<td style="text-align: center;">19.3%</td>
+<td style="text-align: center;">13.2%</td>
+<td style="text-align: center;">50.0%</td>
+<td style="text-align: center;">-6.1pp</td>
+</tr>
+<tr>
+<td style="text-align: left;">claude-opus-4-5</td>
+<td style="text-align: center;">6.1%</td>
+<td style="text-align: center;">1.9%</td>
+<td style="text-align: center;">0.0%</td>
+<td style="text-align: center;">-4.2pp</td>
+</tr>
+<tr>
+<td style="text-align: left;">claude-sonnet-4-5</td>
+<td style="text-align: center;">0.0%</td>
+<td style="text-align: center;">0.0%</td>
+<td style="text-align: center;">0.0%</td>
+<td style="text-align: center;">+0.0pp</td>
+</tr>
+<tr>
+<td style="text-align: left;">gemini-2.5-flash</td>
+<td style="text-align: center;">65.5%</td>
+<td style="text-align: center;">67.9%</td>
+<td style="text-align: center;">75.0%</td>
+<td style="text-align: center;">+2.4pp</td>
+</tr>
+<tr>
+<td style="text-align: left;">gemini-2.5-pro</td>
+<td style="text-align: center;">25.9%</td>
+<td style="text-align: center;">32.1%</td>
+<td style="text-align: center;">75.0%</td>
+<td style="text-align: center;">+6.2pp</td>
+</tr>
+<tr>
+<td style="text-align: left;">gemini-3-pro-preview</td>
+<td style="text-align: center;">21.8%</td>
+<td style="text-align: center;">9.4%</td>
+<td style="text-align: center;">12.5%</td>
+<td style="text-align: center;">-12.4pp</td>
+</tr>
+<tr>
+<td style="text-align: left;">gpt-5-mini-2025-08-07</td>
+<td style="text-align: center;">9.6%</td>
+<td style="text-align: center;">15.1%</td>
+<td style="text-align: center;">0.0%</td>
+<td style="text-align: center;">+5.5pp</td>
+</tr>
+<tr>
+<td style="text-align: left;">gpt-5-nano-2025-08-07</td>
+<td style="text-align: center;">21.8%</td>
+<td style="text-align: center;">22.6%</td>
+<td style="text-align: center;">37.5%</td>
+<td style="text-align: center;">+0.8pp</td>
+</tr>
+<tr>
+<td style="text-align: left;">gpt-5.1-2025-11-13</td>
+<td style="text-align: center;">18.3%</td>
+<td style="text-align: center;">15.1%</td>
+<td style="text-align: center;">37.5%</td>
+<td style="text-align: center;">-3.2pp</td>
+</tr>
+<tr>
+<td style="text-align: left;">gpt-5.2-2025-12-11</td>
+<td style="text-align: center;">3.2%</td>
+<td style="text-align: center;">3.8%</td>
+<td style="text-align: center;">0.0%</td>
+<td style="text-align: center;">+0.6pp</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Observations</strong>: - Most models show
+<strong>substantial degradation</strong> on post-cutoff tasks -
+<strong>Gemini 2.5 Flash</strong> is an outlier: performs
+<em>better</em> on post-cutoff tasks, suggesting it may be using
+different reasoning strategies (less reliance on memorization) - The
+pattern suggests historical task performance may be <strong>inflated by
+data contamination</strong> - Post-cutoff tasks provide a more honest
+assessment of temporal reasoning capability</p>
+<h3 id="overall-model-rankings">4.5 Overall Model Rankings</h3>
+<p><img src="plots/overall_performance_msg50.png"
+alt="Overall Performance 50" /> <em>Figure 5: Overall accuracy
+(sample-weighted) at message limit 50.</em></p>
+<p><img src="plots/model_task_heatmap_msg50.png" alt="Heatmap 50" />
+<em>Figure 6: Model × Task heatmap showing performance variation across
+task families.</em></p>
+<h3 id="task-difficulty-analysis">4.6 Task Difficulty Analysis</h3>
+<p><img src="plots/task_difficulty_ranking.png"
+alt="Task Difficulty Ranking" /> <em>Figure 7: Task difficulty ranking
+(average accuracy across models). Lower = harder.</em></p>
+<p><strong>Hardest Tasks</strong> (lowest accuracy): - Professor field
+prediction (requires understanding research trajectory patterns) -
+Citation ranking (requires fine-grained citation count comparisons) -
+EMNLP awards MCQ (requires understanding implicit quality criteria)</p>
+<p><strong>Easiest Tasks</strong> (highest accuracy): - SOTA bucket
+prediction (structured lookup in historical data) - Professor article
+attribution (matching writing style/topics)</p>
+<hr />
+<h2 id="discussion">5. Discussion</h2>
+<h3 id="the-value-of-agentic-evaluation">5.1 The Value of Agentic
+Evaluation</h3>
+<p>Our results strongly support the hypothesis that <strong>tool-using
+agents outperform direct generation</strong> on temporal reasoning
+tasks. The 20-50pp gaps we observe suggest that:</p>
+<ol type="1">
+<li><strong>Parametric knowledge is insufficient</strong>: Models cannot
+reliably predict future events from pre-training alone</li>
+<li><strong>Evidence verification is crucial</strong>: Agents that can
+check hypotheses against data achieve higher accuracy</li>
+<li><strong>Multi-step reasoning helps</strong>: Complex tasks benefit
+from iterative exploration and refinement</li>
+</ol>
+<h3 id="test-time-compute-as-a-scaling-axis">5.2 Test-Time Compute as a
+Scaling Axis</h3>
+<p>The dramatic scaling gains (up to +49pp) from increased message
+limits suggest that <strong>test-time compute is a viable alternative to
+model scaling</strong> for capability improvement. This has practical
+implications:</p>
+<ul>
+<li>Smaller models with more inference budget may match larger models’
+accuracy</li>
+<li>Compute allocation can be task-adaptive: simple tasks get fewer
+turns, complex tasks get more</li>
+<li>The ceiling on scaling gains varies by model family, informing
+deployment decisions</li>
+</ul>
+<h3 id="the-data-contamination-problem">5.3 The Data Contamination
+Problem</h3>
+<p>Our post-cutoff analysis reveals a concerning pattern: models perform
+substantially worse on ACL 2025/EMNLP 2025 papers than on historical
+papers. This suggests that:</p>
+<ol type="1">
+<li><strong>Historical benchmarks may overestimate capability</strong>:
+Prior results could reflect memorization</li>
+<li><strong>Post-cutoff evaluation is essential</strong>: Only tasks
+definitively beyond training cutoffs provide uncontaminated
+estimates</li>
+<li><strong>The capability gap is real</strong>: Even the best models
+struggle on truly novel papers</li>
+</ol>
+<h3 id="limitations">5.4 Limitations</h3>
+<ul>
+<li><strong>Small post-cutoff test sets</strong>: ACL 2025 (53 papers)
+and EMNLP 2025 (8 papers) samples are limited</li>
+<li><strong>Single domain</strong>: Results may not generalize beyond
+NLP/scientific literature</li>
+<li><strong>API-based evaluation</strong>: We cannot control for
+potential model updates during evaluation period</li>
+<li><strong>Prompt sensitivity</strong>: Results depend on specific
+prompts; alternative formulations may differ</li>
+</ul>
+<hr />
+<h2 id="conclusions">6. Conclusions</h2>
+<h3 id="key-findings">6.1 Key Findings</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Finding</th>
+<th style="text-align: left;">Implication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Agentic &gt; Zero-shot (+20-50pp)</td>
+<td style="text-align: left;">Tool access is essential for temporal
+reasoning</td>
+</tr>
+<tr>
+<td style="text-align: left;">Strong test-time scaling (+11-49pp)</td>
+<td style="text-align: left;">Inference compute is a viable capability
+lever</td>
+</tr>
+<tr>
+<td style="text-align: left;">Prompt effects are model-specific</td>
+<td style="text-align: left;">One-size-fits-all prompts are
+suboptimal</td>
+</tr>
+<tr>
+<td style="text-align: left;">Post-cutoff degradation</td>
+<td style="text-align: left;">Historical benchmarks may overestimate
+capability</td>
+</tr>
+</tbody>
+</table>
+<h3 id="recommendations">6.2 Recommendations</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Use Case</th>
+<th style="text-align: left;">Recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Maximum accuracy</strong></td>
+<td style="text-align: left;">gemini-3-pro-preview with 50-message
+limit</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Efficiency-accuracy
+tradeoff</strong></td>
+<td style="text-align: left;">Gemini 2.5 Pro (strong at low limits)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cost-effective
+option</strong></td>
+<td style="text-align: left;">Claude Haiku 4.5 (excellent scaling, lower
+cost)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Post-cutoff tasks</strong></td>
+<td style="text-align: left;">Gemini 2.5 Flash (robust to temporal
+shift)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="future-directions">6.3 Future Directions</h3>
+<ol type="1">
+<li><strong>Larger post-cutoff test sets</strong> as more conferences
+publish in 2025-2026</li>
+<li><strong>Cross-domain generalization</strong> to finance, medicine,
+policy domains</li>
+<li><strong>Adaptive compute allocation</strong> based on task
+difficulty estimation</li>
+<li><strong>Fine-tuning experiments</strong> to improve temporal
+reasoning capabilities</li>
+</ol>
+<hr />
+<h2 id="appendix">Appendix</h2>
+<h3 id="a.-implementation-details">A. Implementation Details</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Framework</td>
+<td style="text-align: left;">Inspect AI (inspect-ai)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sandbox</td>
+<td style="text-align: left;">Docker containers with Python 3.11</td>
+</tr>
+<tr>
+<td style="text-align: left;">Tools</td>
+<td style="text-align: left;">python(), bash(), text_editor(),
+think()</td>
+</tr>
+<tr>
+<td style="text-align: left;">Evaluation</td>
+<td style="text-align: left;">Exact match for MCQ; custom scorers for
+ranking</td>
+</tr>
+</tbody>
+</table>
+<h3 id="b.-task-suffix-conventions">B. Task Suffix Conventions</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Suffix</th>
+<th style="text-align: left;">Solver</th>
+<th style="text-align: center;">Sandbox</th>
+<th style="text-align: center;">Agentic Prompt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>*_simple_task</code></td>
+<td style="text-align: left;"><code>generate()</code></td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>*_no_offline_prompt_task</code></td>
+<td style="text-align: left;"><code>react()</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>*_task</code> (default)</td>
+<td style="text-align: left;"><code>react()</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+</tbody>
+</table>
+<h3 id="c.-reproduction">C. Reproduction</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the full ablation sweep</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> scripts/run_inspect_ablations.py <span class="at">--include-no-offline</span> <span class="at">--limit</span> 50</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate this report and figures</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> analysis/comprehensive</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> main.py</span></code></pre></div>
+<h3 id="d.-data-files">D. Data Files</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">File</th>
+<th style="text-align: left;">Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;"><code>logs_msg15_summary_new.csv</code></td>
+<td style="text-align: left;">Results at message limit 15</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><code>logs_msg30_summary_new.csv</code></td>
+<td style="text-align: left;">Results at message limit 30</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><code>logs_msg50_summary_new.csv</code></td>
+<td style="text-align: left;">Results at message limit 50</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Report generated by Proof-of-Time analysis pipeline.</em></p>
+</body>
+</html>

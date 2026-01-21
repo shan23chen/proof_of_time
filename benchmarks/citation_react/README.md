@@ -86,22 +86,22 @@ docker ps
 
 ```bash
 # Multiple choice only
-inspect eval inspect/citation_react/benchmark.py@citation_multiple_choice \
+inspect eval benchmarks/citation_react/benchmark.py@citation_multiple_choice \
   --model openai/gpt-4o-mini
 
 # Ranking only
-inspect eval inspect/citation_react/benchmark.py@citation_ranking \
+inspect eval benchmarks/citation_react/benchmark.py@citation_ranking \
   --model openai/gpt-4o-mini
 
 # Bucket prediction only
-inspect eval inspect/citation_react/benchmark.py@citation_bucket_prediction \
+inspect eval benchmarks/citation_react/benchmark.py@citation_bucket_prediction \
   --model openai/gpt-4o-mini
 ```
 
 ### Run All Tasks
 
 ```bash
-inspect eval inspect/citation_react/benchmark.py@citation_all_tasks \
+inspect eval benchmarks/citation_react/benchmark.py@citation_all_tasks \
   --model openai/gpt-4o-mini
 ```
 
@@ -109,11 +109,11 @@ inspect eval inspect/citation_react/benchmark.py@citation_all_tasks \
 
 ```bash
 # Claude
-inspect eval inspect/citation_react/benchmark.py@citation_all_tasks \
+inspect eval benchmarks/citation_react/benchmark.py@citation_all_tasks \
   --model anthropic/claude-3-5-sonnet-20241022
 
 # GPT-4
-inspect eval inspect/citation_react/benchmark.py@citation_all_tasks \
+inspect eval benchmarks/citation_react/benchmark.py@citation_all_tasks \
   --model openai/gpt-4o
 ```
 
@@ -215,7 +215,7 @@ docker pull python:3.11-slim
 
 ```bash
 # Verify data exists
-ls -lh inspect/citation_react/sandbox/data/
+ls -lh benchmarks/citation_react/sandbox/data/
 
 # Should show:
 # - emnlp_papers.jsonl (~12MB)
@@ -225,10 +225,10 @@ ls -lh inspect/citation_react/sandbox/data/
 ## Example Run
 
 ```bash
-$ inspect eval inspect/citation_react/benchmark.py@citation_multiple_choice \
+$ inspect eval benchmarks/citation_react/benchmark.py@citation_multiple_choice \
     --model openai/gpt-4o-mini
 
-Target: /Users/.../inspect/citation_react/benchmark.py@citation_multiple_choice
+Target: /Users/.../benchmarks/citation_react/benchmark.py@citation_multiple_choice
 Model: openai/gpt-4o-mini
 Samples: 20
 Sandbox: docker

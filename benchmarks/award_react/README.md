@@ -71,15 +71,15 @@ docker ps
 
 ```bash
 # Award MCQ
-inspect eval inspect/award_react/benchmark.py@emnlp_awards_mcq_task \
+inspect eval benchmarks/award_react/benchmark.py@emnlp_awards_mcq_task \
   --model openai/gpt-4o-mini
 
 # Historical MCQ
-inspect eval inspect/award_react/benchmark.py@emnlp_historical_mcq_task \
+inspect eval benchmarks/award_react/benchmark.py@emnlp_historical_mcq_task \
   --model openai/gpt-4o-mini
 
 # Simple baseline (no tools)
-inspect eval inspect/award_react/benchmark.py@emnlp_awards_mcq_simple_task \
+inspect eval benchmarks/award_react/benchmark.py@emnlp_awards_mcq_simple_task \
   --model openai/gpt-4o-mini
 ```
 
@@ -87,15 +87,15 @@ inspect eval inspect/award_react/benchmark.py@emnlp_awards_mcq_simple_task \
 
 ```bash
 # Claude
-inspect eval inspect/award_react/benchmark.py@emnlp_awards_mcq_task \
+inspect eval benchmarks/award_react/benchmark.py@emnlp_awards_mcq_task \
   --model anthropic/claude-3-5-sonnet-20241022
 
 # GPT-4
-inspect eval inspect/award_react/benchmark.py@emnlp_awards_mcq_task \
+inspect eval benchmarks/award_react/benchmark.py@emnlp_awards_mcq_task \
   --model openai/gpt-4o
 
 # Limit samples for quick testing
-inspect eval inspect/award_react/benchmark.py@emnlp_awards_mcq_task \
+inspect eval benchmarks/award_react/benchmark.py@emnlp_awards_mcq_task \
   --model openai/gpt-4o-mini \
   --limit 5
 ```
