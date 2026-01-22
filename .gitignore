@@ -21,7 +21,7 @@ benchmarks/*/sandbox/data/
 # Large evaluation logs and archives (keep locally)
 logs_all/
 logs_all_archive/
-*.zip
+# *.zip
 
 # Large analysis artifacts
 analysis/agent_behavior/outputs/all_samples_*.jsonl
