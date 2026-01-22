@@ -8,14 +8,6 @@ license = {text = "MIT"}
 authors = [
     {name = "AIM Harvard", email = "aim@seas.harvard.edu"}
 ]
-
-[project.urls]
-Homepage = "https://github.com/shan23chen/proof_of_time"
-Repository = "https://github.com/shan23chen/proof_of_time"
-Documentation = "https://github.com/shan23chen/proof_of_time/blob/main/README.md"
-Issues = "https://github.com/shan23chen/proof_of_time/issues"
-Dataset = "https://huggingface.co/datasets/AIM-Harvard/proof-of-time"
-
 dependencies = [
     "anthropic[vertex]>=0.75.0",
     "datasets>=4.4.2",
@@ -28,6 +20,13 @@ dependencies = [
     "plotly>=6.5.0",
     "vertexai>=1.71.1",
 ]
+
+[project.urls]
+Homepage = "https://github.com/shan23chen/proof_of_time"
+Repository = "https://github.com/shan23chen/proof_of_time"
+Documentation = "https://github.com/shan23chen/proof_of_time/blob/main/README.md"
+Issues = "https://github.com/shan23chen/proof_of_time/issues"
+Dataset = "https://huggingface.co/datasets/AIM-Harvard/proof-of-time"
 
 [project.optional-dependencies]
 dev = [

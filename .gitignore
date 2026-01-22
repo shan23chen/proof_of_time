@@ -204,6 +204,7 @@ ctgov_studies_summary.csv
 
 # Persist analysis reports
 !reports/*.csv
+*.eval
 
 # macOS
 .DS_Store

@@ -18,6 +18,18 @@ git clone https://github.com/shan23chen/proof_of_time.git
 cd proof_of_time
 ```
 
+### 1.1 download the files from huggingface and patch them
+```bash
+export HF_TOKEN="your_hf_token"
+huggingface-cli download AIM-Harvard/proof-of-time \
+  --repo-type dataset \
+  --include "benchmarks/*" \
+  --local-dir ./temp_patch
+
+rsync -av ./temp_patch/benchmarks/ ./benchmarks/
+rm -rf temp_patch
+```
+
 ### 2. Install uv (if not already installed)
 
 ```bash
@@ -34,8 +46,7 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 # Install all dependencies
 uv sync
 
-# Install Inspect AI
-pip install inspect-ai
+source .venv/bin/activate
 ```
 
 ### 4. Verify Docker Installation

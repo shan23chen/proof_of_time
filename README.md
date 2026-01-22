@@ -24,16 +24,29 @@ You can download our generated questions from: https://huggingface.co/datasets/A
 git clone https://github.com/shan23chen/proof_of_time.git
 cd proof_of_time
 uv sync
-pip install inspect-ai
+source .venv/bin/activate
 
-# 2. Set up API keys
+# 2. download data files from huggingface and patch them
+export HF_TOKEN="your_hf_token"
+huggingface-cli download AIM-Harvard/proof-of-time \
+  --repo-type dataset \
+  --include "benchmarks/*" \
+  --local-dir ./temp_patch
+
+rsync -av ./temp_patch/benchmarks/ ./benchmarks/
+rm -rf temp_patch
+
+# 3. Set up API keys
 cp .env.example .env
 # Edit .env with your API keys
 
-# 3. Run a quick test (5 samples)
+# 4. Run a quick test (5 samples)
 inspect eval benchmarks/award_react/benchmark.py@pre_cutoff_simple_task \
     --model openai/gpt-5-mini-2025-08-07 \
     --limit 5
+
+# 5. Check results
+inspect view
 ```
 
 For detailed setup instructions, see [SETUP.md](SETUP.md).
@@ -125,7 +138,17 @@ cd proof_of_time
 
 # Install dependencies
 uv sync
-pip install inspect-ai
+source .venv/bin/activate
+
+# download data files from huggingface and patch them
+export HF_TOKEN="your_hf_token"
+huggingface-cli download AIM-Harvard/proof-of-time \
+  --repo-type dataset \
+  --include "benchmarks/*" \
+  --local-dir ./temp_patch
+
+rsync -av ./temp_patch/benchmarks/ ./benchmarks/
+rm -rf temp_patch
 
 # Configure API keys
 cp .env.example .env
